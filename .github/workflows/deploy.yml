@@ -30,9 +30,9 @@ jobs:
     - name: deploy to k8s
       run: |
           docker pull ysicing/devops-handbook
-          docker tag ysicing/devops-handbook ysicing/devops-handbook:$(date +%F-%H)
-          docker push ysicing/devops-handbook:$(date +%F-%H)
-          bash scripts/gitbook/deploy.sh $TOKEN $APIURL ysicing/devops-handbook:$(date +%F-%H)
+          docker tag ysicing/devops-handbook ysicing/devops-handbook:$(date +%s)
+          docker push ysicing/devops-handbook:$(date +%s)
+          bash scripts/gitbook/deploy.sh $TOKEN $APIURL ysicing/devops-handbook:$(date +%s)
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
