@@ -8,6 +8,10 @@
 
 ## DevOps
 
+* [存储](storage/storage.md)
+    * [NFS](storage/nfs.md)
+
+
 ## 研发那点事
 
 ## 附录
