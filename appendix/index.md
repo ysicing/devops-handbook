@@ -2,6 +2,10 @@
 
 > 用于记录发现的有用/有趣的Github项目
 
+### 20191219
+
+- [book prometheus](https://github.com/yunlzheng/prometheus-book)
+
 ### 20191208
 
 - [`kubewatch` Watch k8s events and trigger Handlers Go](https://github.com/bitnami-labs/kubewatch)
