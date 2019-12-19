@@ -9,6 +9,7 @@
 ## DevOps
 
 * [Linux](linux/linux.md)
+    * [FAQ](linux/faq.md)
 
 * [存储](storage/storage.md)
     * [NFS](storage/nfs.md)
