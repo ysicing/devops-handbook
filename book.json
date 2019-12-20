@@ -24,8 +24,9 @@
         "sitemap-general",
         "lightbox",
         "ga",
+        "livereload",
         "copy-code-button",
-        "alerts"
+        "alerts","-sharing"
     ],
     "pluginsConfig": {
         "theme-default": {

@@ -9,6 +9,8 @@
 ## DevOps
 
 * [Linux](linux/linux.md)
+    * [初始化](linux/init.md)
+    * [重装系统](linux/reinstall.md)
     * [FAQ](linux/faq.md)
 
 * [存储](storage/storage.md)

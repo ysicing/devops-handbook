@@ -1,0 +1,16 @@
+## 初始化Debian
+
+> 基础环境配置和安装docker配置
+
+### 操作
+
+```
+git clone https://github.com/ysicing/play-ansible.git
+cd play-ansible
+# 安装ansible,可跳过
+./install.sh
+# 配置初始化机器
+cp inventory.ini.example inventory.ini
+# 执行初始化
+ansible-playbook init.yml
+```
