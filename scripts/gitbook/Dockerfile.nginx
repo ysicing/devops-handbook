@@ -8,6 +8,8 @@ RUN bash -x /gitbook/scripts/gitbook/build-gitbook.sh
 
 FROM openresty/openresty:1.15.8.2-stretch
 
+ENV TZ Asia/Shanghai
+
 COPY --from=builder /gitbook/_book/ /usr/local/openresty/nginx/html/
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
