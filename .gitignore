@@ -21,3 +21,4 @@ _book
 # IDEA
 *.iml
 .idea
+hack/vm/.vagrant
