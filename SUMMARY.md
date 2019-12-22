@@ -6,6 +6,8 @@
 
 ## Kubernetes
 
+* [安装篇](kubernetes/install/index.md)
+
 ## DevOps
 
 * [Linux](linux/index.md)
@@ -17,8 +19,9 @@
 * [存储](storage/storage.md)
     * [NFS](storage/nfs.md)
 
+* [docker](docker/index.md)
 
-## 研发那点事
+## 学习开发那点事
 
 ## 附录
 
