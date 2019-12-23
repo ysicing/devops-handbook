@@ -52,8 +52,11 @@ sealos init --passwd vagrant --podcidr 192.168.0.0/16 --repo registry.cn-hangzho
 sealos clean  --passwd vagrant --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103
 ```
 
-特别说明node节点需要指定路由，否则会安装失败
+特别说明node节点需要指定路由，否则会安装失败,[fanux/sealos#134](https://github.com/fanux/sealos/issues/134)
 
 ```
 route add default gw 172.20.0.1
+# 最后修改hosts
+172.20.0.101 apiserver.cluster.local
 ```
+
