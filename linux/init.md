@@ -14,3 +14,5 @@ cp inventory.ini.example inventory.ini
 # 执行初始化
 ansible-playbook init.yml
 ```
+
+或者参考 [k8s安装部分](/kubernetes/install/index.md) 容器化方式初始化
