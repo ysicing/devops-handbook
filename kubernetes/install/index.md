@@ -25,3 +25,35 @@ ansible-playbook all.yml
 exit
 ```
 
+### 安装k8s
+
+源码编译安装sealos,使用新特性
+
+```
+git clone https://github.com/fanux/sealos.git --depth 1
+make local
+mv sealos /usr/local/bin/
+```
+
+下载离线包定制离线包
+
+```
+wget https://sealyun.oss-cn-beijing.aliyuncs.com/413bd3624b2fb9e466601594b4f72072-1.17.0/kube1.17.0.tar.gz
+tar xf kube1.17.0.tar.gz
+```
+
+定制后的脚本，我移除了镜像和二进制文件,需要自己二次集成，下载路径[install.tgz](/hack/sealos/install.tgz)
+
+```
+# 安装1master2worker
+sealos init --passwd vagrant --podcidr 192.168.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103 --version 1.17.0 --pkg-url /root/kube1.17.0.tar.gz
+
+# 清除
+sealos clean  --passwd vagrant --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103
+```
+
+特别说明node节点需要指定路由，否则会安装失败
+
+```
+route add default gw 172.20.0.1
+```
