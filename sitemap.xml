@@ -8,6 +8,7 @@
 <url> <loc>https://ysicing.me/linux/init.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/linux/reinstall.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/linux/aliyun_debian_upgrade_kernel.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://ysicing.me/linux/timers.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/linux/faq.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/storage/storage.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/storage/nfs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
