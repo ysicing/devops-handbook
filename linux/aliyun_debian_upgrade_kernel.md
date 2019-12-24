@@ -44,7 +44,7 @@ reboot
 
 #### 升级完成后docker无法启动
 
-```log
+```
 prior storage driver aufs failed: driver not supported
 ```
 

@@ -16,6 +16,7 @@
         * [初始化](linux/init.md)
         * [在线重装](linux/reinstall.md)
         * [轻量云升级内核](linux/aliyun_debian_upgrade_kernel.md)
+    * [定时器](linux/timers.md)    
     * [FAQ](linux/faq.md)
 
 * [存储](storage/storage.md)
