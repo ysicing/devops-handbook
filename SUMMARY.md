@@ -7,6 +7,7 @@
 ## Kubernetes
 
 * [安装篇](kubernetes/install/index.md)
+* [插件篇](kubernetes/plugins/index.md)
 
 ## DevOps
 
@@ -14,14 +15,21 @@
     * [Debian使用技巧](linux/linux.md)
         * [初始化](linux/init.md)
         * [在线重装](linux/reinstall.md)
+        * [轻量云升级内核](linux/aliyun_debian_upgrade_kernel.md)
     * [FAQ](linux/faq.md)
 
 * [存储](storage/storage.md)
     * [NFS](storage/nfs.md)
 
-* [docker](docker/index.md)
+* [Docker](docker/index.md)
+
+* [DNS](dns/index.md)
+    * [Adguard](dns/adguard.md)
 
 ## 学习开发那点事
+
+* [Shell](shell/index.md)
+    * [awk 中关于多个$的用法](shell/awk-func.md)
 
 ## 附录
 
