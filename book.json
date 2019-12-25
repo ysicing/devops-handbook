@@ -42,11 +42,6 @@
         "image-captions": {
             "caption": "图片 - _CAPTION_"
         },
-        "github-buttons": {
-            "repo": "ysicing/devops-handbook",
-            "types": ["star"],
-            "size": "small"
-        },
         "tbfed-pagefooter": {
             "copyright": "Copyright © 2019 | 仅供学习参考,不可用于其他途径.",
             "modify_label": " Updated at ",

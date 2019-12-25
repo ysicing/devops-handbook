@@ -36,3 +36,4 @@
 
 * [附录说明](appendix/index.md)
 * [macOS常用工具](appendix/macOS-apps.md)
+* [关于](appendix/about.md)
