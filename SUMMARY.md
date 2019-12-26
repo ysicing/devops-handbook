@@ -32,6 +32,8 @@
 * [Shell](shell/index.md)
     * [awk 中关于多个$的用法](shell/awk-func.md)
 
+* [IDE工具-vim配置](ide/vim_config.md)
+
 ## 附录
 
 * [附录说明](appendix/index.md)
