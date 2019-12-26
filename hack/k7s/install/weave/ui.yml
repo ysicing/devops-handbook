@@ -1,0 +1,15 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: weave-webui
+  namespace: weave
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`weave.local.ysicing`)
+    kind: Rule
+    services:
+    - name: weave-scope-app
+      port: 80
