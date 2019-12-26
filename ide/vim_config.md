@@ -94,6 +94,4 @@ vim ~/.vimrc
 
 # 更新插件
 :PlugUpdate
-
-
 ```
