@@ -1,0 +1,79 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    k8s.eip.work/displayName: nginx
+    k8s.eip.work/ingress: 'true'
+    k8s.eip.work/service: ClusterIP
+    k8s.eip.work/workload: web-nginx
+  labels:
+    k8s.eip.work/layer: web
+    k8s.eip.work/name: web-nginx
+  name: web-nginx
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s.eip.work/layer: web
+      k8s.eip.work/name: web-nginx
+  template:
+    metadata:
+      labels:
+        k8s.eip.work/layer: web
+        k8s.eip.work/name: web-nginx
+    spec:
+      containers:
+        -
+          image: nginx
+          imagePullPolicy: Always
+          name: nginx-demo
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    k8s.eip.work/displayName: nginx
+    k8s.eip.work/workload: web-nginx
+  labels:
+    k8s.eip.work/layer: web
+    k8s.eip.work/name: web-nginx
+  name: web-nginx
+  namespace: default
+spec:
+  ports:
+    - name: wm6zfy
+      nodePort: 0
+      port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    k8s.eip.work/layer: web
+    k8s.eip.work/name: web-nginx
+  type: ClusterIP
+
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    k8s.eip.work/displayName: nginx
+    k8s.eip.work/workload: web-nginx
+  labels:
+    k8s.eip.work/layer: web
+    k8s.eip.work/name: web-nginx
+  name: web-nginx
+  namespace: default
+spec:
+  rules:
+    - host: nginx-demo.opscdn.top
+      http:
+        paths:
+          - backend:
+              serviceName: web-nginx
+              servicePort: wm6zfy
+            path: /
+
