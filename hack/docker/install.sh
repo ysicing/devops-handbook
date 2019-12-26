@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+curl -fsSL https://get.docker.com | bash -s docker --mirror AzureChinaCloud
 
 cat > /etc/docker/daemon.json <<EOF
 {

@@ -8,6 +8,7 @@
 
 * [安装篇](kubernetes/install/index.md)
 * [插件篇](kubernetes/plugins/index.md)
+* [开发篇](kubernetes/dev/index.md)
 
 ## DevOps
 
