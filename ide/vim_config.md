@@ -1,5 +1,13 @@
 ## vim配置
 
+### 安装vim plug
+
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+### 写配置
+
 向`~/.vimrc`写入
 
 ```
@@ -73,5 +81,19 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'dgryski/vim-godef'
 
 call plug#end()
+
+```
+
+### 安装插件
+
+```
+vim ~/.vimrc
+
+# 安装插件
+:PlugInstall
+
+# 更新插件
+:PlugUpdate
+
 
 ```
