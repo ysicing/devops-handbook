@@ -15,8 +15,9 @@
 <url> <loc>https://ysicing.me/storage/storage.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/storage/nfs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/docker/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://ysicing.me/dns/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://ysicing.me/dns/adguard.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://ysicing.me/soft/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://ysicing.me/soft/dns/adguard.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://ysicing.me/soft/ldap/openldap_install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/shell/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/shell/awk-func.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/ide/vim_config.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
