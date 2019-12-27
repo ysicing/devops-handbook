@@ -26,8 +26,9 @@
 
 * [Docker](docker/index.md)
 
-* [DNS](dns/index.md)
-    * [Adguard](dns/adguard.md)
+* [开源软件](soft/index.md)
+    * [DNS-Adguard](soft/dns/adguard.md)
+    * [OpenLDAP](soft/ldap/openldap_install.md)
 
 ## 学习开发那点事
 
