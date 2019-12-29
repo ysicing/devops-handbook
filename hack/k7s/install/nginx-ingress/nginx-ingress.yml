@@ -28,7 +28,7 @@ metadata:
   namespace: nginx-ingress
 data:
   server-names-hash-bucket-size: "1024"
-  proxy-protocol: "True"
+  proxy-protocol: "False"
   real-ip-header: "X-Real-IP"
   set-real-ip-from: "0.0.0.0/0"
   client-max-body-size: "20m"
