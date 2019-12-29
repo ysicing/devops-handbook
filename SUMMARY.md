@@ -10,6 +10,8 @@
 * [插件篇](kubernetes/plugins/index.md)
 * [开发篇](kubernetes/dev/index.md)
 * [Helm篇](kubernetes/install/helm_install.md)
+* [Ingress Controller](kubernetes/ingress/index.md)
+    * [部署nginxnc](kubernetes/ingress/nginxnc-ingress.md)
 
 ## DevOps
 
