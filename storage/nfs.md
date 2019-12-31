@@ -37,3 +37,12 @@ exportfs -r
 # 测试
 showmount -e 127.0.0.1
 ```
+
+### k8s集群部署nfs
+
+```
+# 未安装存储
+curl https://ysicing.me/hack/k7s/install/nfs/deploy.sh | bash
+# 已安装存储
+kubectl apply -f https://ysicing.me/hack/k7s/install/nfs/deploy.yaml
+```
