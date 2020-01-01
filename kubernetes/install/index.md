@@ -46,7 +46,7 @@ tar xf kube1.17.0.tar.gz
 
 ```
 # 安装1master2worker
-sealos init --passwd vagrant --podcidr 192.168.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103 --version 1.17.0 --pkg-url /root/kube1.17.0.tar.gz
+sealos init --passwd vagrant --podcidr 172.16.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103 --version 1.17.0 --pkg-url /root/kube1.17.0.tar.gz
 
 # 清除
 sealos clean  --passwd vagrant --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103

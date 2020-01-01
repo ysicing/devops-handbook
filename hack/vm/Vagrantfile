@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "k8s#{i}" do |node|
       node.vm.box = "ysicing/debian"
       node.vm.hostname = "k8s#{i}"
-      ip = "172.20.0.#{i+100}"
+      ip = "192.168.100.#{i+100}"
       node.vm.network "public_network", use_dhcp_assigned_default_route: true, bridge: 'en0: Wi-Fi (Wireless)'
       node.vm.network "private_network", ip: ip
       node.vm.provider "virtualbox" do |vb|
