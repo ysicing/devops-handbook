@@ -7,10 +7,12 @@
 ## Kubernetes
 
 * [安装篇](kubernetes/install/index.md)
+    * [sealos](kubernetes/install/sealos.md)
+    * [minikube](kubernetes/install/minikube.md)
 * [存储篇](kubernetes/storage/index.md)
 * [插件篇](kubernetes/plugins/index.md)
 * [开发篇](kubernetes/dev/index.md)
-* [Helm篇](kubernetes/install/helm_install.md)
+* [Helm篇](kubernetes/helm/install.md)
 * [Ingress Controller](kubernetes/ingress/index.md)
     * [部署nginxnc](kubernetes/ingress/nginxnc-ingress.md)
 * [ACK实践](kubernetes/ack/index.md)
