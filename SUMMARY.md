@@ -7,6 +7,7 @@
 ## Kubernetes
 
 * [安装篇](kubernetes/install/index.md)
+* [存储篇](kubernetes/storage/index.md)
 * [插件篇](kubernetes/plugins/index.md)
 * [开发篇](kubernetes/dev/index.md)
 * [Helm篇](kubernetes/install/helm_install.md)

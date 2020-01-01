@@ -52,11 +52,8 @@ sealos init --passwd vagrant --podcidr 192.168.0.0/16 --repo registry.cn-hangzho
 sealos clean  --passwd vagrant --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103
 ```
 
-特别说明node节点需要指定路由，否则会安装失败,[fanux/sealos#134](https://github.com/fanux/sealos/issues/134)
+<del>特别说明node节点需要指定路由，否则会安装失败,[fanux/sealos#134](https://github.com/fanux/sealos/issues/134)</del>
 
-```
-route add default gw 172.20.0.1
-# 最后修改hosts
-172.20.0.101 apiserver.cluster.local
-```
+### 20200101 更新 
 
+目前已经解决了这个问题, vagrant配置桥接网络并注册默认路由 [Vagrantfile](https://ysicing.me/hack/vm/Vagrantfile)
