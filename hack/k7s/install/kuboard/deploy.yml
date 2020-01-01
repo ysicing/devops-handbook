@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: kuboard
-        image: eipwork/kuboard:v1.0.5-beta.2
+        image: eipwork/kuboard:v1.0.5.4
         imagePullPolicy: Always
       tolerations:
       - key: node-role.kubernetes.io/master
@@ -129,7 +129,7 @@ metadata:
     nginx.com/sticky-cookie-services: "serviceName=kuboard srv_id expires=1h path=/"
 spec:
   rules:
-  - host: kuboard.local.ysicing
+  - host: ui.slb.k7s.xyz
     http:
       paths:
       - path: /
