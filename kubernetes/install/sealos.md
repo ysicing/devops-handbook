@@ -59,3 +59,12 @@ sealos clean  --passwd vagrant --master  192.168.100.101 --node 192.168.100.102 
 ### 20200101 更新 
 
 目前已经解决了这个问题, vagrant配置桥接网络并注册默认路由 [Vagrantfile](https://ysicing.me/hack/vm/Vagrantfile)
+
+内网网段与calico冲突,故调整calico和vagrant虚拟机网段
+
+```
+桥接网络: 192.168.199.0/24
+hostonly: 192.168.100.0/24
+podcidr: 172.16.0.0/16
+svccidr: 10.96.0.0/12
+```
