@@ -32,8 +32,10 @@ exit
 ```
 git clone https://github.com/fanux/sealos.git --depth 1
 make local
+# 同步sealos到相关节点，如果你用上述步骤初始化系统，默认已经内置了sealos😂
 mv sealos /usr/local/bin/
 ```
+
 
 下载离线包定制离线包
 
