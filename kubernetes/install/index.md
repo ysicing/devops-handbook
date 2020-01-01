@@ -6,7 +6,7 @@
 
 ### 虚拟机
 
-环境: 3台机器(debian/buster, 4.19.0-6-amd64, 172.20.0.101~172.20.0.103, 2核4G80G存储)
+环境: 3台机器(debian/buster, 4.19.0-6-amd64, 192.168.100.101~192.168.100.103, 2核4G80G存储)
 
 ```
 mkdir k8s && cd k8s
@@ -42,14 +42,14 @@ wget https://sealyun.oss-cn-beijing.aliyuncs.com/413bd3624b2fb9e466601594b4f7207
 tar xf kube1.17.0.tar.gz
 ```
 
-定制后的脚本，我移除了镜像和二进制文件,需要自己二次集成，下载路径[install.tgz](/hack/sealos/install.tgz)
+定制后的脚本，我移除了镜像和二进制文件,需要自己二次集成，下载路径<del>[install.tgz](/hack/sealos/install.tgz)</del>或者[kube1.17.0.tar.gz](/hack/vm/)
 
 ```
 # 安装1master2worker
-sealos init --passwd vagrant --podcidr 172.16.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103 --version 1.17.0 --pkg-url /root/kube1.17.0.tar.gz
+sealos init --passwd vagrant --podcidr 172.16.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  192.168.100.101 --node 192.168.100.102 --node 192.168.100.103 --version 1.17.0 --pkg-url /root/kube1.17.0.tar.gz
 
 # 清除
-sealos clean  --passwd vagrant --master  172.20.0.101 --node 172.20.0.102 --node 172.20.0.103
+sealos clean  --passwd vagrant --master  192.168.100.101 --node 192.168.100.102 --node 192.168.100.103
 ```
 
 <del>特别说明node节点需要指定路由，否则会安装失败,[fanux/sealos#134](https://github.com/fanux/sealos/issues/134)</del>

@@ -15,6 +15,8 @@
     * [部署nginxnc](kubernetes/ingress/nginxnc-ingress.md)
 * [ACK实践](kubernetes/ack/index.md)
     * [新增内网slb ingress](kubernetes/ack/ingress.md)
+* [应用](kubernetes/apps/index.md)
+    * [部署kuboard](kubernetes/apps/kuboard/index.md)
 
 ## DevOps
 
