@@ -4,6 +4,8 @@ COPY . /gitbook
 
 WORKDIR /gitbook
 
+ENV TZ Asia/Shanghai
+
 RUN bash -x /gitbook/scripts/gitbook/build-gitbook.sh
 
 FROM ysicing/openresty
