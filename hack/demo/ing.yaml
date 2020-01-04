@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app: demo
+  name: demo-ingress # ingress名
+  namespace: default
+spec:
+  rules:
+    - host: godemo.slb.k7s.xyz # 域名
+      http:
+        paths:
+          - backend:
+              serviceName: demo-service # godemo的 service名
+              servicePort: demo-port # godemo的service定义的port
+            path: / #路径
