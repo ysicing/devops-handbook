@@ -6,10 +6,12 @@
 <url> <loc>https://ysicing.me/kubernetes/install/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/install/sealos.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/install/minikube.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://ysicing.me/kubernetes/install/feature.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/storage/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/plugins/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/dev/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/helm/install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://ysicing.me/kubernetes/helm/drone.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/addons/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/addons/ingress/nginxnc-ingress.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/ack/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
