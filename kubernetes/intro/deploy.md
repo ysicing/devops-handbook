@@ -284,3 +284,21 @@ root@k8s1:~# curl godemo.slb.k7s.xyz
 
 - pod容器如果未发生调度，重启容器ip是不会改变的
 
+另外除了Service这种网络，还有`hostPort`,`hostNetwork`
+
+```
+hostPort：直接将容器的端口与所调度的节点上的端口路由，这样可以通过宿主机的IP加上来访问Pod了, Ingress就是这样的
+hostNetwork：共享宿主机的网络名称空间
+```
+
+这里可以这么测试使用hostPort
+
+```
+kubectl apply -f https://ysicing.me/hack/demo/deploy3.yaml
+kubectl get pods  -l app=demo -o wide
+NAME                               READY   STATUS    RESTARTS   AGE    IP              NODE   NOMINATED NODE   READINESS GATES
+demo-deployment-6c5664f4d6-s6w8v   1/1     Running   0          112s   172.16.109.68   k8s2   <none>           <none>
+
+curl 666.slb.k7s.xyz:28080
+{"hostname":"demo-deployment-6c5664f4d6-s6w8v","ip":{"eth0":"172.16.109.68/32","lo":"127.0.0.1/8"}}
+```
