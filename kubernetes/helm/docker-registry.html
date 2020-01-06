@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ACK实践 · DevOps Handbook - DevOps运维指南/云原生实践手册 by ysicing</title>
+        <title>安装Registry · DevOps Handbook - DevOps运维指南/云原生实践手册 by ysicing</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -86,10 +86,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ingress.html" />
+    <link rel="next" href="../addons/" />
     
     
-    <link rel="prev" href="../addons/ingress/nginxnc-ingress.html" />
+    <link rel="prev" href="drone.html" />
     
 
     <style>
@@ -319,9 +319,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="../helm/install.html">
+        <li class="chapter " data-level="2.6" data-path="install.html">
             
-                <a href="../helm/install.html">
+                <a href="install.html">
             
                     
                         <b>2.6.</b>
@@ -335,9 +335,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.6.1" data-path="../helm/drone.html">
+        <li class="chapter " data-level="2.6.1" data-path="drone.html">
             
-                <a href="../helm/drone.html">
+                <a href="drone.html">
             
                     
                         <b>2.6.1.</b>
@@ -350,9 +350,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6.2" data-path="../helm/docker-registry.html">
+        <li class="chapter active" data-level="2.6.2" data-path="docker-registry.html">
             
-                <a href="../helm/docker-registry.html">
+                <a href="docker-registry.html">
             
                     
                         <b>2.6.2.</b>
@@ -406,9 +406,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.8" data-path="./">
+        <li class="chapter " data-level="2.8" data-path="../ack/">
             
-                <a href="./">
+                <a href="../ack/">
             
                     
                         <b>2.8.</b>
@@ -422,9 +422,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.8.1" data-path="ingress.html">
+        <li class="chapter " data-level="2.8.1" data-path="../ack/ingress.html">
             
-                <a href="ingress.html">
+                <a href="../ack/ingress.html">
             
                     
                         <b>2.8.1.</b>
@@ -808,7 +808,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >ACK实践</a>
+        <a href="../.." >安装Registry</a>
     </h1>
 </div>
 
@@ -823,11 +823,82 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x963F;&#x91CC;&#x4E91;ack&#x5B9E;&#x8DF5;">&#x963F;&#x91CC;&#x4E91;ACK&#x5B9E;&#x8DF5;</h2>
+                                <h2 id="&#x90E8;&#x7F72;docker-registry">&#x90E8;&#x7F72;docker registry</h2>
 <blockquote>
-<p>&#x91CD;&#x70B9;&#x4ECB;&#x7ECD;&#x963F;&#x91CC;&#x4E91;ACK&#x96C6;&#x7FA4;&#x5B9E;&#x8DF5;</p>
+<p>&#x6700;&#x8FD1;&#x5927;&#x9646;push&#x955C;&#x50CF;&#x8001;&#x662F;&#x8D85;&#x65F6;&#xFF0C;&#x4E8E;&#x662F;&#x60F3;&#x81EA;&#x5EFA;&#x4E00;&#x4E2A;&#xFF0C;&#x4F7F;&#x7528;helm&#x65B9;&#x5F0F;, &#x548C;drone&#x5B89;&#x88C5;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;</p>
 </blockquote>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2019 | &#x4EC5;&#x4F9B;&#x5B66;&#x4E60;&#x53C2;&#x8003;,&#x4E0D;&#x53EF;&#x7528;&#x4E8E;&#x5176;&#x4ED6;&#x9014;&#x5F84;. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
+<h3 id="&#x90E8;&#x7F72;">&#x90E8;&#x7F72;</h3>
+<pre class="language-"><code>helm pull stable/docker-registry
+tar xf docker-registry-1.9.1.tgz &amp;&amp; cd docker-registry/
+# &#x7F16;&#x8F91;values.yaml,&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;
+</code></pre><pre class="language-"><code class="lang-yaml"><span class="token comment"># &#x6CE8;&#x91CA;&#x90E8;&#x5206;&#x4E3A;&#x8C03;&#x6574;</span>
+<span class="token key atrule">replicaCount</span><span class="token punctuation">:</span> <span class="token number">1</span>
+<span class="token key atrule">updateStrategy</span><span class="token punctuation">:</span>
+<span class="token key atrule">podAnnotations</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token key atrule">podLabels</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token key atrule">image</span><span class="token punctuation">:</span>
+  <span class="token key atrule">repository</span><span class="token punctuation">:</span> registry
+  <span class="token key atrule">tag</span><span class="token punctuation">:</span> 2.7.1
+  <span class="token key atrule">pullPolicy</span><span class="token punctuation">:</span> IfNotPresent
+<span class="token key atrule">service</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> registry
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> ClusterIP
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">5000</span>
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token key atrule">ingress</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment"># &#x542F;&#x7528;ingress</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> /
+  <span class="token key atrule">hosts</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> hub.local.godu.dev <span class="token comment"># &#x57DF;&#x540D;</span>
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">nginx.ingress.kubernetes.io/proxy-body-size</span><span class="token punctuation">:</span> <span class="token string">&quot;100m&quot;</span> <span class="token comment"># k8s ingress 413</span>
+    <span class="token key atrule">nginx.org/client-max-body-size</span><span class="token punctuation">:</span> <span class="token string">&quot;100m&quot;</span> <span class="token comment"># nginxnc ingress 413</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token key atrule">tls</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">secretName</span><span class="token punctuation">:</span> godu.dev <span class="token comment"># &#x8BC1;&#x4E66;</span>
+      <span class="token key atrule">hosts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> hub.local.godu.dev <span class="token comment"># &#x57DF;&#x540D;</span>
+<span class="token key atrule">resources</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token key atrule">persistence</span><span class="token punctuation">:</span>
+  <span class="token key atrule">accessMode</span><span class="token punctuation">:</span> <span class="token string">&apos;ReadWriteOnce&apos;</span>
+  <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">size</span><span class="token punctuation">:</span> 5Gi
+  <span class="token key atrule">existingClaim</span><span class="token punctuation">:</span> registry <span class="token comment"># &#x540C;drone</span>
+<span class="token key atrule">storage</span><span class="token punctuation">:</span> filesystem
+<span class="token key atrule">secrets</span><span class="token punctuation">:</span>
+  <span class="token key atrule">haSharedSecret</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+  <span class="token key atrule">htpasswd</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token key atrule">configData</span><span class="token punctuation">:</span>
+  <span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token number">0.1</span>
+  <span class="token key atrule">log</span><span class="token punctuation">:</span>
+    <span class="token key atrule">fields</span><span class="token punctuation">:</span>
+      <span class="token key atrule">service</span><span class="token punctuation">:</span> registry
+  <span class="token key atrule">storage</span><span class="token punctuation">:</span>
+    <span class="token key atrule">cache</span><span class="token punctuation">:</span>
+      <span class="token key atrule">blobdescriptor</span><span class="token punctuation">:</span> inmemory
+  <span class="token key atrule">http</span><span class="token punctuation">:</span>
+    <span class="token key atrule">addr</span><span class="token punctuation">:</span> <span class="token punctuation">:</span><span class="token number">5000</span>
+    <span class="token key atrule">headers</span><span class="token punctuation">:</span>
+      <span class="token key atrule">X-Content-Type-Options</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>nosniff<span class="token punctuation">]</span>
+  <span class="token key atrule">health</span><span class="token punctuation">:</span>
+    <span class="token key atrule">storagedriver</span><span class="token punctuation">:</span>
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token key atrule">interval</span><span class="token punctuation">:</span> 10s
+      <span class="token key atrule">threshold</span><span class="token punctuation">:</span> <span class="token number">3</span>
+<span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span> <span class="token number">1000</span>
+  <span class="token key atrule">fsGroup</span><span class="token punctuation">:</span> <span class="token number">1000</span>
+<span class="token key atrule">priorityClassName</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token key atrule">podDisruptionBudget</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token key atrule">nodeSelector</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token key atrule">tolerations</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token key atrule">extraVolumeMounts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token key atrule">extraVolumes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+</code></pre>
+<p>deploy</p>
+<pre class="language-"><code>helm install registry -f values.yaml stable/docker-registry
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; 2019 | &#x4EC5;&#x4F9B;&#x5B66;&#x4E60;&#x53C2;&#x8003;,&#x4E0D;&#x53EF;&#x7528;&#x4E8E;&#x5176;&#x4ED6;&#x9014;&#x5F84;. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
 2020-01-06 15:04:29
 </span></footer>
                                 
@@ -856,12 +927,12 @@
 
             
                 
-                <a href="../addons/ingress/nginxnc-ingress.html" class="navigation navigation-prev " aria-label="Previous page: 部署nginxnc">
+                <a href="drone.html" class="navigation navigation-prev " aria-label="Previous page: 安装Drone">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="ingress.html" class="navigation navigation-next " aria-label="Next page: 新增内网slb ingress">
+                <a href="../addons/" class="navigation navigation-next " aria-label="Next page: Addons篇">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -872,7 +943,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ACK实践","level":"2.8","depth":1,"next":{"title":"新增内网slb ingress","level":"2.8.1","depth":2,"path":"kubernetes/ack/ingress.md","ref":"kubernetes/ack/ingress.md","articles":[]},"previous":{"title":"部署nginxnc","level":"2.7.1","depth":2,"path":"kubernetes/addons/ingress/nginxnc-ingress.md","ref":"kubernetes/addons/ingress/nginxnc-ingress.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","tbfed-pagefooter@^0.0.1","theme-default","-highlight","prism","prism-themes","sitemap-general","lightbox","ga","copy-code-button","alerts","-sharing"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2019 | 仅供学习参考,不可用于其他途径.","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/ysicing/devops-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/ysicing/devops-handbook/blob/master/"},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://ysicing.me/"},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"alerts":{},"github-buttons":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-79417627-2"},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"ysicing","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"kubernetes/intro/index.html#fig2.1.1","level":"2.1","list_caption":"Figure: k8s架构","alt":"k8s架构","nro":1,"url":"/images/k8s/k8s-arch.png","index":1,"caption_template":"图片 - _CAPTION_","label":"k8s架构","attributes":{},"skip":false,"key":"2.1.1"},{"backlink":"kubernetes/intro/index.html#fig2.1.2","level":"2.1","list_caption":"Figure: k8s整体架构","alt":"k8s整体架构","nro":2,"url":"/images/k8s/kubernetes-high-level-component-archtecture.jpg","index":2,"caption_template":"图片 - _CAPTION_","label":"k8s整体架构","attributes":{},"skip":false,"key":"2.1.2"},{"backlink":"kubernetes/intro/index.html#fig2.1.3","level":"2.1","list_caption":"Figure: master节点架构","alt":"master节点架构","nro":3,"url":"/images/k8s/kubernetes-master-arch.png","index":3,"caption_template":"图片 - _CAPTION_","label":"master节点架构","attributes":{},"skip":false,"key":"2.1.3"},{"backlink":"kubernetes/intro/index.html#fig2.1.4","level":"2.1","list_caption":"Figure: worker节点架构","alt":"worker节点架构","nro":4,"url":"/images/k8s/kubernetes-node-arch.png","index":4,"caption_template":"图片 - _CAPTION_","label":"worker节点架构","attributes":{},"skip":false,"key":"2.1.4"},{"backlink":"kubernetes/helm/drone.html#fig2.6.1.1","level":"2.6.1","list_caption":"Figure: drone github oauth应用","alt":"drone github oauth应用","nro":5,"url":"/images/drone/github.png","index":1,"caption_template":"图片 - _CAPTION_","label":"drone github oauth应用","attributes":{},"skip":false,"key":"2.6.1.1"},{"backlink":"kubernetes/helm/drone.html#fig2.6.1.2","level":"2.6.1","list_caption":"Figure: drone ci","alt":"drone ci","nro":6,"url":"/images/drone/ci.png","index":2,"caption_template":"图片 - _CAPTION_","label":"drone ci","attributes":{},"skip":false,"key":"2.6.1.2"},{"backlink":"kubernetes/helm/drone.html#fig2.6.1.3","level":"2.6.1","list_caption":"Figure: drone 详情页","alt":"drone 详情页","nro":7,"url":"/images/drone/d.png","index":3,"caption_template":"图片 - _CAPTION_","label":"drone 详情页","attributes":{},"skip":false,"key":"2.6.1.3"}]},"title":"DevOps Handbook - DevOps运维指南/云原生实践手册 by ysicing","language":"zh-hans","links":{"sidebar":{"ysicing":"https://github.com/ysicing","资源下载":"https://ysicing.me/hack/","科学快人一步":"https://justmysocks1.net/members/aff.php?aff=2191"}},"gitbook":"*","description":"DevOps Handbook - DevOps运维指南/云原生实践手册，本书记录了本人DevOps学习历程，着重于经验分享和总结，同时也会有相关的概念解析，希望能够帮助大家少踩坑，少走弯路，如Kubernetes、DevOps、Cloud Native等领域。"},"file":{"path":"kubernetes/ack/index.md","mtime":"2020-01-06T15:04:29.078Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-06T15:05:41.650Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"安装Registry","level":"2.6.2","depth":2,"next":{"title":"Addons篇","level":"2.7","depth":1,"path":"kubernetes/addons/index.md","ref":"kubernetes/addons/index.md","articles":[{"title":"部署nginxnc","level":"2.7.1","depth":2,"path":"kubernetes/addons/ingress/nginxnc-ingress.md","ref":"kubernetes/addons/ingress/nginxnc-ingress.md","articles":[]}]},"previous":{"title":"安装Drone","level":"2.6.1","depth":2,"path":"kubernetes/helm/drone.md","ref":"kubernetes/helm/drone.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","tbfed-pagefooter@^0.0.1","theme-default","-highlight","prism","prism-themes","sitemap-general","lightbox","ga","copy-code-button","alerts","-sharing"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2019 | 仅供学习参考,不可用于其他途径.","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/ysicing/devops-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/ysicing/devops-handbook/blob/master/"},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://ysicing.me/"},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"alerts":{},"github-buttons":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-79417627-2"},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"ysicing","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"kubernetes/intro/index.html#fig2.1.1","level":"2.1","list_caption":"Figure: k8s架构","alt":"k8s架构","nro":1,"url":"/images/k8s/k8s-arch.png","index":1,"caption_template":"图片 - _CAPTION_","label":"k8s架构","attributes":{},"skip":false,"key":"2.1.1"},{"backlink":"kubernetes/intro/index.html#fig2.1.2","level":"2.1","list_caption":"Figure: k8s整体架构","alt":"k8s整体架构","nro":2,"url":"/images/k8s/kubernetes-high-level-component-archtecture.jpg","index":2,"caption_template":"图片 - _CAPTION_","label":"k8s整体架构","attributes":{},"skip":false,"key":"2.1.2"},{"backlink":"kubernetes/intro/index.html#fig2.1.3","level":"2.1","list_caption":"Figure: master节点架构","alt":"master节点架构","nro":3,"url":"/images/k8s/kubernetes-master-arch.png","index":3,"caption_template":"图片 - _CAPTION_","label":"master节点架构","attributes":{},"skip":false,"key":"2.1.3"},{"backlink":"kubernetes/intro/index.html#fig2.1.4","level":"2.1","list_caption":"Figure: worker节点架构","alt":"worker节点架构","nro":4,"url":"/images/k8s/kubernetes-node-arch.png","index":4,"caption_template":"图片 - _CAPTION_","label":"worker节点架构","attributes":{},"skip":false,"key":"2.1.4"},{"backlink":"kubernetes/helm/drone.html#fig2.6.1.1","level":"2.6.1","list_caption":"Figure: drone github oauth应用","alt":"drone github oauth应用","nro":5,"url":"/images/drone/github.png","index":1,"caption_template":"图片 - _CAPTION_","label":"drone github oauth应用","attributes":{},"skip":false,"key":"2.6.1.1"},{"backlink":"kubernetes/helm/drone.html#fig2.6.1.2","level":"2.6.1","list_caption":"Figure: drone ci","alt":"drone ci","nro":6,"url":"/images/drone/ci.png","index":2,"caption_template":"图片 - _CAPTION_","label":"drone ci","attributes":{},"skip":false,"key":"2.6.1.2"},{"backlink":"kubernetes/helm/drone.html#fig2.6.1.3","level":"2.6.1","list_caption":"Figure: drone 详情页","alt":"drone 详情页","nro":7,"url":"/images/drone/d.png","index":3,"caption_template":"图片 - _CAPTION_","label":"drone 详情页","attributes":{},"skip":false,"key":"2.6.1.3"}]},"title":"DevOps Handbook - DevOps运维指南/云原生实践手册 by ysicing","language":"zh-hans","links":{"sidebar":{"ysicing":"https://github.com/ysicing","资源下载":"https://ysicing.me/hack/","科学快人一步":"https://justmysocks1.net/members/aff.php?aff=2191"}},"gitbook":"*","description":"DevOps Handbook - DevOps运维指南/云原生实践手册，本书记录了本人DevOps学习历程，着重于经验分享和总结，同时也会有相关的概念解析，希望能够帮助大家少踩坑，少走弯路，如Kubernetes、DevOps、Cloud Native等领域。"},"file":{"path":"kubernetes/helm/docker-registry.md","mtime":"2020-01-06T15:04:29.078Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-06T15:05:41.650Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
