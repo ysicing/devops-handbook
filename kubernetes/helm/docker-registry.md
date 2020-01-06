@@ -31,8 +31,8 @@ ingress:
   hosts:
     - hub.local.godu.dev # 域名
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "100m" # k8s ingress 413
-    nginx.org/client-max-body-size: "100m" # nginxnc ingress 413
+    nginx.ingress.kubernetes.io/proxy-body-size: "0" # k8s ingress 413
+    nginx.org/client-max-body-size: "0" # nginxnc ingress 413
   labels: {}
   tls:
     - secretName: godu.dev # 证书
