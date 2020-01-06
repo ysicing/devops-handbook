@@ -102,7 +102,7 @@ service:
   type: ClusterIP
   exposeGRPC: false
 ingress:
-  enabled: enabled # 启用
+  enabled: true # 启用
   hosts:
     - drone.godu.dev # 域名
   tls:

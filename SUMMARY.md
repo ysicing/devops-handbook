@@ -17,6 +17,7 @@
 * [开发篇](kubernetes/dev/index.md)
 * [Helm篇](kubernetes/helm/install.md)
     * [安装Drone](kubernetes/helm/drone.md)
+    * [安装Registry](kubernetes/helm/docker-registry.md)
 * [Addons篇](kubernetes/addons/index.md)
     * [部署nginxnc](kubernetes/addons/ingress/nginxnc-ingress.md)
 * [ACK实践](kubernetes/ack/index.md)
