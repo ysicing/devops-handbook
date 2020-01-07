@@ -8,6 +8,7 @@
 
 * [概念篇](kubernetes/intro/index.md)
     * [部署第一个应用](kubernetes/intro/deploy.md)
+    * [资源权限控制](kubernetes/intro/sa.md)
 * [安装篇](kubernetes/install/index.md)
     * [sealos](kubernetes/install/sealos.md)
     * [minikube](kubernetes/install/minikube.md)
