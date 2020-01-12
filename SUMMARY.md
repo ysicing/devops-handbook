@@ -45,10 +45,12 @@
 
 ## 学习开发那点事
 
-* [Shell](shell/index.md)
-    * [awk 中关于多个$的用法](shell/awk-func.md)
+* [脚本语言思考](develop/shell/index.md)
+    * [awk 中关于多个$的用法](develop/shell/awk-func.md)
 
-* [IDE工具-vim配置](ide/vim_config.md)
+* [vim配置](develop/ide/vim_config.md)
+* [环境配置Node](develop/env/nodejs.md)
+* [环境配置Go](develop/env/go.md)
 
 ## 附录
 
