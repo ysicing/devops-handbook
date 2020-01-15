@@ -39,18 +39,22 @@
 
 * [Docker](docker/index.md)
 
-* [开源软件](soft/index.md)
+* [开源软件]()
     * [DNS-Adguard](soft/dns/adguard.md)
     * [OpenLDAP](soft/ldap/openldap_install.md)
 
 ## 学习开发那点事
 
-* [脚本语言思考](develop/shell/index.md)
+* [脚本语言思考]()
     * [awk 中关于多个$的用法](develop/shell/awk-func.md)
 
-* [vim配置](develop/ide/vim_config.md)
-* [环境配置Node](develop/env/nodejs.md)
-* [环境配置Go](develop/env/go.md)
+* [开发准备]()
+    * [安装Node](develop/env/nodejs.md)
+    * [安装Go](develop/env/go.md)
+
+    * [vim配置](develop/env/vim_config.md)
+    * [vscode配置](develop/env/vscode_config.md)
+
 
 ## 附录
 
