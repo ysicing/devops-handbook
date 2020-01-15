@@ -55,9 +55,11 @@
     * [vim配置](develop/env/vim_config.md)
     * [vscode配置](develop/env/vscode_config.md)
 
+* [Go开发学习]()
+
 
 ## 附录
 
-* [附录说明](appendix/index.md)
+* [有趣的开源项目](appendix/index.md)
 * [macOS常用工具](appendix/macOS-apps.md)
 * [关于](appendix/about.md)
