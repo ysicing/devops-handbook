@@ -55,8 +55,8 @@
     * [vim配置](develop/env/vim_config.md)
     * [vscode配置](develop/env/vscode_config.md)
 
-* [Go开发学习]()
-
+* [Go开发学习](develop/gostudy/ch01/index.md)
+* [Gin中文文档]()
 
 ## 附录
 

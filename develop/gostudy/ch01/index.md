@@ -238,6 +238,8 @@ func main() {
 
 #### switch case
 
+简化判断
+
 ```
 a := 4
 switch a {
@@ -255,7 +257,7 @@ switch a {
         fmt.Println("1")
     case 2,3:
         fmt.Println("2")
-        fallthrough // 可以执行满足条件的case的下一个case
+        fallthrough // 可以执行满足条件的case的下一个case, 了解即可
     default:
         fmt.Println("3") 
 } 
@@ -279,7 +281,214 @@ func main() {
 		}
 	}
 
-breakTag:
+breakTag: // label
 	fmt.Println("end")
+}
+```
+
+### 运算符
+
+
+算数运算符: + - * / %
+关系运算符: == != > >= < << (结果为bool值)
+逻辑运算符: && || ! (结果为bool值)
+位运算符: & (相与 同为1为1)｜(相或 有1为1) ^（相异 或不同为1） << (乘2的n次方)  >> (除2的n次方)
+赋值运算符: 先其他运算再赋值
+
+```
+5 << 2 // 5 --- 101 左移 2 10100 --- 10 5 * 2^ 1
+
+5 >> 2 // 5 --- 101 右移 2 001 --- 1 
+```
+
+注: `++`,`--` 单独语句，不是运算符
+
+### 数组
+
+```
+var 数组变量名 [元素数量]T // 一旦定义，长度不能变
+var a [3]int
+```
+
+数组初始化
+
+```
+var a1 [3]int //数组会初始化为int类型的零值
+var a2 = [3]int{1,2} //使用指定的初始值完成初始化
+var a3 = [...]int{1, 2} // 让编译器根据初始值的个数自行推断数组的长度
+a4 := [...]int{1: 1, 3: 5} // 指定索引值的方式来初始化数组 [0, 1, 0 ,3]
+```
+
+数组遍历
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var a = [...]int{1, 2, 3, 4, 5}
+    // for循环遍历
+	for i := 0; i < len(a); i++ {
+		fmt.Println(a[i])
+	}
+    // range
+	for i, j := range a {
+		fmt.Println(i, j)
+    }
+    
+    b := [...][2]int{
+        {1,2},
+        {2,1},
+    }
+
+    for _, i := range b {
+        for _, j := range i {
+            fmt.Printf("%d\t", j)
+        }
+    }
+}
+```
+
+> 数组是值类型，赋值和传参会复制整个数组。因此改变副本的值，不会改变本身的值。
+
+### 切片slice
+
+切片是引用类型，拥有相同类型元素的可变长度的序列
+
+```
+var 切片名 []切片类型
+var name []string
+# 动态创建
+make([]T, size, cap) // T 类型，size 长度， cap容量(从第一个到最后容量数)，cap 可省却
+```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	//var a []int
+	var c = []string{"a", "b"}
+	fmt.Println(len(c), cap(c))
+	d := make([]int, 2, 10)
+    fmt.Println(len(d), cap(d))
+    e := d[3:6]
+    fmt.Println(len(e), cap(e)) // 3， 3-10 7
+
+
+	s1 := make([]int, 3) // [0,0,0]
+    s2 := s1
+    // 拷贝前后两个变量共享底层数组，对一个切片的修改会影响另一个切片的内容
+	s2[0] = 100
+	fmt.Println(s1)
+    fmt.Println(s2)
+    
+    // 遍历和for一样
+    for i := 0; i < len(s1); i++ {
+		fmt.Printf("%d\t", s1[i])
+	}
+	for _, i := range s2 {
+		fmt.Printf("%d\t", i)
+	}
+}
+```
+
+> 切片的本质就是对底层数组的封装
+
+#### append
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var num []int
+	for i := 0; i < 20; i++ {
+        // 追加一个元素
+		num = append(num, i)
+		fmt.Printf("%v len:%d cap:%d ptr:%p\n", num, len(num), cap(num), num)
+    }
+    // 追加多个元素
+    num = append(num, 1, 2, 3)
+	fmt.Printf("%v, \n", num)
+    num1 := []int{99, 98}
+    // 追加切片
+	num = append(num, num1...)
+	fmt.Println(num)
+}
+```
+
+#### copy
+
+```
+copy(目标切片,源切片)
+```
+
+```go
+func main() {
+	// copy()复制切片
+	a := []int{1, 2, 3, 4, 5}
+	c := make([]int, 5, 5)
+	copy(c, a)     //使用copy()函数将切片a中的元素复制到切片c
+	fmt.Println(a) //[1 2 3 4 5]
+	fmt.Println(c) //[1 2 3 4 5]
+	c[0] = 1000
+	fmt.Println(a) //[1 2 3 4 5]
+    fmt.Println(c) //[1000 2 3 4 5]
+    
+    var a = make([]string, 5, 10) // 已经有5个了
+	for i := 0; i < 10; i++ {
+		a = append(a, fmt.Sprintf("%v", i))
+	}
+    fmt.Println(a, cap(a), len(a))
+    
+    // [     0 1 2 3 4 5 6 7 8 9] 20 15
+}
+```
+
+### 指针
+
+- 取地址 `&a`
+- 根据地址取值 `*b`
+
+#### make & new
+
+都用来申请内存
+
+```
+make: slice，map， chan申请内存，返回类型本身
+new: 基本数据类型申请内存, 返回指针, 且内存对应的值为类型零值
+
+a := new(int)
+```
+
+### map
+
+散列表(hash)实现, 无序的基于key-value的数据结构,引用类型，必须初始化才能使用.
+
+```
+map[KeyType]ValueType
+
+make(map[keytype]valuetype, [cap])
+
+code := make(map[string]string, 10)
+
+code["a"] = "a"
+code["b"] = "b"
+
+# 判断 值是否存在
+value, ok := map[key]
+if ok {
+    // 存在
+} else {
+    // 不存在
+}
+
+// 循环
+for k, v := range map {
+    // k,v v可省略
 }
 ```
