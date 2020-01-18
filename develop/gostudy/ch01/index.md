@@ -492,3 +492,167 @@ for k, v := range map {
     // k,v v可省略
 }
 ```
+
+### 函数
+
+```
+func 函数名(参数)(返回值){
+
+}
+```
+
+示例
+
+```
+func sum1(x, y int) int {
+	sum := x + y
+	return sum
+}
+
+// 返回值定义了返回值名，return可省却
+func sum2(x, y int) (sum int) {
+	sum = x + y
+	return
+}
+
+// 可变参数，可变参数可有可无
+func sum3(x int, y ...int) {
+	fmt.Println(x)
+	fmt.Println(y) // 切片
+}
+
+func main() {
+	r1 := sum1(1, 2)
+	r2 := sum2(1, 2)
+	fmt.Println(r1, r2)
+	sum3(1) // 1 []
+	sum3(1, 2) 1 [2]
+	sum3(1, 2, 3) 1 [2,3]
+}
+
+```
+
+### defer
+
+延迟处理, 多个defer 按照先进后出处理。
+
+函数return分成两步
+
+- 返回值赋值
+- defer
+- return
+
+
+```go
+package main
+
+import "fmt"
+
+func deferdemo(name string) {
+	fmt.Println(name)
+}
+
+func f1() int {
+	x := 5
+	defer func() {
+		x++ // 修改x不是 返回值
+	}()
+	// 返回值赋值 5
+	// 修改x值为 6
+	// retrun 5
+	return x
+}
+
+func f2() (x int) {
+	defer func() {
+		x++
+	}()
+
+	// 返回值赋值 x=5
+	// 修改x值为 x=6
+	// return 6
+
+	return 5 // 返回值
+}
+
+func f3() (y int) {
+	x := 5
+	defer func() {
+		x++
+	}()
+
+	// y = x = 5
+	// x = 6
+	// return y = 6
+
+	return x
+}
+
+func f4() (x int) {
+	defer func(x int) {
+		x++
+	}(x)
+	// x = 5
+	// 副本 x = 6
+	// return x
+	return 5
+}
+
+func main() {
+	deferdemo("666")
+	defer deferdemo("777")
+	deferdemo("888")
+	defer deferdemo("999")
+
+	fmt.Println(f1(), f2(), f3(), f4()) // 5,6,5,5
+
+}
+```
+
+### 匿名函数
+
+```go
+
+	// 多次执行
+	e1 := func(x, y int) {
+		fmt.Println(x)
+		fmt.Println(y)
+		fmt.Println(x + y)
+	}
+	e1(2, 4)
+
+	// 立即执行，只执行一次
+	func(x, y int) {
+		fmt.Println(x * y)
+	}(1, 2)
+```
+
+### 闭包
+
+1. 函数作为返回值
+2. 外部变量引用
+
+```go
+package main
+
+import "strings"
+
+import "fmt"
+
+// checkMail
+func checkMail(domain string) func(string) string {
+	return func(name string) string {
+		if strings.HasSuffix(name, domain) {
+			return name
+		}
+		return name + "@" + domain
+
+	}
+}
+
+func main() {
+	talkFunc := checkMail("@ysicing.me")
+	fmt.Println(talkFunc("i"))
+	fmt.Println(talkFunc("root@ysicing.me"))
+}
+```
