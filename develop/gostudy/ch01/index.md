@@ -656,3 +656,52 @@ func main() {
 	fmt.Println(talkFunc("root@ysicing.me"))
 }
 ```
+
+### panic/recover
+
+- recover()和defer一起使用
+- defer在panic语句前
+
+```go
+package main
+
+import "fmt"
+
+func funcA() {
+	fmt.Println("a")
+}
+
+func funcB() {
+
+	defer func() {
+		err := recover()
+		fmt.Println(err)
+	}()
+	panic("error")
+	fmt.Println("b")
+}
+
+func funC() {
+	fmt.Println("c")
+}
+
+func main() {
+	funcA()
+	funcB()
+	funC()
+}
+```
+
+### 占位符
+
+```
+	m1 := make(map[string]int, 5)
+	m1["demo"] = 1
+	fmt.Printf("%v\n", m1) // 值的默认格式
+	fmt.Printf("%+v\n", m1) // 类似%v, 结构体会加字段名
+	fmt.Printf("%#v\n", m1)	// map[string]int{"demo":1} 值Go语法
+	fmt.Printf("%T\n", m1) // map[string]int 打印类型
+```
+
+### 结构体
+
