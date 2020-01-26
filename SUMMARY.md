@@ -6,13 +6,13 @@
 
 ## Kubernetes
 
-* [概念篇](kubernetes/intro/index.md)
-    * [部署第一个应用](kubernetes/intro/deploy.md)
-    * [资源权限控制](kubernetes/intro/sa.md)
 * [安装篇](kubernetes/install/index.md)
     * [sealos](kubernetes/install/sealos.md)
     * [minikube](kubernetes/install/minikube.md)
     * [feature启用](kubernetes/install/feature.md)
+* [概念篇](kubernetes/intro/index.md)
+    * [部署第一个应用](kubernetes/intro/deploy.md)
+    * [资源权限控制](kubernetes/intro/sa.md)
 * [存储篇](kubernetes/storage/index.md)
 * [插件篇](kubernetes/plugins/index.md)
 * [开发篇](kubernetes/dev/index.md)
