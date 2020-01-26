@@ -1,6 +1,6 @@
 ## sealos安装k8s
 
-> 推荐使用[sealos](https://github.com/fanux/sealos), 一键高可用，简单上手
+> 推荐使用[sealos](https://github.com/fanux/sealos), 一键高可用，简单上手, 安装k8s 1.17.1版本
 
 ## 准备工作
 
@@ -37,18 +37,20 @@ mv sealos /usr/local/bin/
 ```
 
 
-下载离线包定制离线包
+自行下载具体版本定制离线包
 
 ```
 wget https://sealyun.oss-cn-beijing.aliyuncs.com/413bd3624b2fb9e466601594b4f72072-1.17.0/kube1.17.0.tar.gz
 tar xf kube1.17.0.tar.gz
 ```
 
-定制后的脚本，我移除了镜像和二进制文件,需要自己二次集成，下载路径<del>[install.tgz](/hack/sealos/install.tgz)</del>或者[kube1.17.0.tar.gz](/hack/vm/)
+定制后的脚本，我移除了镜像和二进制文件,需要自己二次集成，下载路径<del>[install.tgz](/hack/sealos/install.tgz)</del>或者[kube1.17.1.tar.gz](/hack/vm/)
+
+> 说明，我定制了sealos和calico版本为最新版本
 
 ```
 # 安装1master2worker
-sealos init --passwd vagrant --podcidr 172.16.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  192.168.100.101 --node 192.168.100.102 --node 192.168.100.103 --version 1.17.0 --pkg-url /root/kube1.17.0.tar.gz
+sealos init --passwd vagrant --podcidr 172.16.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  192.168.100.101 --node 192.168.100.102 --node 192.168.100.103 --version 1.17.1 --pkg-url /root/kube1.17.1.tar.gz
 
 # 清除
 sealos clean  --passwd vagrant --master  192.168.100.101 --node 192.168.100.102 --node 192.168.100.103
