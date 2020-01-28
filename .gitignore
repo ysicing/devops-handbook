@@ -25,3 +25,5 @@ hack/vm/.vagrant
 !hack/vm/kube1.17.1.tar.gz
 hack/vm/kube1.17.1.backup.tar.gz
 hack/vm/kube
+
+hack/allinone/.vagrant
