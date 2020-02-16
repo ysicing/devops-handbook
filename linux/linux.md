@@ -1,18 +1,18 @@
-## Linux
+## Debian Linux,你值得拥有
 
-> 快速启动一个Debian环境
+> 快速启动一个Debian buster环境
 
-### Debian 9.11
-
-```
-vagrant init ysicing/debian --box-version 9.11.0
-vagrant up
-```
-
-### Debian 10.2
+### Debian 10.3
 
 ```
 vagrant init ysicing/debian
+vagrant up
+```
+
+### Debian 9.11 不在维护了
+
+```
+vagrant init ysicing/debian --box-version 9.11.0
 vagrant up
 ```
 

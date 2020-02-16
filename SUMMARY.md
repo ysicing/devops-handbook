@@ -23,12 +23,15 @@
     * [部署nginxnc](kubernetes/addons/ingress/nginxnc-ingress.md)
 * [ACK实践](kubernetes/ack/index.md)
     * [新增内网slb ingress](kubernetes/ack/ingress.md)
+* [tutorials]()
+    * [部署efk(fluentd)](kubernetes/tutorials/setup_efk_logging_stack.md)
 
 ## DevOps
 
 * [Linux](linux/index.md)
     * [Debian使用技巧](linux/linux.md)
         * [初始化](linux/init.md)
+        * [Debian Buster日常操作](linux/debian-buster-op.md)
         * [在线重装](linux/reinstall.md)
         * [轻量云升级内核](linux/aliyun_debian_upgrade_kernel.md)
     * [定时器](linux/timers.md)    
