@@ -102,25 +102,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: eip-nfs-nfs-test
-  name: eip-nfs-nfs-test
+    app: eip-nfs-data
+  name: eip-nfs-data
   namespace: kube-system
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: eip-nfs-nfs-test
+      app: eip-nfs-data
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: eip-nfs-nfs-test
+        app: eip-nfs-data
     spec:
       containers:
         - env:
             - name: PROVISIONER_NAME
-              value: nfs-nfs-test
+              value: nfs-data
             - name: NFS_SERVER
               value: 10.8.82.35
             - name: NFS_PATH
@@ -142,11 +142,12 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
     k8s.eip.work/storageType: nfs_client_provisioner
   name: nfs-test
 parameters:
   archiveOnDelete: 'false'
-provisioner: nfs-nfs-test
+provisioner: nfs-data
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
 
