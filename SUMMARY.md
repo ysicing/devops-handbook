@@ -4,6 +4,10 @@
 
 * [序言](README.md)
 
+## 实践
+
+* [日常实践总览](init/init.md)
+
 ## Kubernetes
 
 * [安装篇](kubernetes/install/index.md)
