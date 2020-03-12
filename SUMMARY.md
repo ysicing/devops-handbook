@@ -4,9 +4,9 @@
 
 * [序言](README.md)
 
-## 实践
+## 我的实践
 
-* [日常实践总览](init/init.md)
+* [总览](init/init.md)
 
 ## Kubernetes
 

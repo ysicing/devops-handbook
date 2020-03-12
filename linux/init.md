@@ -16,3 +16,12 @@ ansible-playbook init.yml
 ```
 
 或者参考 [k8s安装部分](/kubernetes/install/index.md) 容器化方式初始化
+
+```bash
+docker pull ysicing/ansible
+docker run -it --rm ysicing/ansible bash
+cp inventory.ini.example inventory.ini
+# 初始化系统,安装docker
+ansible-playbook all.yml
+exit
+```
