@@ -70,6 +70,9 @@
         * [安装](gin/guide/installation.md)
         * [自定义](gin/guide/customization.md)
 
+##  历史博文
+
+ * [龙芯Mips64el平台上部署K8S](posts/mips64el-loongson-k8s.md)
 
 ## 附录
 
