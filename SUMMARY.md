@@ -4,19 +4,19 @@
 
 * [序言](README.md)
 
-## 我的实践
+## 云原生实践
 
 * [总览](init/init.md)
-
-## Kubernetes
 
 * [安装篇](kubernetes/install/index.md)
     * [sealos](kubernetes/install/sealos.md)
     * [minikube](kubernetes/install/minikube.md)
     * [feature启用](kubernetes/install/feature.md)
+
 * [概念篇](kubernetes/intro/index.md)
     * [部署第一个应用](kubernetes/intro/deploy.md)
     * [资源权限控制](kubernetes/intro/sa.md)
+
 * [存储篇](kubernetes/storage/index.md)
 * [插件篇](kubernetes/plugins/index.md)
 * [开发篇](kubernetes/dev/index.md)
@@ -29,8 +29,6 @@
     * [新增内网slb ingress](kubernetes/ack/ingress.md)
 * [tutorials]()
     * [部署efk(fluentd)](kubernetes/tutorials/setup_efk_logging_stack.md)
-
-## DevOps
 
 * [Linux](linux/index.md)
     * [Debian使用技巧](linux/linux.md)
@@ -50,17 +48,17 @@
     * [DNS-Adguard](soft/dns/adguard.md)
     * [OpenLDAP](soft/ldap/openldap_install.md)
 
-## 学习开发那点事
-
-* [脚本语言思考]()
-    * [awk 中关于多个$的用法](develop/shell/awk-func.md)
-
 * [开发准备]()
     * [安装Node](develop/env/nodejs.md)
     * [安装Go](develop/env/go.md)
 
     * [vim配置](develop/env/vim_config.md)
     * [vscode配置](develop/env/vscode_config.md)
+
+## 研发那点事
+
+* [脚本语言思考]()
+    * [awk 中关于多个$的用法](develop/shell/awk-func.md)
 
 * [Go开发学习]()
     * [Go项目结构](develop/gostudy/project-layout.md)
