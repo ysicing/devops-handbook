@@ -1,8 +1,4 @@
-## docker使用
-
-> 不会特别强调docker具体使用
-
-## docker快速安装
+> docker快速安装
 
 ```
 curl -fsSL https://ysicing.me/hack/docker/install.sh | bash 
@@ -33,14 +29,19 @@ docker run --rm -v /usr/local/bin:/sysdir ysicing/tools tar zxf /pkg.tgz -C /sys
 
 内置了
 
-- etcdctl
-- helm(v3)
-- docker-compose
-- calicoctl
-- ctop
-- cclear (清理退出容器)
-- din (进入容器 din <cname/>cid> ash/bash(默认)/sh)
-- dps (容器状态)
-- etcdcli (特别支持k8s集群的etcd)
-- kbtoken (查看kuboard admin用户token)
-- kdtoken (查看dashboard-admin 用户token)
+```bash
+etcdctl
+helm(v3)
+helminit // 初始化helm, 默认配置的是mirror.azure.cn
+docker-compose
+calicoctl
+ctop
+cclear (清理退出容器)
+din (进入容器 din <cname/>cid> ash/bash(默认)/sh)
+dps (容器状态)
+etcdcli (特别支持k8s集群的etcd)
+kbtoken (查看kuboard admin用户token)
+kdtoken (查看dashboard-admin 用户token)
+
+upgrade-tools // 升级二进制
+```

@@ -6,12 +6,14 @@
 
 ## 云原生实践
 
-* [总览](init/init.md)
-
-* [安装篇](kubernetes/install/index.md)
-    * [sealos](kubernetes/install/sealos.md)
-    * [minikube](kubernetes/install/minikube.md)
-    * [feature启用](kubernetes/install/feature.md)
+* [安装集群或工具]()
+    * [docker](install/docker.md)
+    * [debian初始化](install/init.md)
+    * [k8s之sealos](install/sealos.md)
+    * [k8s之minikube](install/minikube.md)
+    * [helm](install/helm.md)
+    * [存储之NFS](install/nfs.md)
+    * [k8s启用feature特性](install/feature.md)
 
 * [概念篇](kubernetes/intro/index.md)
     * [部署第一个应用](kubernetes/intro/deploy.md)
@@ -19,12 +21,10 @@
 
 * [存储篇](kubernetes/storage/index.md)
 * [插件篇](kubernetes/plugins/index.md)
-* [开发篇](kubernetes/dev/index.md)
-* [Helm篇](kubernetes/helm/install.md)
-    * [安装Drone](kubernetes/helm/drone.md)
-    * [安装Registry](kubernetes/helm/docker-registry.md)
 * [Addons篇](kubernetes/addons/index.md)
     * [部署nginxnc](kubernetes/addons/ingress/nginxnc-ingress.md)
+    * [安装Drone](kubernetes/helm/drone.md)
+    * [安装Registry](kubernetes/helm/docker-registry.md)
 * [ACK实践](kubernetes/ack/index.md)
     * [新增内网slb ingress](kubernetes/ack/ingress.md)
 * [tutorials]()
@@ -33,16 +33,10 @@
 * [Linux](linux/index.md)
     * [Debian使用技巧](linux/linux.md)
         * [Debian Buster日常操作](linux/debian-buster-op.md)
-        * [初始化](linux/init.md)
         * [在线重装](linux/reinstall.md)
         * [轻量云升级内核](linux/aliyun_debian_upgrade_kernel.md)
     * [定时器](linux/timers.md)    
     * [FAQ](linux/faq.md)
-
-* [存储](storage/storage.md)
-    * [NFS](storage/nfs.md)
-
-* [Docker](docker/index.md)
 
 * [开源软件]()
     * [DNS-Adguard](soft/dns/adguard.md)

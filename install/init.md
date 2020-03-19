@@ -2,12 +2,18 @@
 
 > 基础环境配置和安装docker配置
 
-### 操作
+```
+all.yaml: 系统+docker
+docker.yaml: 安装docker
+init.yaml: 系统
+```
+
+### 宿主机初始化
 
 ```
 git clone https://github.com/ysicing/play-ansible.git
 cd play-ansible
-# 安装ansible,可跳过
+# 安装ansible,如果已安装可跳过
 ./install.sh
 # 配置初始化机器
 cp inventory.ini.example inventory.ini
@@ -15,13 +21,13 @@ cp inventory.ini.example inventory.ini
 ansible-playbook init.yml
 ```
 
-或者参考 [k8s安装部分](/kubernetes/install/index.md) 容器化方式初始化
+### 容器化方式初始化
 
 ```bash
 docker pull ysicing/ansible
 docker run -it --rm ysicing/ansible bash
 cp inventory.ini.example inventory.ini
-# 初始化系统,安装docker
-ansible-playbook all.yml
+# 初始化系统
+ansible-playbook init.yml
 exit
 ```
