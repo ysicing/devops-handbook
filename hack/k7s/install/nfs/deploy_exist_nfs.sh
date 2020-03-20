@@ -152,7 +152,7 @@ metadata:
   annotations:
     k8s.eip.work/storageType: nfs_client_provisioner
     storageclass.kubernetes.io/is-default-class: 'true'
-  name: nfs-test
+  name: nfsdata
 parameters:
   archiveOnDelete: 'false'
 provisioner: nfs-provisioner
