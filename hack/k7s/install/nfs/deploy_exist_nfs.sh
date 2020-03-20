@@ -1,25 +1,9 @@
 #!/bin/bash
 
-nfspath="/k8sdata"
-
-# 安装
-apt update
-apt install -y nfs-kernel-server
-# 配置
-mkdir ${nfspath}
-echo "${nfspath}/ *(insecure,rw,sync,no_root_squash,no_subtree_check)" > /etc/exports
-# 启动nfs
-systemctl enable rpcbind
-systemctl enable nfs-server
-systemctl start rpcbind
-systemctl start nfs-server
-exportfs -r
-# 测试
-showmount -e 127.0.0.1
-
 # deploy nfs provide
 
-nfsip=$(kubectl get node -o wide | grep $HOSTNAME | awk '{print $6}')
+nfsip=${1:-127.0.0.1}
+nfspath=${2:-/k8sdata}
 
 cat > /tmp/deploy.nfs.yaml <<EOF
 ---

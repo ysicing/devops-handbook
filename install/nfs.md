@@ -38,11 +38,12 @@ exportfs -r
 showmount -e 127.0.0.1
 ```
 
-### k8s集群部署nfs
+### 一键部署nfs且配置默认存储
 
 ```
 # 未安装存储
 curl https://ysicing.me/hack/k7s/install/nfs/deploy.sh | bash
-# 已安装存储
-kubectl apply -f https://ysicing.me/hack/k7s/install/nfs/deploy.yaml
+# 已有存储
+wget https://ysicing.me/hack/k7s/install/nfs/deploy_exist_nfs.sh
+./deploy_exist_nfs.sh <ip> <path>
 ```

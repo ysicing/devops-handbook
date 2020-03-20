@@ -39,17 +39,11 @@ git clone https://github.com/ysicing/sealos.git --depth 1
 mv sealos /usr/local/bin/
 ```
 
-自行下载具体版本定制离线包
-
 ```
-# 需要自行替换下载链接，这里示例1.17.0
-wget https://sealyun.oss-cn-beijing.aliyuncs.com/413bd3624b2fb9e466601594b4f72072-1.17.0/kube1.17.0.tar.gz
-tar xf kube1.17.0.tar.gz
-```
-
-```
+# 下载k7s文件. 需要自行下载k8s二进制文件
+docker run --rm -v /root:/sysdir ysicing/k7s cp /kube.tgz /sysdir
 # 安装1master2worker
-sealos init --passwd vagrant --podcidr 172.16.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  192.168.100.101 --node 192.168.100.102 --node 192.168.100.103 --version 1.17.4 --pkg-url /root/kube1.17.4.tar.gz
+sealos init --passwd vagrant --podcidr 172.16.0.0/16 --repo registry.cn-hangzhou.aliyuncs.com/google_containers --master  192.168.100.101 --node 192.168.100.102 --node 192.168.100.103 --version 1.17.4 --pkg-url /root/kube.tgz
 
 # 清除
 sealos clean
