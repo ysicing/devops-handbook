@@ -218,13 +218,13 @@ controller:
 
   minAvailable: 1
 
-  resources: 
-    limits:
-      cpu: 100m
-      memory: 64Mi
-    requests:
-      cpu: 100m
-      memory: 64Mi
+  resources: {}
+    # limits:
+    #   cpu: 100m
+    #   memory: 64Mi
+    # requests:
+    #   cpu: 100m
+    #   memory: 64Mi
 
   autoscaling:
     enabled: false
@@ -508,13 +508,13 @@ defaultBackend:
 
   minAvailable: 1
 
-  resources: 
-    limits:
-      cpu: 10m
-      memory: 20Mi
-    requests:
-      cpu: 10m
-      memory: 20Mi
+  resources: {}
+    # limits:
+    #   cpu: 10m
+    #   memory: 20Mi
+    # requests:
+    #   cpu: 10m
+    #   memory: 20Mi
 
   service:
     annotations: {}
