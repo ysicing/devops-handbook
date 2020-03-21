@@ -16,7 +16,10 @@
 
 ```
 kubectl apply -f https://ysicing.me/hack/helm/nginx-ingress/ns.yaml
+# 安装
 helm install nginx-ingress -f https://ysicing.me/hack/helm/nginx-ingress/nginx-ingress-1.34.2.yaml stable/nginx-ingress -n ingress-nginx
+# 升级
+helm upgrade nginx-ingress -f https://ysicing.me/hack/helm/nginx-ingress/nginx-ingress-1.34.2.yaml stable/nginx-ingress -n ingress-nginx
 ```
 
 ## NGINX Ingress Controllers (kubernetes-ingress)

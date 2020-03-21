@@ -20,6 +20,8 @@
 * [概念篇](kubernetes/intro/index.md)
     * [部署第一个应用](kubernetes/intro/deploy.md)
     * [资源权限控制](kubernetes/intro/sa.md)
+* [Ingress Controller高级使用]()
+    * [配置域名证书](kubernetes/addons/ingress/tls-config.md)
 
 * [存储篇](kubernetes/storage/index.md)
 * [插件篇](kubernetes/plugins/index.md)
