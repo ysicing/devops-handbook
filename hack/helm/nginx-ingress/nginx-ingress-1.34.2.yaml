@@ -277,9 +277,9 @@ controller:
       http: http
       https: https
 
-    type: LoadBalancer
+    # type: LoadBalancer
 
-    # type: NodePort
+    type: NodePort
     # nodePorts:
     #   http: 32080
     #   https: 32443
@@ -365,9 +365,9 @@ controller:
     enabled: true
 
     service:
-      annotations: {}
-      # prometheus.io/scrape: "true"
-      # prometheus.io/port: "10254"
+      annotations: 
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "10254"
 
       ## Deprecated, instead simply do not provide a clusterIP value
       omitClusterIP: false
@@ -384,7 +384,7 @@ controller:
       type: ClusterIP
 
     serviceMonitor:
-      enabled: false
+      enabled: true
       additionalLabels: {}
       namespace: ""
       namespaceSelector: {}
@@ -396,27 +396,27 @@ controller:
       # honorLabels: true
 
     prometheusRule:
-      enabled: false
+      enabled: true
       additionalLabels: {}
       namespace: ""
-      rules: []
-        # # These are just examples rules, please adapt them to your needs
-        # - alert: TooMany500s
-        #   expr: 100 * ( sum( nginx_ingress_controller_requests{status=~"5.+"} ) / sum(nginx_ingress_controller_requests) ) > 5
-        #   for: 1m
-        #   labels:
-        #     severity: critical
-        #   annotations:
-        #     description: Too many 5XXs
-        #     summary: More than 5% of the all requests did return 5XX, this require your attention
-        # - alert: TooMany400s
-        #   expr: 100 * ( sum( nginx_ingress_controller_requests{status=~"4.+"} ) / sum(nginx_ingress_controller_requests) ) > 5
-        #   for: 1m
-        #   labels:
-        #     severity: critical
-        #   annotations:
-        #     description: Too many 4XXs
-        #     summary: More than 5% of the all requests did return 4XX, this require your attention
+      rules: 
+        # These are just examples rules, please adapt them to your needs
+        - alert: TooMany500s
+          expr: 100 * ( sum( nginx_ingress_controller_requests{status=~"5.+"} ) / sum(nginx_ingress_controller_requests) ) > 5
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            description: Too many 5XXs
+            summary: More than 5% of the all requests did return 5XX, this require your attention
+        - alert: TooMany400s
+          expr: 100 * ( sum( nginx_ingress_controller_requests{status=~"4.+"} ) / sum(nginx_ingress_controller_requests) ) > 5
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            description: Too many 4XXs
+            summary: More than 5% of the all requests did return 4XX, this require your attention
 
 
   lifecycle: {}

@@ -14,6 +14,7 @@
     * [helm](install/helm.md)
     * [存储之NFS](install/nfs.md)
     * [Ingress Controller部署](install/ingress.md)
+    * [Promethues部署](install/prometheus.md)
     * [k8s启用feature特性](install/feature.md)
 
 * [概念篇](kubernetes/intro/index.md)
