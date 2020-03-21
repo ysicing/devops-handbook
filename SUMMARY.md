@@ -13,6 +13,7 @@
     * [k8s之minikube](install/minikube.md)
     * [helm](install/helm.md)
     * [存储之NFS](install/nfs.md)
+    * [Ingress Controller部署](install/ingress.md)
     * [k8s启用feature特性](install/feature.md)
 
 * [概念篇](kubernetes/intro/index.md)
@@ -22,7 +23,6 @@
 * [存储篇](kubernetes/storage/index.md)
 * [插件篇](kubernetes/plugins/index.md)
 * [Addons篇](kubernetes/addons/index.md)
-    * [部署nginxnc](kubernetes/addons/ingress/nginxnc-ingress.md)
     * [安装Drone](kubernetes/helm/drone.md)
     * [安装Registry](kubernetes/helm/docker-registry.md)
 * [ACK实践](kubernetes/ack/index.md)
