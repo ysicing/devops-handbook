@@ -64,3 +64,9 @@ hostonly: 192.168.100.0/24
 podcidr: 172.16.0.0/16
 svccidr: 10.96.0.0/12
 ```
+
+### 允许管理节点调度pod
+
+```
+kubectl taint nodes --all node-role.kubernetes.io/master-
+```
