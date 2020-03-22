@@ -20,9 +20,9 @@ case "$lsb_dist" in
 			case "$dist_version" in
 				10)
 					update-alternatives --set iptables /usr/sbin/iptables-legacy && echo 1 || echo 0
-          update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy && echo 1 || echo 0 
-          update-alternatives --set arptables /usr/sbin/arptables-legacy && echo 1 || echo 0
-          update-alternatives --set ebtables /usr/sbin/ebtables-legacy && echo 1 || echo 0
+          			update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy && echo 1 || echo 0 
+          			update-alternatives --set arptables /usr/sbin/arptables-legacy && echo 1 || echo 0
+          			update-alternatives --set ebtables /usr/sbin/ebtables-legacy && echo 1 || echo 0
 				;;
 			esac
 		;;
@@ -35,6 +35,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror AzureChinaCloud
 
 cat > /etc/docker/daemon.json <<EOF
 {
+  "exec-opts": ["native.cgroupdriver=systemd"],
   "registry-mirrors": ["https://dockerhub.azk8s.cn","https://reg-mirror.qiniu.com"],
   "bip": "172.30.42.1/16",
   "max-concurrent-downloads": 10,
