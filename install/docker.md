@@ -8,6 +8,7 @@ curl -fsSL https://ysicing.me/hack/docker/install.sh | bash
 
 ```json
 {
+  "exec-opts": ["native.cgroupdriver=systemd"],
   "registry-mirrors": ["https://dockerhub.azk8s.cn","https://reg-mirror.qiniu.com"],
   "bip": "172.30.42.1/16",
   "max-concurrent-downloads": 10,
