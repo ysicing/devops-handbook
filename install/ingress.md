@@ -25,6 +25,10 @@ helm upgrade nginx-ingress -f https://ysicing.me/hack/helm/nginx-ingress/nginx-i
 ## NGINX Ingress Controllers (kubernetes-ingress)
 
 ```
+helm repo add nginx-stable https://helm.nginx.com/stable
+helm repo update
+helm install nginx-ingress -f https://ysicing.me/hack/helm/hack/helm/nginxnc-ingress/nginx-ingress-0.4.3.yaml nginx-stable/nginx-ingress -n ingress-nginx
+# 或者
 kubectl apply -f https://ysicing.me/hack/k7s/install/nginx-ingress/nginx-ingress.yml
 ```
 
