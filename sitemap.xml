@@ -14,6 +14,7 @@
 <url> <loc>https://ysicing.me/kubernetes/intro/deploy.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/intro/sa.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/addons/ingress/tls-config.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://ysicing.me/kubernetes/network/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/storage/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/plugins/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/addons/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
