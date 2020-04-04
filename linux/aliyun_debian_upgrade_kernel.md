@@ -4,8 +4,8 @@
 
 #### 配置说明
 
-> 阿里云HK 1核2G2TB30Mbps ¥34/m
-> Debian 8.9
+> 阿里云HK 1核1G1TB30Mbps ¥24/m
+> Debian 9.9
 
 
 #### 更新源
@@ -13,18 +13,14 @@
 > 需要移除默认源，使用如下源
 
 ```
-# /etc/apt/sources.list
-deb http://mirror.xtom.com.hk/debian/ stretch main contrib non-free
-# deb-src http://mirror.xtom.com.hk/debian/ stretch main contrib non-free
-
-deb http://mirror.xtom.com.hk/debian/ stretch-updates main contrib non-free
-# deb-src http://mirror.xtom.com.hk/debian/ stretch-updates main contrib non-free
-
-deb http://mirror.xtom.com.hk/debian/ stretch-backports main contrib non-free
-# deb-src http://mirror.xtom.com.hk/debian/ stretch-backports main contrib non-free
-
-deb http://mirror.xtom.com.hk/debian-security/ stretch/updates main contrib non-free
-#deb-src http://mirror.xtom.com.hk/debian-security/ stretch/updates main contrib non-free
+# 需要添加buster-backports源
+sed -i "s#stretch#buster#g" /etc/apt/sources.list
+# 示例
+deb http://mirrors.a li yun c/debian/ buster main contrib non-free
+deb http://mirrors.aliyun.com/debian/ buster-updates main contrib non-free
+deb http://mirrors.aliyun.com/debian/ buster-proposed-updates main non-free contrib
+deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
+deb http://mirrors.aliyun.com/debian-security/ buster/updates main non-free contrib
 ```
 
 更新升级
@@ -37,8 +33,10 @@ apt-get dist-upgrade
 #### 升级到最新内核
 
 ```
-apt-get install -t stretch-backports linux-image-amd64
+apt-get install -t buster-backports linux-image-amd64 -y
 update-grub
+apt autoclean
+apt autoremove
 reboot
 ```
 

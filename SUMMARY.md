@@ -45,6 +45,7 @@
 * [开源软件]()
     * [DNS-Adguard](soft/dns/adguard.md)
     * [OpenLDAP](soft/ldap/openldap_install.md)
+    * [wireguard](soft/wireguard/install.md)
 
 * [开发准备]()
     * [安装Node](develop/env/nodejs.md)
