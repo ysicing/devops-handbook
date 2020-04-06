@@ -6,7 +6,7 @@
 
 ```
 # Debian Bullseye 之前版本都需要启用backports源来支持安装
-apt install wireguard
+apt install wireguard -y
 ```
 
 #### macOS

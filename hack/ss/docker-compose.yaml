@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  ss:
+    image: ysicing/ss
+    container_name: ss
+    environment:
+      - PORT=25
+      - PASS=ooGhai0Thie2ievoo4ic3Vo4ei8ipaichiphohshoqueeN8sah4Haif1xoo0laiP
+      - METHOD=aes-256-cfb
+      - HOST=10.147.20.41
+    network_mode: host
+    dns: 8.8.8.8
+    restart: always

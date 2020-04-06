@@ -16,6 +16,7 @@
     * [Ingress Controller部署](install/ingress.md)
     * [Promethues部署](install/prometheus.md)
     * [k8s启用feature特性](install/feature.md)
+    * [k3s安装](install/k3s.md)
 
 * [概念篇](kubernetes/intro/index.md)
     * [部署第一个应用](kubernetes/intro/deploy.md)

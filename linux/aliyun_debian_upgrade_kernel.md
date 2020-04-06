@@ -27,7 +27,7 @@ deb http://mirrors.aliyun.com/debian-security/ buster/updates main non-free cont
 
 ```bash
 apt-get update
-apt-get dist-upgrade
+apt-get dist-upgrade -y
 ```
 
 #### 升级到最新内核
@@ -36,7 +36,7 @@ apt-get dist-upgrade
 apt-get install -t buster-backports linux-image-amd64 -y
 update-grub
 apt autoclean
-apt autoremove
+apt autoremove -y
 reboot
 ```
 
