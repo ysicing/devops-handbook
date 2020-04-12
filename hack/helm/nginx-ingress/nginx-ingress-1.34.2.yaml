@@ -190,8 +190,8 @@ controller:
   ## Node labels for controller pod assignment
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
-  nodeSelector: 
-    node-role.kubernetes.io/master: ""
+  nodeSelector: {}
+    # node-role.kubernetes.io/master: ""
 
   ## Liveness and readiness probe values
   ## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
@@ -387,7 +387,7 @@ controller:
     serviceMonitor:
       enabled: true
       additionalLabels: {}
-      namespace: ""
+      namespace: "monitoring"
       namespaceSelector: {}
       # Default: scrape .Release.Namespace only
       # To scrape all, use the following:
@@ -399,7 +399,7 @@ controller:
     prometheusRule:
       enabled: true
       additionalLabels: {}
-      namespace: ""
+      namespace: "monitoring"
       rules: 
         # These are just examples rules, please adapt them to your needs
         - alert: TooMany500s
