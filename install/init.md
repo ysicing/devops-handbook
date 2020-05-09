@@ -8,6 +8,14 @@ docker.yaml: 安装docker
 init.yaml: 系统
 ```
 
+### 命令行工具
+
+> 仅使用debian系统
+
+```
+ergo init debian -h
+```
+
 ### 宿主机初始化
 
 ```

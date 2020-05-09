@@ -1,7 +1,11 @@
 > docker快速安装
 
+## 安装
+
 ```
 curl -fsSL https://ysicing.me/hack/docker/install.sh | bash 
+或者
+ergo install docker -h
 ```
 
 做了如下设置
@@ -43,6 +47,9 @@ dps (容器状态)
 etcdcli (特别支持k8s集群的etcd)
 kbtoken (查看kuboard admin用户token)
 kdtoken (查看dashboard-admin 用户token)
+
+istioctl
+linkerd
 
 upgrade-tools // 升级二进制
 ```

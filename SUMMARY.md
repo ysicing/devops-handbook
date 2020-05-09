@@ -7,6 +7,7 @@
 ## 云原生实践
 
 * [安装集群或工具]()
+    * [运维工具ergo](install/ergo.md)
     * [docker](install/docker.md)
     * [debian初始化](install/init.md)
     * [k8s之sealos](install/sealos.md)
