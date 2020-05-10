@@ -35,6 +35,8 @@
     * [新增内网slb ingress](kubernetes/ack/ingress.md)
 * [tutorials]()
     * [部署efk(fluentd)](kubernetes/tutorials/setup_efk_logging_stack.md)
+* [服务治理]()
+    * [部署linkerdv2](kubernetes/linkerd/install.md)
 
 * [Linux](linux/index.md)
     * [Debian使用技巧](linux/linux.md)
