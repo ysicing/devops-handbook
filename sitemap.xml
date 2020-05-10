@@ -25,6 +25,7 @@
 <url> <loc>https://ysicing.me/kubernetes/ack/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/ack/ingress.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/kubernetes/tutorials/setup_efk_logging_stack.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://ysicing.me/kubernetes/linkerd/install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/linux/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/linux/linux.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://ysicing.me/linux/debian-buster-op.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
