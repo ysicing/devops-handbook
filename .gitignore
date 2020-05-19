@@ -27,3 +27,6 @@ hack/vm/kube1.17.1.backup.tar.gz
 hack/vm/kube
 
 hack/allinone/.vagrant
+
+public
+resources
