@@ -1,3 +1,22 @@
+---
+title: "k8s实践之基础概念"
+date: 2020-05-18T22:55:18+08:00
+description: "k8s实践之基础概念"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+tocLevels: ["h2", "h3", "h4"]
+tags: 
+- kubernetes
+series:
+-
+categories: 
+- kubernetes
+image:
+---
+
 ## 概念篇
 
 > Kubernetes 基本概念和使用方法

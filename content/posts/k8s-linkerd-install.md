@@ -1,3 +1,22 @@
+---
+title: "k8s实践之安装linkerdv2"
+date: 2020-05-18T22:55:18+08:00
+description: "k8s实践之安装linkerdv2"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+tocLevels: ["h2", "h3", "h4"]
+tags: 
+- linkerd
+series:
+-
+categories: 
+- kubernetes
+image:
+---
+
 ## 安装linkerd v2
 
 #### 安装二进制

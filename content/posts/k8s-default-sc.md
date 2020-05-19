@@ -1,3 +1,22 @@
+---
+title: "k8s配置默认存储"
+date: 2020-05-18T22:55:18+08:00
+description: "k8s配置默认存储"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+tocLevels: ["h2", "h3", "h4"]
+tags: 
+- 存储
+series:
+-
+categories: 
+- kubernetes
+image:
+---
+
 > 配置默认存储
 
 ```

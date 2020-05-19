@@ -1,4 +1,24 @@
-## ACK 添加内网负载均衡
+---
+title: "ACK 添加内网负载均衡"
+date: 2020-05-18T22:55:18+08:00
+description: "ACK 添加内网负载均衡"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+tocLevels: ["h2", "h3", "h4"]
+tags: 
+- ingress
+- kubernetes
+- ack
+series:
+-
+categories: 
+- kubernetes
+image:
+---
+
 
 先已经创建好内网slb,获取slb的ID为`lb-xxxx`
 

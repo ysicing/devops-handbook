@@ -4,8 +4,9 @@ ENV TZ Asia/Shanghai
 
 COPY ./public /var/www/ysicing.me/public
 
-COPY scripts/hugo/default.conf /etc/nginx/conf.d/default.conf
+COPY ./hack /var/www/ysicing.me/public/hack
 
+COPY scripts/hugo/default.conf /etc/nginx/conf.d/default.conf
 
 CMD ["/usr/local/openresty/bin/openresty", "-g", "daemon off;"]
 

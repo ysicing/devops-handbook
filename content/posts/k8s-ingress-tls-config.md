@@ -1,3 +1,23 @@
+---
+title: "nginx ingress 配置域名证书"
+date: 2020-05-18T22:55:18+08:00
+description: "nginx ingress 配置域名证书"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+tocLevels: ["h2", "h3", "h4"]
+tags: 
+- ingress
+- kubernetes
+series:
+-
+categories: 
+- kubernetes
+image:
+---
+
 > nginx ingress 配置域名证书(默认以ingress-nginx为例)
 
 ##  创建证书

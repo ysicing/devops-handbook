@@ -1,3 +1,22 @@
+---
+title: "kubectl plugin插件机制初体验之krew"
+date: 2020-05-18T22:55:18+08:00
+description: "kubectl plugin插件机制初体验之krew"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+tocLevels: ["h2", "h3", "h4"]
+tags: 
+- krew
+series:
+-
+categories: 
+- kubernetes
+image:
+---
+
 ## kubectl plugin插件机制初体验之krew
 
 ### 插件机制

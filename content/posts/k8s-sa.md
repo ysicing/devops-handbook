@@ -1,3 +1,22 @@
+---
+title: "k8s实践之资源管理的权限控制"
+date: 2020-05-18T22:55:18+08:00
+description: "k8s实践之资源管理的权限控制"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+tocLevels: ["h2", "h3", "h4"]
+tags: 
+- kubernetes
+series:
+-
+categories: 
+- kubernetes
+image:
+---
+
 ## k8s 资源管理的权限控制
 
 在k8s中，由系统自身的接口来创建和管理的账号类型只有一种，叫做`ServiceAccount`。

@@ -1,4 +1,21 @@
-## 附加组件
+---
+title: "k8s常用扩展组件"
+date: 2020-05-18T22:55:18+08:00
+description: "k8s常用扩展组件"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+tocLevels: ["h2", "h3", "h4"]
+tags: 
+- kubernetes
+series:
+-
+categories: 
+- kubernetes
+image:
+---
 
 > 扩展了Kubernetes的功能
 
