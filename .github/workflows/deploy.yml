@@ -13,29 +13,34 @@ jobs:
     steps:
     - uses: actions/checkout@v1
       with:
-        fetch-depth: 1
+        fetch-depth: 0
+        submodules: true
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.68.3'        
     - name: build
       run: |
-          make build
+          hugo --minify
           echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-          docker build -t ysicing/devops-handbook -f scripts/gitbook/Dockerfile.nginx .
+          docker build -t ysicing/devops-handbook -f scripts/hugo/Dockerfile.nginx .
           docker push ysicing/devops-handbook
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
     - name: deploy
-      uses: peaceiris/actions-gh-pages@v2
+      uses: peaceiris/actions-gh-pages@v3
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./_book
+        PUBLISH_DIR: ./public
     - name: deploy to k8s
       run: |
           docker pull ysicing/devops-handbook
           ver=$(date +%s)
           docker tag ysicing/devops-handbook ysicing/devops-handbook:$ver
           docker push ysicing/devops-handbook:$ver
-          bash scripts/gitbook/deploy.sh $TOKEN $APIURL ysicing/devops-handbook:$ver
+          bash scripts/hugo/deploy.sh $TOKEN $APIURL ysicing/devops-handbook:$ver
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}

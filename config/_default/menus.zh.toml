@@ -1,0 +1,29 @@
+[[main]]
+  identifier = "about"
+  name = "关于"
+  url = "about"
+  weight = 1
+
+[[main]]
+  identifier = "archive"
+  name = "归档"
+  url = "archive"
+  weight = 2
+
+[[main]]
+  identifier = "posts"
+  name = "博文"
+  url = "posts"
+  weight = 4
+
+[[main]]
+  identifier = "talks"
+  name = "链接"
+  url = "links"
+  weight = 5
+
+[[main]]
+  identifier = "showcase"
+  name = "开源项目"
+  url = "showcase"
+  weight = 6  

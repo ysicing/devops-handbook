@@ -13,7 +13,7 @@ install:
 
 .PHONY: serve
 serve:
-	@$(docker) gitbook serve . $(BOOK_OUTPUT)
+	@$(docker) hugo serve 
 
 .PHONY: clean
 clean:
