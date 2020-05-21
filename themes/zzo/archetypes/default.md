@@ -9,11 +9,13 @@ enableTocContent: false
 tocPosition: inner
 tocLevels: ["h2", "h3", "h4"]
 pinned: false
+author: ysicing
+authorEmoji: 🐶
 tags:
 -
 series:
 -
 categories:
 -
-image:
+image: images/custom/graph.png
 ---

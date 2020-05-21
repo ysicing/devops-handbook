@@ -10,11 +10,10 @@ tocPosition: outer
 tocLevels: ["h2", "h3", "h4"]
 tags: 
 - dns
-- AdGuard
 series:
 -
 categories: 
-- dns
+- tools
 image:
 ---
 

@@ -15,7 +15,7 @@ series:
 -
 categories: 
 - 站点
-image:
+image: images/custom/code-file.png
 ---
 
 ## 开始之前

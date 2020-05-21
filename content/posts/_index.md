@@ -1,7 +1,7 @@
 ---
 aliases: ["posts","articles","blog","showcase","docs"]
-title:  "Posts"
-author: "Hugo Authors"
+title:  "博文"
+author: "ysicing"
 tags: ["index"]
-description:  "Post page"
+description:  "博文"
 ---

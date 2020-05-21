@@ -16,7 +16,7 @@ series:
 -
 categories: 
 - kubernetes
-image:
+image: images/custom/graph.png
 ---
 
 
