@@ -1,6 +1,6 @@
 ---
-title: "开源项目"
-date: 2020-05-18T22:32:21+08:00
-description: ysicing开源项目 # For SEO
+title: "Showcase" # For SEO
+date: 2020-01-19T15:43:38+09:00
+description: My portfolio, repos, works overview page # For SEO
 enableBio: true # Set to false if you want to hide the bio component.
 ---
