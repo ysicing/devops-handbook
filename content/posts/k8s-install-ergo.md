@@ -194,7 +194,7 @@ I0523 15:35:59.920024   19284 install.go:55] 🎉 安装 tools
 
 ```
 # 安装了k8s 1.18.3, 安装了ingress, 配置nfs，默认存储类为nfs-data
-ergo install k8s --enablenfs=true --mip 11.11.11.111 --wip 11.11.11.112-11.11.11.113 --pass vagrant
+ergo install k8s --enablenfs=true --mip 11.11.11.111 --wip 11.11.11.112-11.11.11.113 --pass vagrant --ingresstype --enablekuboard --regioncn
 ```
 
 ## 验证
@@ -208,10 +208,10 @@ k8s3   Ready    <none>   87s    v1.18.3
 root@k8s1:~# kubectl get ns
 NAME              STATUS   AGE
 default           Active   2m6s
+ingress-nginx     Active   2m13s
 kube-node-lease   Active   2m7s
 kube-public       Active   2m7s
 kube-system       Active   2m8s
-nginx-ingress     Active   63s
 root@k8s1:~# kubectl get cs
 NAME                 STATUS    MESSAGE             ERROR
 controller-manager   Healthy   ok
