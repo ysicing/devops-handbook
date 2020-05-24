@@ -1,7 +1,7 @@
 ---
-title: "helm安装"
-date: 2020-05-18T22:55:18+08:00
-description: "helm安装"
+title: "helm小记"
+date: 2020-05-24T02:55:18+08:00
+description: "记录helm相关使用"
 draft: false
 hideToc: false
 enableToc: true
@@ -9,29 +9,26 @@ enableTocContent: false
 tocPosition: outer
 tocLevels: ["h2", "h3", "h4"]
 tags: 
-- kubernetes
 - helm
 series:
 -
 categories: 
-- kubernetes
 - helm
-image:
+image: images/helm/helm.svg
 ---
 
-## helm 安装
+## 安装
 
 > 安装docker时默认已经安装了helm,如果不是最新版本请`upgrade-tools`
 
 ```bash
-docker pull ysicing/tools
-docker run --rm -v /usr/local/bin:/sysdir ysicing/tools tar zxf /pkg.tgz -C /sysdir
+upgrade-tools
 # 版本
 helm version
-version.BuildInfo{Version:"v3.1.2", GitCommit:"d878d4d45863e42fd5cff6743294a11d28a9abce", GitTreeState:"clean", GoVersion:"go1.13.8"}
+version.BuildInfo{Version:"v3.2.1", GitCommit:"fe51cd1e31e6a202cba7dead9552a6d418ded79a", GitTreeState:"clean", GoVersion:"go1.13.10"}
 ```
 
-### 配置国内helm镜像库
+## 配置helm镜像库
 
 ```bash
 # 自动

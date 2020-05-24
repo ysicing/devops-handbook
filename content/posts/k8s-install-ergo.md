@@ -197,6 +197,14 @@ I0523 15:35:59.920024   19284 install.go:55] 🎉 安装 tools
 ergo install k8s --enablenfs=true --mip 11.11.11.111 --wip 11.11.11.112-11.11.11.113 --pass vagrant --ingresstype --enablekuboard --regioncn
 ```
 
+### 安装其他ingress
+
+支持`nginx-ingress`, `traefik`, `ingress-nginx`
+
+```
+ergo install ingress --ip 11.11.11.111 --pk ~/.ssh/id_rsa --regioncn --ingresstype
+```
+
 ## 验证
 
 ```

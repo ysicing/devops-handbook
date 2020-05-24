@@ -1,7 +1,7 @@
 ---
 title: "docker快速安装"
-date: 2020-05-18T22:55:18+08:00
-description: "docker快速安装"
+date: 2020-05-19T22:55:18+08:00
+description: "使用ergo快速安装docker"
 draft: false
 hideToc: false
 enableToc: true
@@ -10,15 +10,14 @@ tocPosition: outer
 tocLevels: ["h2", "h3", "h4"]
 tags: 
 - docker
-- 安装
 series:
 -
 categories: 
 - docker
-image:
+image: images/docker/docker-logo-1024x914.png
 ---
 
-## 安装
+## 安装docker
 
 ```
 curl -fsSL https://ysicing.me/hack/docker/install.sh | bash 
@@ -44,7 +43,7 @@ ergo install docker -h
 }
 ```
 
-## docker常用工具安装
+## 安装tools
 
 ```
 docker run --rm -v /usr/local/bin:/sysdir ysicing/tools tar zxf /pkg.tgz -C /sysdir
