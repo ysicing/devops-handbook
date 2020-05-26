@@ -1,6 +1,6 @@
 ---
 title: "安装golang"
-date: 2020-05-18T22:55:18+08:00
+date: 2019-05-18T22:55:18+08:00
 description: "安装golang"
 draft: false
 hideToc: false
@@ -10,24 +10,51 @@ tocPosition: outer
 tocLevels: ["h2", "h3", "h4"]
 tags: 
 - go
-- 安装
 series:
 -
 categories: 
 - go
-image:
+image: images/other/go1.svg
 ---
 
-> 主要是用于linux安装
 
+## Mac安装
 
-### 安装,配置
+如果已经安装了brew，就可以快速安装了
+
+```
+# 安装git
+brew install git
+
+# 安装go
+brew install go
+
+# add GOBIN path to your PATH in ~/.zshrc
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+export GOPATH="/Users/ysicing/go" # 示例
+export GOBIN="$GOPATH/bin"
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/opt/mysql-client/bin:$GOBIN:$PATH
+```
+
+### 配置Visual Studio Code Editor
+
+```
+快捷键cmd+shift+p
+键入: go install
+选择 "Go: Install/Update Tools"
+Check all the checkboxes
+```
+
+## Linux安装
+
+访问 [golang中国](https://golang.google.cn/dl/) 获取最新go版本
 
 ```bash
 # 下载
-wget https://dl.google.com/go/go1.13.6.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.14.3.linux-amd64.tar.gz
 # 解压
-tar -C /usr/local -xzf go1.13.3.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz
 # 配置 .bashrc
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
