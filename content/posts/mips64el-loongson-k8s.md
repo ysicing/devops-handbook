@@ -1,6 +1,6 @@
 ---
 title: "龙芯Mips64el平台上部署K8s"
-date: 2020-05-18T22:55:18+08:00
+date: 2018-05-18T22:55:18+08:00
 description: "龙芯Mips64el平台上部署K8s"
 draft: false
 hideToc: false

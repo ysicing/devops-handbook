@@ -9,7 +9,7 @@ languagedir = "ltr" # ltr / rtl
 
 themeOptions = ["solarized", "light", "dark"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "gallery"] # not allowed page types in home page. type can be set in front matter or default to folder name.
-notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery", "talks"] # not allowed page types in home page sidebar(recent post titles).
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery", "talks", "links"] # not allowed page types in home page sidebar(recent post titles).
 notAllowedTypesInArchive = ["about", "talks", "showcase", "contact", "gallery"] # not allowed page types in archive page
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 enablePinnedPosts = true # show pinned posts first in the main view
@@ -56,7 +56,7 @@ enableBio = true # in home page sidebar
 enableBioImage = false # in home page sidebar
 enableSidebar = true # Set to false to create the full width of the content.
 enableSidebarTags = true # if you want to use tags.
-enableSidebarSeries = true
+enableSidebarSeries = false
 enableSidebarCategories = true
 enableHomeSidebarTitles = true
 enableListSidebarTitles = true

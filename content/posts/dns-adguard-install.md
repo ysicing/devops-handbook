@@ -1,6 +1,6 @@
 ---
 title: "AdGuard使用姿势"
-date: 2020-05-18T22:55:18+08:00
+date: 2019-04-18T22:55:18+08:00
 description: "AdGuard使用姿势"
 draft: false
 hideToc: false

@@ -1,6 +1,6 @@
 ---
 title: "awk 中关于多个$的用法"
-date: 2020-05-18T22:55:18+08:00
+date: 2019-12-18T22:55:18+08:00
 description: "awk 中关于多个$的用法"
 draft: false
 hideToc: false
