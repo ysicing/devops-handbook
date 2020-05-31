@@ -21,7 +21,7 @@ image: images/k8s/prometheus-icon-color.png
 
 > 通过Operator创建Prometheus
 
-## 部署
+## 脚本部署
 
 ```
 #  在之前的基础上，配置了存储storageclass
@@ -33,3 +33,9 @@ bash -x ./deploy.sh
 ```
 
 与[官方](https://github.com/coreos/kube-prometheus/tree/master/manifests)的区别支持了数据持久化和域名配置,部分监控组件如etcd等
+
+## ergo安装
+
+```
+ergo install prom  --ip 10.147.20.42 --pass oac5eeWosie7aiP5Um2AeKahkaiCeigh  --domain godu.dev
+```
