@@ -1,7 +1,7 @@
 ---
-title: "使用ergo快速安装k8s1.18.3"
-date: 2020-05-22T22:55:18+08:00
-description: "本地使用ergo快速安装k8s1.18.3"
+title: "使用ergo快速安装k8s1.18.4"
+date: 2020-06-19T22:30:18+08:00
+description: "本地使用ergo快速安装k8s1.18.4"
 draft: false
 hideToc: false
 enableToc: true
@@ -17,7 +17,7 @@ categories:
 image: images/k8s/k8s02.png
 ---
 
-> 基于[sealos](https://github.com/ysicing/sealos), 一键高可用，简单上手, 安装k8s 1.18.3版本
+> 基于[sealos](https://github.com/ysicing/sealos), 一键高可用，简单上手, 安装k8s 1.18.4版本
 
 ## 准备虚拟机
 
@@ -193,7 +193,7 @@ I0523 15:35:59.920024   19284 install.go:55] 🎉 安装 tools
 > 说明，我定制了sealos和calico版本为最新版本,且使用了在线安装包
 
 ```
-# 安装了k8s 1.18.3, 安装了ingress, 配置nfs，默认存储类为nfs-data
+# 安装了k8s 1.18.4, 安装了ingress, 配置nfs，默认存储类为nfs-data
 ergo install k8s --enablenfs=true --mip 11.11.11.111 --wip 11.11.11.112-11.11.11.113 --pass vagrant --ingresstype --enablekuboard --regioncn
 ```
 
@@ -210,9 +210,9 @@ ergo install ingress --ip 11.11.11.111 --pk ~/.ssh/id_rsa --regioncn --ingressty
 ```
 root@k8s1:~# kubectl get node
 NAME   STATUS   ROLES    AGE    VERSION
-k8s1   Ready    master   2m2s   v1.18.3
-k8s2   Ready    <none>   87s    v1.18.3
-k8s3   Ready    <none>   87s    v1.18.3
+k8s1   Ready    master   2m2s   v1.18.4
+k8s2   Ready    <none>   87s    v1.18.4
+k8s3   Ready    <none>   87s    v1.18.4
 root@k8s1:~# kubectl get ns
 NAME              STATUS   AGE
 default           Active   2m6s
