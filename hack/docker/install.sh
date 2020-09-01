@@ -35,7 +35,6 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror AzureChinaCloud
 
 cat > /etc/docker/daemon.json <<EOF
 {
-  "exec-opts": ["native.cgroupdriver=systemd"],
   "registry-mirrors": ["https://reg-mirror.qiniu.com","https://dyucrs4l.mirror.aliyuncs.com","https://dockerhub.azk8s.cn"],
   "bip": "169.254.0.1/24",
   "max-concurrent-downloads": 10,
