@@ -3,16 +3,14 @@
 English | 
 [한국어](https://github.com/zzossig/hugo-theme-zzo/blob/master/README.ko.md)
 
-Minimum Hugo version changed to 0.65.0 to take advantage of new feature `.GetTerms`.
-This new feature enable asian languages correctly displayed.
-
-```html
-<ul>
-    {{ range (.GetTerms "tags") }}
-        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-   {{ end }}
-</ul>
+🔥🔥🔥
+after update the zzo theme, delete the outputs.page variable in `config.toml`.
+```diff
+[outputs]
+  <del>page = ["HTML", "SearchIndex"]</del>
 ```
+I changed the place to make search index
+🔥🔥🔥
 
 Thank you for click me!. Zzo theme is a blog theme powered by Hugo with free(always), and many features. 
 
@@ -240,10 +238,12 @@ notAllowedTypesInHome = ["contact", "talks", "about", "showcase"] # not allowed 
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"] # not allowed page types in home page sidebar(recent post titles).
 notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page types in archive page
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+enablePinnedPosts = true # show pinned posts first in the main view
 
 viewportSize = "normal" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
+minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -324,6 +324,8 @@ commento = false
 [utterances]       # https://utteranc.es/
   owner = ""              # Your GitHub ID
   repo = ""               # The repo to store comments
+  message = ""      # Optional
+  link = ""         # Optional
 
 [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
   owner = ""              # Your GitHub ID

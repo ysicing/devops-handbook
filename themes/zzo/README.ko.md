@@ -3,7 +3,14 @@
 [English](https://github.com/zzossig/hugo-theme-zzo/blob/master/README.md) | 
 한국어
 
-🔥🔥🔥🤓최소로 지원가능한 Hugo 버전이 0.60.0으로 변경되었습니다. 이전 버전과는 다르게 아예 마크다운 렌더링 라이브러리 자체가 변경되어(blackfridy에서 goldmark로), 혹여 이전버전을 사용하고 계시다면, 최신 Hugo 버전을 설치하시는걸 권장드립니다.🔥🔥🔥
+🔥🔥🔥
+zzo theme을 업데이트한 후 `config.toml` 파일에서 page 변수를 삭제해주세요
+```diff
+[outputs]
+  <del>page = ["HTML", "SearchIndex"]</del>
+```
+검색 관련 인덱스 생성위치를 변경했습니다
+🔥🔥🔥
 
 클릭해 주셔서 감사합니다. Zzo theme은 많은 기능을 지원하고있고 있습니다. 기술 블로그를 운영하기에 최적화 되어있습니다!(적어도 제생각엔...)
 Zzo theme을 이용할 시 가장 매력적인 포인트 한가지는, 한글로 저와 소통할 수 있다는 점? 입니다. 
@@ -240,10 +247,12 @@ notAllowedTypesInHome = ["contact", "talks", "about", "showcase"] # not allowed 
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"] # not allowed page types in home page sidebar(recent post titles).
 notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page types in archive page
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+enablePinnedPosts = true # show pinned posts first in the main view
 
 viewportSize = "normal" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
+minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -329,6 +338,8 @@ commento = false
 [utterances]       # https://utteranc.es/
   owner = ""              # Your GitHub ID
   repo = ""               # The repo to store comments
+  message = ""      # Optional
+  link = ""         # Optional
 
 [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
   owner = ""              # Your GitHub ID
