@@ -30,18 +30,6 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: deploy to k8s
-      run: |
-          docker pull ysicing/devops-handbook
-          ver=$(date +%s)
-          docker tag ysicing/devops-handbook ysicing/devops-handbook:$ver
-          docker push ysicing/devops-handbook:$ver
-          bash scripts/hugo/deploy.sh $TOKEN $APIURL ysicing/devops-handbook:$ver
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        TOKEN: ${{ secrets.TOKEN }}
-        APIURL: ${{ secrets.APIURL }}
     - name: deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
