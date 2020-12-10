@@ -3,9 +3,9 @@
 go::install(){
     pushd /tmp
     # 下载
-    wget https://dl.google.com/go/go1.13.6.linux-amd64.tar.gz
+    wget https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz
     # 解压
-    tar -C /usr/local -xzf go1.13.6.linux-amd64.tar.gz
+    tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
     popd 
 }
 
