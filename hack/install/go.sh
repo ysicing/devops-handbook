@@ -11,11 +11,11 @@ go::install(){
 
 go::config(){
     cat >> /root/.bashrc <<EOF
-    export GO111MODULE=on
-    export GOPROXY=https://goproxy.cn
-    export GOPATH="/root/go"
-    export GOBIN="$GOPATH/bin"
-    export PATH=$PATH:$GOBIN:/usr/local/go/bin
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+export GOPATH="/root/go"
+export GOBIN="$GOPATH/bin"
+export PATH=$PATH:$GOBIN:/usr/local/go/bin
 EOF
 
     source /root/.bashrc
