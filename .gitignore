@@ -1,0 +1,29 @@
+# Node rules:
+## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+## Dependency directory
+## Commenting this out is preferred by some people, see
+## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Book build output
+_book
+
+# eBook build output
+*.epub
+*.mobi
+*.pdf
+
+# Github Pages
+.DS_Store
+
+# IDEA
+*.iml
+.idea
+hack/vm/.vagrant
+!hack/vm/kube1.17.1.tar.gz
+hack/vm/kube1.17.1.backup.tar.gz
+hack/vm/kube
+
+hack/allinone/.vagrant
