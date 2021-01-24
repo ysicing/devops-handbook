@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM ysicing/alpine
 
 LABEL maintainer="ysicing <i@ysicing.me>"
 

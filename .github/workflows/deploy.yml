@@ -1,15 +1,15 @@
-name: deloy ysicing.me
+name: deloy 2021.ysicing.me
 on:
   push:
     branches:
-    - master
+    - 2021
   schedule:
     - cron: '0 */8 * * *'
 
 jobs:
   build:
     name: build & deploy
-    runs-on: 	ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
       with:
@@ -18,8 +18,8 @@ jobs:
       run: |
           make build
           echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-          docker build -t ysicing/devops-handbook -f scripts/gitbook/Dockerfile.nginx .
-          docker push ysicing/devops-handbook
+          docker build -t ysicing/devops-handbook:2021 -f scripts/gitbook/Dockerfile.nginx .
+          docker push ysicing/devops-handbook:2021
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
@@ -29,15 +29,3 @@ jobs:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./_book
-    - name: deploy to k8s
-      run: |
-          docker pull ysicing/devops-handbook
-          ver=$(date +%s)
-          docker tag ysicing/devops-handbook ysicing/devops-handbook:$ver
-          docker push ysicing/devops-handbook:$ver
-          bash scripts/gitbook/deploy.sh $TOKEN $APIURL ysicing/devops-handbook:$ver
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        TOKEN: ${{ secrets.TOKEN }}
-        APIURL: ${{ secrets.APIURL }}

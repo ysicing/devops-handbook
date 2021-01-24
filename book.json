@@ -5,22 +5,21 @@
     "author": "ysicing",
     "links": {
         "sidebar": {
-            "ysicing": "https://github.com/ysicing",
-	    "资源下载": "https://ysicing.me/hack/",
-	    "科学快人一步": "https://justmysocks1.net/members/aff.php?aff=2191"
+            "科学快人一步": "https://justmysocks1.net/members/aff.php?aff=2191",
+            "科学快人两步": "https://kgcloud.club/#/register?code=Z0kEyBC9"
         }
     },
     "plugins": [
         "github",
         "codesnippet",
         "splitter",
-        "page-toc-button",
+        "ancre-navigation",
         "image-captions",
         "editlink",
         "back-to-top-button",
         "-lunr", "-search", "search-plus",
-        "github-buttons@2.1.0",
-        "tbfed-pagefooter@^0.0.1",
+        "github-buttons",
+        "tbfed-pagefooter",
         "theme-default",
         "-highlight", "prism", "prism-themes",
         "sitemap-general",
@@ -30,6 +29,12 @@
         "copy-code-button",
         "alerts","-sharing"
     ],
+    "pdf": {
+        "toc": true,
+        "pageNumbers": true,
+        "fontSize": 11
+    },
+    "generator": "site",
     "pluginsConfig": {
         "theme-default": {
             "showLevel": true
@@ -45,7 +50,7 @@
             "caption": "图片 - _CAPTION_"
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © 2020 | 仅供学习参考,不可用于其他途径.",
+            "copyright": "Copyright © 2021 | 仅供学习参考,不可用于其他途径.",
             "modify_label": " Updated at ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
