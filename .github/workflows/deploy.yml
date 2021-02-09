@@ -2,7 +2,7 @@ name: deloy 2021.ysicing.me
 on:
   push:
     branches:
-    - 2021
+    - "2021"
   schedule:
     - cron: '0 */8 * * *'
 
