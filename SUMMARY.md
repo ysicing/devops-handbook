@@ -2,6 +2,13 @@
 
 * [序言](README.md)
 
+## Linux使用 <a id="linux"></a>
+
+* [Debian](linux/debian/README.md)
+    * [初始化](linux/debian/init-system.md)
+    * [升级内核](linux/debian/upcore.md)
+* [CetnOS](linux/centos/README.md)
+
 ## 实践案例 <a id="practice"></a>
 
 * [实践概览](practice/index.md)

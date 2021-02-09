@@ -11,22 +11,19 @@
     },
     "plugins": [
         "github",
-        "codesnippet",
-        "splitter",
-        "ancre-navigation",
-        "image-captions",
+        "mermaid",
         "editlink",
-        "back-to-top-button",
-        "-lunr", "-search", "search-plus",
+        "page-toc",
+        "-lunr", 
+        "-search", 
+        "search-plus",
         "github-buttons",
         "tbfed-pagefooter",
-        "theme-default",
         "-highlight", "prism", "prism-themes",
         "sitemap-general",
         "lightbox",
         "ga",
-        "copy-code-button",
-        "alerts","-sharing"
+        "copy-code-button"
     ],
     "pdf": {
         "toc": true,
@@ -35,18 +32,12 @@
     },
     "generator": "site",
     "pluginsConfig": {
-        "theme-default": {
-            "showLevel": true
-        },
         "github": {
             "url": "https://github.com/ysicing/devops-handbook"
         },
         "editlink": {
             "base": "https://github.com/ysicing/devops-handbook/blob/master/",
             "label": "编辑本页"
-        },
-        "image-captions": {
-            "caption": "图片 - _CAPTION_"
         },
         "tbfed-pagefooter": {
             "copyright": "Copyright © 2021 | 仅供学习参考,不可用于其他途径.",
@@ -63,6 +54,11 @@
         },
         "ga": {
             "token": "UA-79417627-2"
+        },
+        "page-toc": {
+            "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3",
+            "position": "before-first",
+            "showByDefault": true
         }
     }
 }
