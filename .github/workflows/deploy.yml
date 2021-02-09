@@ -2,9 +2,7 @@ name: deloy 2021.ysicing.me
 on:
   push:
     branches:
-    - "2021"
-  schedule:
-    - cron: '0 */8 * * *'
+      - "2021"
 
 jobs:
   build:
@@ -12,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
     - name: build
       run: |
           make build
