@@ -12,6 +12,8 @@
 ## 实践案例 <a id="practice"></a>
 
 * [实践概览](practice/index.md)
+    * [负载均衡](practice/loadbalancer/README.md)
+        * [metallb部署使用](practice/loadbalancer/metallb.md)
     * [存储](practice/storage/README.md)
         * [网络文件系统(NFS)存储持久卷](practice/storage/nfs-pv.md)
 * [服务治理](practice/devops/README.md)
