@@ -16,7 +16,11 @@
         * [metallb部署使用](practice/loadbalancer/metallb.md)
     * [存储](practice/storage/README.md)
         * [网络文件系统(NFS)存储持久卷](practice/storage/nfs-pv.md)
-* [服务治理](practice/devops/README.md)
+        * [OpenEBS安装](practice/storage/openebs-install.md)
+
+* [服务治理](practice/observe/README.md)
+    * [istio](practice/observe/istio/README.md)
+        * [istio1.9.0安装](practice/observe/istio/istio-install.md)
 * [Devops](practice/devops/README.md)
 
 ## 排错指南 <a id="troubleshooting"></a>
