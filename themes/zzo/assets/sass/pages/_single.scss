@@ -22,6 +22,19 @@
     }
   }
 
+  &__subtitle {
+    margin-bottom: 1.75rem;
+    font-family: $title-font;
+    
+    @include themify($themes) {
+      color: themed("toc-title-color");
+    }
+
+    &[data-ani="true"] {
+      @include animation('slide-in-down .2s .3s 1 ease-in both');
+    }
+  }
+
   &__shorttitle {
     font-size: 1.5rem;
     font-family: $title-font;
@@ -86,7 +99,7 @@
     margin: 1rem 0;
     font-size: 1rem;
     line-height: 1.7;
-    width: inheirt;
+    width: inherit;
     max-width: inherit;
     h1,
     h2,
@@ -236,19 +249,12 @@
       @include clippy();
       @include transition(all, 0.2s, ease);
     }
-    .copy-to-clipboard:hover {
-      @include translateY(-0.1rem);
-    }
     .chroma .copy-to-clipboard {
       position: absolute;
       right: 4px;
       top: 5px;      
       border-radius: 2px;
       z-index: z('clipboard');
-      @include transition(all, 0.2s, ease);
-    }
-    .chroma .copy-to-clipboard:hover {
-      @include translateY(-0.1rem);
     }
     .language-code .copy-to-clipboard {
       position: absolute;
@@ -256,10 +262,6 @@
       top: 5px;      
       border-radius: 2px;
       z-index: z('clipboard');
-      @include transition(all, 0.2s, ease);
-    }
-    .language-code .copy-to-clipboard:hover {
-      @include translateY(-0.1rem);
     }
     .highlight > .copy-to-clipboard {
       position: absolute;
@@ -267,10 +269,6 @@
       top: 5px;      
       border-radius: 2px;
       z-index: z('clipboard');
-      @include transition(all, 0.2s, ease);
-    }
-    .highlight > .copy-to-clipboard:hover {
-      @include translateY(-0.1rem);
     }
 
     blockquote {
@@ -556,8 +554,7 @@ pre:not(.chroma) {
       font-size: 13.8px;
       font-family: $title-font;
       font-weight: bold;
-      display: inline-block;
-      text-transform: capitalize;      
+      display: inline-block;      
       content: attr(data-lang);
 
       @include themify($codeblock) {

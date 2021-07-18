@@ -10,6 +10,11 @@
 
 .hide {
   display: none;
+  &-mobile {
+    @media only screen and (max-width: 769px) {
+      display: none;
+    }
+  }
 }
 
 .grow {
@@ -20,6 +25,10 @@
   @include flexbox();
   @include align-items(center);
   @include justify-content(center);
+}
+
+.flexwrap {
+  @include flex-wrap(wrap);
 }
 
 .basicflex-column {

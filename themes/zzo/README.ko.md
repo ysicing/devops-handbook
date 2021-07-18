@@ -18,7 +18,7 @@ Zzo theme을 이용할 시 가장 매력적인 포인트 한가지는, 한글로
 ## Documentation
 
 영문버전 도큐먼트
-[https://zzodocs.netlify.com/docs/](https://zzodocs.netlify.com/docs/)
+[https://zzo-docs.vercel.app/zzo](https://zzo-docs.vercel.app/zzo)
 
 ## Table of contents
 
@@ -254,8 +254,13 @@ enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
 
+# appbar
+enableAppbarSearchIcon = false
+enableAppbarLangIcon = false
+
 # header
-homeHeaderType = "text" # text, img, slide
+homeHeaderType = "text" # text, img, slide, typewriter
+hideHomeHeaderWhenMobile = false
 
 # menu
 showMobileMenuTerms = ["tags", "categories", "series"]
@@ -263,10 +268,15 @@ showMobileMenuTerms = ["tags", "categories", "series"]
 # navbar
 enableThemeChange = true # site color theme
 
-# body
-enableBreadcrumb = true # breadcrumb for list, single page
+# search
 enableSearch = true # site search with fuse
 enableSearchHighlight = true # when true, search keyword will be highlighted
+searchContent = true # include content to search index
+searchDistance = 100 # fuse option: distance
+searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
+
+# body
+enableBreadcrumb = true # breadcrumb for list, single page
 enableGoToTop = true # scroll to top
 enableWhoami = true # at the end of single page
 summaryShape = "classic" # card, classic, compact
@@ -800,7 +810,7 @@ root/assets/scss/custom.scss
 
 홈페이지에서 헤더 부분에 4가지 종류의 헤더를 입힐 수 있습니다. 슬라이더, 이미지, 텍스트, 그리고 아무것도 입력 안하시면 빈공간이 됩니다.
 
-1. config/_default/params.toml 설정파일에 homeHeaderType 값을 변경해주세요. 가능한 값은 slide, img, text입니다.
+1. config/_default/params.toml 설정파일에 homeHeaderType 값을 변경해주세요. 가능한 값은 slide, img, text, typewriter입니다.
 
 2. root/content/_index.md에 _index.md 파일을 만들어주세요 그리고 아래 내용을 복붙해주세요.
 

@@ -1,8 +1,7 @@
 {{ $js := .Site.Data.lib.js }}
 {{ $css := .Site.Data.lib.css }}
+{{ $d3 := .Site.Data.lib.d3 }}
 
-{{ $clipboard := resources.Get "js/clipboard.min.js" | resources.Fingerprint }}
-<script defer src="{{ $clipboard.RelPermalink }}"></script>
 {{ $getParents := resources.Get "js/helper/getParents.js" | resources.Minify }}
 <script defer src="{{ $getParents.RelPermalink }}"></script>
 {{ $closest := resources.Get "js/helper/closest.js" | resources.Minify }}
@@ -13,6 +12,108 @@
 <script defer src="{{ $prop.RelPermalink }}"></script>
 {{ $fadeinout := resources.Get "js/helper/fadeinout.js" | resources.Minify }}
 <script defer src="{{ $fadeinout.RelPermalink }}"></script>
+{{ $throttle := resources.Get "js/helper/throttle.js" | resources.Minify }}
+<script defer src="{{ $throttle.RelPermalink }}"></script>
+
+{{ if in .Params.Libraries "d3" }}
+  <script defer src="{{ $d3.d3.url }}" integrity="{{ $d3.d3.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_hierarchy" }}
+  <script defer src="{{ $d3.d3_hierarchy.url }}" integrity="{{ $d3.d3_hierarchy.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_chord" }}
+  <script defer src="{{ $d3.d3_chord.url }}" integrity="{{ $d3.d3_chord.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_scale" }}
+  <script defer src="{{ $d3.d3_scale.url }}" integrity="{{ $d3.d3_scale.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_array" }}
+  <script defer src="{{ $d3.d3_array.url }}" integrity="{{ $d3.d3_array.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_time" }}
+  <script defer src="{{ $d3.d3_time.url }}" integrity="{{ $d3.d3_time.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_color" }}
+  <script defer src="{{ $d3.d3_color.url }}" integrity="{{ $d3.d3_color.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_interpolate" }}
+  <script defer src="{{ $d3.d3_interpolate.url }}" integrity="{{ $d3.d3_interpolate.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_format" }}
+  <script defer src="{{ $d3.d3_format.url }}" integrity="{{ $d3.d3_format.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_shape" }}
+  <script defer src="{{ $d3.d3_shape.url }}" integrity="{{ $d3.d3_shape.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_time_format" }}
+  <script defer src="{{ $d3.d3_time_format.url }}" integrity="{{ $d3.d3_time_format.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_geo" }}
+  <script defer src="{{ $d3.d3_geo.url }}" integrity="{{ $d3.d3_geo.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_path" }}
+  <script defer src="{{ $d3.d3_path.url }}" integrity="{{ $d3.d3_path.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_collection" }}
+  <script defer src="{{ $d3.d3_collection.url }}" integrity="{{ $d3.d3_collection.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_timer" }}
+  <script defer src="{{ $d3.d3_timer.url }}" integrity="{{ $d3.d3_timer.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_ease" }}
+  <script defer src="{{ $d3.d3_ease.url }}" integrity="{{ $d3.d3_ease.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_dispatch" }}
+  <script defer src="{{ $d3.d3_dispatch.url }}" integrity="{{ $d3.d3_dispatch.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_selection" }}
+  <script defer src="{{ $d3.d3_selection.url }}" integrity="{{ $d3.d3_selection.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_transition" }}
+  <script defer src="{{ $d3.d3_transition.url }}" integrity="{{ $d3.d3_transition.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_force" }}
+  <script defer src="{{ $d3.d3_force.url }}" integrity="{{ $d3.d3_force.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_quadtree" }}
+  <script defer src="{{ $d3.d3_quadtree.url }}" integrity="{{ $d3.d3_quadtree.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_dsv" }}
+  <script defer src="{{ $d3.d3_dsv.url }}" integrity="{{ $d3.d3_dsv.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_drag" }}
+  <script defer src="{{ $d3.d3_drag.url }}" integrity="{{ $d3.d3_drag.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_axis" }}
+  <script defer src="{{ $d3.d3_axis.url }}" integrity="{{ $d3.d3_axis.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_random" }}
+  <script defer src="{{ $d3.d3_random.url }}" integrity="{{ $d3.d3_random.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_scale_chromatic" }}
+  <script defer src="{{ $d3.d3_scale_chromatic.url }}" integrity="{{ $d3.d3_scale_chromatic.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_fetch" }}
+  <script defer src="{{ $d3.d3_fetch.url }}" integrity="{{ $d3.d3_fetch.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_voronoi" }}
+  <script defer src="{{ $d3.d3_voronoi.url }}" integrity="{{ $d3.d3_voronoi.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_brush" }}
+  <script defer src="{{ $d3.d3_brush.url }}" integrity="{{ $d3.d3_brush.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_zoom" }}
+  <script defer src="{{ $d3.d3_zoom.url }}" integrity="{{ $d3.d3_zoom.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_polygon" }}
+  <script defer src="{{ $d3.d3_polygon.url }}" integrity="{{ $d3.d3_polygon.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_contour" }}
+  <script defer src="{{ $d3.d3_contour.url }}" integrity="{{ $d3.d3_contour.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_cloud" }}
+  <script defer src="{{ $d3.d3_cloud.url }}" integrity="{{ $d3.d3_cloud.sri }}" crossorigin="anonymous"></script>
+{{ end }}
 
 {{ if in .Params.Libraries "mermaid" }}
   <script defer src="{{ $js.mermaid.url }}" integrity="{{ $js.mermaid.sri }}" crossorigin="anonymous"></script>
@@ -30,35 +131,23 @@
 {{ end }}
 
 {{ if in .Params.Libraries "mathjax" }}
-  <script type="text/javascript" async src="{{ $js.mathjax.url }}?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$']],
-        processEscapes: true,
-        processEnvironments: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        TeX: {
-          equationNumbers: { autoNumber: "AMS" },
-          extensions: ["AMSmath.js", "AMSsymbols.js"]
-        }
-      }
-    });
-    MathJax.Hub.Queue(function () {
-      // Fix <code> tags after MathJax finishes running. This is a
-      // hack to overcome a shortcoming of Markdown. Discussion at
-      // https://github.com/mojombo/jekyll/issues/199
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-
-    MathJax.Hub.Config({
-      // Autonumbering by mathjax
-      TeX: { equationNumbers: { autoNumber: "AMS" } }
-    });
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    }
+  };
   </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script async src="{{ $js.mathjax.url }}" id="MathJax-script"></script>
 {{ end }}
 
 {{ if in .Params.Libraries "msc" }}
@@ -103,6 +192,7 @@
     // =================================================================
 
 
+
     // ============================== toc ==============================
     {{ $enableToc := ($.Param "enableToc") }}
     {{ $toc := ($.Param "toc") }}
@@ -118,6 +208,18 @@
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
+
+      tableOfContentsElem.onmouseenter = function() {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      tableOfContentsElem.onmouseleave = function() {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.add('scrolling');
+        }
+      }
 
       if (false === tocFolding) {
 
@@ -137,10 +239,13 @@
           tableOfContentsElem.querySelectorAll('a').forEach(function (elem) {
             elem.addEventListener('click', function () {
               var id = elem.getAttribute('id');
-              navbar.classList.remove('navbar--show');
-              navbar.classList.remove('navbar--hide');
-              navbar.classList.add('navbar--hide');
 
+              if (!navbar.classList.contains('scrolling')) {
+                navbar.classList.remove('navbar--show');
+                navbar.classList.remove('navbar--hide');
+                navbar.classList.add('navbar--hide');
+              }
+              
               document.querySelector('.toc').querySelectorAll('a').forEach(function (elem) {
                 elem.classList.remove('active');
               });
@@ -233,18 +338,24 @@
       }) : null;
     }
     // =================================================================
-
-
-    // ======================== markdown table =========================
-    var tables = document.querySelectorAll('.single__contents > table');
-    for (let i = 0; i < tables.length; i++) {
-      var table = tables[i];
-      var wrapper = document.createElement('div');
-      wrapper.className = 'table-wrapper';
-      table.parentElement.replaceChild(wrapper, table);
-      wrapper.appendChild(table);
+    
+    
+    
+    // ======================== TOC height calc ========================
+    var topOffset = 120;
+    var botOffset = 70;
+    var handleWindowResize = function () {
+      if (tocElem) {
+        tocElem.style.maxHeight = (window.innerHeight - topOffset - botOffset) + 'px';
+      }
     }
+    var throttledWindowResize = throttle(handleWindowResize, 300);
+    throttledWindowResize()
+
+    
+    window.addEventListener('resize', throttledWindowResize);
     // =================================================================
+
 
 
     // ==================== add links in all titles ====================
@@ -256,20 +367,22 @@
 
     headers ? 
     headers.forEach(function (elem) {
+      var size = parseInt(elem.tagName.substr(1), 10) * 2;
       var url = encodeURI(document.location.origin + document.location.pathname);
       var link = url + "#" + elem.getAttribute('id');
       var newElemOuter = document.createElement('span');
       newElemOuter.classList.add('anchor');
       newElemOuter.classList.add('hide');
-      newElemOuter.setAttribute('data-clipboard-text', link);
+      newElemOuter.setAttribute('data-clipboard-text', decodeURI(link));
       newElemOuter.style.position = 'relative';
 
       var newElemInner = document.createElement('span');
-      newElemInner.style.fontSize = '1rem';
       newElemInner.style.position = 'absolute';
       newElemInner.style.top = '50%';
+      newElemInner.style.left = '0.75rem';
       newElemInner.style.transform = 'translateY(-50%)';
-      newElemInner.innerText = "🔗";
+      newElemInner.innerHTML = `
+<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="${32 - size}px" height="${32 - size}px"><path d="M 5.5625 0 C 4.136719 0 2.707031 0.542969 1.625 1.625 C -0.539063 3.789063 -0.539063 7.335938 1.625 9.5 L 5.28125 13.15625 C 5.667969 13.554688 6.304688 13.558594 6.703125 13.171875 C 7.101563 12.785156 7.105469 12.148438 6.71875 11.75 L 3.03125 8.0625 C 1.632813 6.664063 1.632813 4.429688 3.03125 3.03125 C 4.429688 1.632813 6.664063 1.632813 8.0625 3.03125 L 12.96875 7.9375 C 14.367188 9.335938 14.367188 11.570313 12.96875 12.96875 C 12.804688 13.132813 12.621094 13.25 12.4375 13.375 C 11.980469 13.6875 11.859375 14.308594 12.171875 14.765625 C 12.484375 15.222656 13.105469 15.34375 13.5625 15.03125 C 13.847656 14.835938 14.125 14.625 14.375 14.375 C 16.539063 12.210938 16.539063 8.664063 14.375 6.5 L 9.5 1.625 C 8.417969 0.542969 6.988281 0 5.5625 0 Z M 10.78125 8.875 C 10.738281 8.882813 10.695313 8.894531 10.65625 8.90625 C 10.507813 8.9375 10.371094 9 10.25 9.09375 C 10.039063 9.253906 9.820313 9.429688 9.625 9.625 C 7.460938 11.789063 7.460938 15.335938 9.625 17.5 L 14.5 22.375 C 16.664063 24.539063 20.210938 24.539063 22.375 22.375 C 24.539063 20.210938 24.539063 16.664063 22.375 14.5 L 18.71875 10.875 C 18.476563 10.578125 18.089844 10.441406 17.714844 10.527344 C 17.34375 10.613281 17.050781 10.90625 16.964844 11.277344 C 16.878906 11.652344 17.015625 12.039063 17.3125 12.28125 L 20.96875 15.9375 C 22.367188 17.335938 22.367188 19.570313 20.96875 20.96875 C 19.570313 22.367188 17.335938 22.367188 15.9375 20.96875 L 11.03125 16.0625 C 9.632813 14.664063 9.632813 12.429688 11.03125 11.03125 C 11.152344 10.90625 11.300781 10.820313 11.4375 10.71875 C 11.839844 10.472656 12.015625 9.976563 11.855469 9.53125 C 11.699219 9.085938 11.25 8.8125 10.78125 8.875 Z"/></svg>`;
 
       if (languagedir === "rtl") {
         newElemInner.style.left = '-2rem';
@@ -306,130 +419,6 @@
     // =================================================================
 
 
-    // =========================== clipboard ===========================
-    var clipInit = false;
-    var preChromaElem = document.querySelectorAll('pre.chroma');
-    var langCodeElem = document.querySelectorAll('.language-code');
-    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
-    var gtCodeElem = document.querySelectorAll('div.language-\\>');
-
-    var makeClipboard = function(elem) {
-      var code = elem,
-        text = elem.textContent;
-        
-      if (text.length > 15) {
-        if (!clipInit) {
-          var text, clip = new ClipboardJS('.copy-to-clipboard', {
-            text: function (trigger) {
-              var codeElem = prev(trigger).querySelectorAll('code');
-              if (codeElem.length > 1) {
-                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
-              } else {
-                text = prev(trigger).querySelector('code').textContent;
-              }
-
-              return text.replace(/^\$\s/gm, '');
-            }
-          });
-
-          var inPre;
-          clip.on('success', function (e) {
-            e.clearSelection();
-            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
-            e.trigger.classList.add('tooltipped');
-            e.trigger.classList.add('tooltipped-w');
-          });
-
-          clip.on('error', function (e) {
-            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', e.action.toString());
-            e.trigger.classList.add('tooltipped');
-            e.trigger.classList.add('tooltipped-w');
-          });
-
-          clipInit = true;
-        }
-
-        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
-        var isNotAllowedIncluded = false;
-        var curClassName = code.getAttribute('class');
-
-        for (var i = 0; i < notAllowedClass.length; i++) {
-          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
-            isNotAllowedIncluded = true;
-            break;
-          }
-        }
-
-        if (!isNotAllowedIncluded) {
-          if (curClassName) {
-            var newClipboardElem = document.createElement('span');
-            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
-            newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
-          }
-        }
-      }
-    }
-
-    var makeSymbolClipboard = function(elem) {
-      var clipboardSpan = document.createElement('span');
-      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
-      clipboardSpan.setAttribute('title', 'Copy to clipboard');
-      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
-    }
-
-    preChromaElem ? 
-    preChromaElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function(codeElem) {
-        makeClipboard(codeElem);
-      });
-    }) : null;
-    
-    langCodeElem ? 
-    langCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeClipboard(codeElem);
-      });
-    }) : null;
-
-    dollarCodeElem ? 
-    dollarCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeSymbolClipboard(codeElem);
-      });
-    }) : null;
-
-    gtCodeElem ?
-    gtCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeSymbolClipboard(codeElem);
-      });
-    }) : null;
-    // =================================================================
-
-
-    // ================ codeblock line number to symbol ================
-    dollarCodeElem ?
-    dollarCodeElem.forEach(function(elem) {
-      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
-      lnts ? 
-      lnts.forEach(function(lnt) {
-        lnt.innerHTML = '$<br/>';
-      }) : null;
-    }) : null;
-
-    gtCodeElem ?
-    gtCodeElem.forEach(function(elem) {
-      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
-      lnts ? 
-      lnts.forEach(function(lnt) {
-        lnt.innerHTML = '><br/>';
-      }) : null;
-    }) : null;
-    // =================================================================
-
 
     // ============================ mermaid ============================
     {{ $lib := .Params.libraries }}
@@ -463,6 +452,7 @@
       });
     }
     // =================================================================
+
     
 
     // ============================= katex =============================
@@ -480,6 +470,7 @@
       renderMathInElement(document.querySelector('.single__contents'), options);
     }
     // =================================================================
+
 
 
     // ========================= flowchart.js ==========================
@@ -507,9 +498,14 @@
     }
     // =================================================================
 
+    
 
     // ============================ mathjax ============================
+    document.querySelectorAll("mjx-container").forEach(function (x) {
+      x.parentElement.classList += 'has-jax'
+    });
     // =================================================================
+
 
 
     // ====================== js-sequence-diagram ======================
@@ -533,6 +529,7 @@
       });
     }
     // =================================================================
+
 
 
     // =========================== chart.js ============================
@@ -576,6 +573,7 @@
     // =================================================================
 
 
+
     // =========================== wavedrom ============================
     if (lib && lib.includes('wavedrom')) {
       var wavePrefix = "language-wave";
@@ -596,6 +594,7 @@
       });
     }
     // =================================================================
+
 
 
     // ========================== viz diagram ==========================

@@ -1,11 +1,12 @@
-code.has-jax {
-  font: inherit;
-  font-size: 100%;
-  background: inherit;
-  border: inherit;
-  color: #515151;
+.MathJax {
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
 }
 
-.MathJax {
-  font-size: 120% !important;
+code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
 }
