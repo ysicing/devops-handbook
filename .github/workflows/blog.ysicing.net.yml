@@ -33,6 +33,7 @@ jobs:
         extended: true        
     - name: build
       run: |
+          cp -a scripts/config/blog.ysicing.net.params.toml config/_default/params.toml
           cp -a scripts/config/blog.ysicing.net.toml config/_default/config.toml
           hugo --minify
           docker build -t ysicing/devops-handbook:blog.ysicing.net -f scripts/caddy/blog.ysicing.net/Dockerfile .
