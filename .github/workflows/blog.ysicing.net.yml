@@ -33,6 +33,8 @@ jobs:
         extended: true        
     - name: build
       run: |
+          rm -rf config/_default/params.toml
+          rm -rf config/_default/config.toml
           cp -a scripts/config/blog.ysicing.net.params.toml config/_default/params.toml
           cp -a scripts/config/blog.ysicing.net.toml config/_default/config.toml
           hugo --minify
