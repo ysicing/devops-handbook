@@ -85,7 +85,7 @@ busuanziSitePV = true # site total page view count
 busuanziPagePV = true # post view count
 
 enableumami = true
-umamiID = "a7e985b0-7a4e-4dee-a31f-190046c760cb"
+umamiID = "794acf15-ac76-448c-a1f7-63ead5229352"
 
 # comment
 enableComment = false

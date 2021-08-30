@@ -1,0 +1,54 @@
+baseURL = "https://blog.ysicing.net/"
+title = "运维指南" #
+theme = "zzo"
+
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = true
+hasCJKLanguage = true
+
+summaryLength = 70
+buildFuture = true
+
+copyright = "©{year}, All Rights Reserved"
+timeout = 10000
+enableEmoji = true
+paginate = 10
+rssLimit = 100
+
+enableGitInfo = false 
+googleAnalytics = "6C2eF2ifIPu7u8lWFgdBAvJ77nQ_7ufGPK1MRpieszA"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+      unsafe = true
+      xHTML = true
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+[outputs]
+  page = ["HTML", "SearchIndex"]
+  home = ["HTML", "RSS", "SearchIndex"]
+  section = ["HTML", "RSS", "SearchIndex"]
+  taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
+  taxonomy = ["HTML", "RSS", "SearchIndex"]
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true  
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"

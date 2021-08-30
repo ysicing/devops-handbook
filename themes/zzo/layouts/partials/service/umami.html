@@ -1,0 +1,4 @@
+{{ if .Site.Params.enableumami }}
+{{ $umamiID := .Site.Params.umamiID }}
+  <script async defer data-website-id="{{ $umamiID }}" src="https://umami.external.ysicing.net/umami.js"></script>
+{{ end }}

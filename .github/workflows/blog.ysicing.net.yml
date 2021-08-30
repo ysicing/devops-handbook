@@ -1,0 +1,41 @@
+name: deloy blog.ysicing.net
+on:
+  push:
+    branches:
+    - master
+  schedule:
+    - cron: '0 */8 * * *'
+
+jobs:
+  build:
+    name: build & deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+        submodules: true
+    - name: Login GHCR
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GHCRIO }}
+    - name: Login Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.85.0'
+        extended: true        
+    - name: build
+      run: |
+          cp -a scripts/config/blog.ysicing.net.toml config/_default/config.toml
+          hugo --minify
+          docker build -t ysicing/devops-handbook:blog.ysicing.net -f scripts/caddy/blog.ysicing.net/Dockerfile .
+          docker push ysicing/devops-handbook:blog.ysicing.net
+          docker tag ysicing/devops-handbook:blog.ysicing.net ghcr.io/ysicing/devops-handbook:blog.ysicing.net
+          docker push ghcr.io/ysicing/devops-handbook:blog.ysicing.net
