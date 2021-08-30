@@ -11,7 +11,7 @@
 
     @denycn not maxmind_geolocation {
         db_path "/root/geoip.mmdb"
-        allow_countries CN
+        deny_countries CN
     }
 
     redir @denycn https://ysicing.me{uri} permanent
