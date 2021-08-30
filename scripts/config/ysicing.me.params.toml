@@ -86,6 +86,7 @@ busuanziPagePV = true # post view count
 
 enableumami = true
 umamiID = "a7e985b0-7a4e-4dee-a31f-190046c760cb"
+googlesiteverification = "6C2eF2ifIPu7u8lWFgdBAvJ77nQ_7ufGPK1MRpieszA"
 
 # comment
 enableComment = false
