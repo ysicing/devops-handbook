@@ -28,9 +28,9 @@ image: images/custom/code-file.png
 
 ## 系列主题
 
-- Kubernetes(1.18.3)实践
-- Go(1.14+)开发实践
-- 运维实践(主要是基于Debian(buster)发行版)
+- Kubernetes(1.18.19)实践
+- Go(1.17)开发实践
+- 运维实践(主要是基于Debian(bullseye)发行版)
 
 ## ？
 

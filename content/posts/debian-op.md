@@ -18,7 +18,29 @@ categories:
 image: images/debian/Debian_logo.png
 ---
 
-## 创建Debian虚拟机
+## Debian 11
+
+> 赶紧升级Debian 11, 好处多多
+
+### 升级debian10(buster)内核版本
+
+```bash
+sed -i 's/buster\/updates/bullseye-security/g;s/buster/bullseye/g' /etc/apt/sources.list
+
+apt update
+apt dist-upgrade -y
+# apt install -t bullseye-backports linux-image-amd64 -y
+# update-grub
+# reboot
+# 内核
+Linux bj01 5.10.0-0.bpo.8-amd64 #1 SMP Debian 5.10.46-2~bpo10+1 (2021-07-22) x86_64 GNU/Linux
+```
+
+<hr />
+
+## Debian 10存档
+
+### 创建Debian虚拟机
 
 ```bash
 Usage:
@@ -74,14 +96,14 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-## 初始化Debian
+### 初始化Debian
 
 ```
 ergo vm init --ip 11.11.11.111 --docker
 # 默认会使用ysicing/ansible镜像，执行ansible脚本初始化debian，--docker参数默认表示安装docker
 ```
 
-### 手动执行之宿主机初始化
+#### 手动执行之宿主机初始化
 
 ```
 git clone https://github.com/ysicing/play-ansible.git
@@ -94,7 +116,7 @@ cp inventory.ini.example inventory.ini
 ansible-playbook init.yml
 ```
 
-### 手动执行之容器化方式初始化
+#### 手动执行之容器化方式初始化
 
 ```bash
 docker pull ysicing/ansible
@@ -105,8 +127,7 @@ ansible-playbook init.yml
 exit
 ```
 
-
-## Debian升级内核
+### Debian 10升级内核
 
 > 添加buster-backports源，如果你使用ysicin/debian镜像可跳过
 
