@@ -9,12 +9,13 @@
 
     root * /root/www
 
-    # @denycn not maxmind_geolocation {
-    #    db_path "/root/geoip.mmdb"
-    #    deny_countries CN
-    # }
+    @geofilter {
+        not geocn {
+            db_file "/etc/caddy/Country.mmdb"
+        }
+    }
 
-    # redir @denycn https://ysicing.me{uri} permanent
+    redir @geofilter https://ysicing.me{uri} permanent
 
     file_server
 }
