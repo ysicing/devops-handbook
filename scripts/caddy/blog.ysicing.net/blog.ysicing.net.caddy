@@ -11,7 +11,7 @@
 
     @geofilter {
         not geocn {
-            db_file "/etc/caddy/Country.mmdb"
+            db_file "/root/geoip.mmdb"
         }
     }
 
