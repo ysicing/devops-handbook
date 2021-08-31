@@ -27,7 +27,7 @@ ergo install docker -h
 </span><span class=lnt>13
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-json data-lang=json><span class=p>{</span>
   <span class=nt>&#34;exec-opts&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;native.cgroupdriver=systemd&#34;</span><span class=p>],</span>
-  <span class=nt>&#34;registry-mirrors&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://reg-mirror.qiniu.com&#34;</span><span class=p>,</span><span class=s2>&#34;https://dyucrs4l.mirror.aliyuncs.com&#34;</span><span class=p>,</span><span class=s2>&#34;https://dockerhub.azk8s.cn&#34;</span><span class=p>],</span>
+  <span class=nt>&#34;registry-mirrors&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://dyucrs4l.mirror.aliyuncs.com&#34;</span><span class=p>],</span>
   <span class=nt>&#34;bip&#34;</span><span class=p>:</span> <span class=s2>&#34;169.254.0.1/24&#34;</span><span class=p>,</span>
   <span class=nt>&#34;max-concurrent-downloads&#34;</span><span class=p>:</span> <span class=mi>10</span><span class=p>,</span>
   <span class=nt>&#34;log-driver&#34;</span><span class=p>:</span> <span class=s2>&#34;json-file&#34;</span><span class=p>,</span>
@@ -58,7 +58,7 @@ ergo install docker -h
 </span><span class=lnt>17
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>etcdctl
 helm<span class=o>(</span>v3<span class=o>)</span>
-helminit // 初始化helm, 默认配置的是mirror.azure.cn
+helminit
 docker-compose
 calicoctl
 ctop
