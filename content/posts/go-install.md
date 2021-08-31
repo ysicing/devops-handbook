@@ -52,9 +52,9 @@ Check all the checkboxes
 
 ```bash
 # 下载
-wget https://dl.google.com/go/go1.14.3.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.17.linux-amd64.tar.gz
 # 解压
-tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.17.linux-amd64.tar.gz
 # 配置 .bashrc
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
@@ -66,8 +66,9 @@ source .bashrc
 go env
 ```
 
-### 一键脚本
+### 一键脚本(废弃)
 
 ```bash
+# 20210819 废弃
 curl https://ysicing.me/hack/install/go.sh | bash
 ```

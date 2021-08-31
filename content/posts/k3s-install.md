@@ -1,7 +1,7 @@
 ---
-title: "debian按照k3s"
+title: "debian10安装k3s"
 date: 2020-05-18T22:55:18+08:00
-description: "debian按照k3s"
+description: "debian10安装k3s"
 draft: false
 hideToc: false
 enableToc: true

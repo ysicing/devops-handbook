@@ -30,7 +30,7 @@ ergo install docker -h
 ```json
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
-  "registry-mirrors": ["https://reg-mirror.qiniu.com","https://dyucrs4l.mirror.aliyuncs.com","https://dockerhub.azk8s.cn"],
+  "registry-mirrors": ["https://dyucrs4l.mirror.aliyuncs.com"],
   "bip": "169.254.0.1/24",
   "max-concurrent-downloads": 10,
   "log-driver": "json-file",
@@ -54,7 +54,7 @@ docker run --rm -v /usr/local/bin:/sysdir ysicing/tools tar zxf /pkg.tgz -C /sys
 ```bash
 etcdctl
 helm(v3)
-helminit // 初始化helm, 默认配置的是mirror.azure.cn
+helminit
 docker-compose
 calicoctl
 ctop
