@@ -9,7 +9,7 @@ clone:
 steps:
 - name: clone
   commands:
-  - git clone code.devops.ysicing.net:ysicing/devops-handbook.git
+  - git clone git@code.devops.ysicing.net:ysicing/devops-handbook.git
 - name: docker test
   commands:
   - docker ps
