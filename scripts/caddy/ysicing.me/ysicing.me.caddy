@@ -32,5 +32,9 @@
 
     redir @geofilter https://blog.ysicing.net{uri} permanent
 
+    file_server /hack/ browse {
+        root /root/hack
+    }
+
     file_server
 }

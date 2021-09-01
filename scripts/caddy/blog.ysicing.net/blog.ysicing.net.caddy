@@ -17,5 +17,9 @@
 
     redir @geofilter https://ysicing.me{uri} permanent
 
+    file_server /hack/ browse {
+        root /root/hack
+    }
+
     file_server
 }
