@@ -1,10 +1,10 @@
-name: deloy blog.ysicing.net
+name: deloy sh.ysicing.me
 on:
   push:
     branches:
     - master
   schedule:
-    - cron: '0 5 */3 * *'
+    - cron: '0 5 */1 * *'
 
 jobs:
   build:
@@ -26,11 +26,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: '0.85.0'
-        extended: true        
     - name: build
       run: |
           docker build -t ysicing/devops-handbook:sh.ysicing.me -f scripts/caddy/sh.ysicing.me/Dockerfile .

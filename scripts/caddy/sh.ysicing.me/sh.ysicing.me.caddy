@@ -22,7 +22,7 @@
 
     metrics /metrics
 
-    root * /root/www
+    root * /root/hack
 
     file_server browse
 }
