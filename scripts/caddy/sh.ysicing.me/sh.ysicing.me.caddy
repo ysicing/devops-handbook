@@ -15,7 +15,7 @@
 
 :80 {
     # 日志
-    import LOG "/var/log/ysicing.me.log"
+    import LOG "/var/log/sh.ysicing.me.log"
 
     # TLS、HSTS、ACME 等通用配置
     import COMMON_CONFIG
@@ -24,12 +24,5 @@
 
     root * /root/www
 
-    @geofilter {
-        geocn {
-            db_file "/root/geoip.mmdb"
-        }
-    }
-
-    redir @geofilter https://blog.ysicing.net{uri} permanent
-    file_server
+    file_server browse
 }
