@@ -1,0 +1,15 @@
+---
+kind: pipeline
+type: exec
+name: default
+
+clone:
+  disable: true
+
+steps:
+- name: clone
+  commands:
+  - git clone code.devops.ysicing.net:ysicing/devops-handbook.git
+- name: docker test
+  commands:
+  - docker ps
