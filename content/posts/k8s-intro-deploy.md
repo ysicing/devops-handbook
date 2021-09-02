@@ -20,7 +20,7 @@ image:
 ## 部署第一个应用
 
 ```yaml
-# https://ysicing.me/hack/demo/deploy.yaml
+# https://sh.ysicing.me/k8s/demo/deploy.yaml
 apiVersion: apps/v1    #与k8s集群版本有关，使用 kubectl api-versions 即可查看当前集群支持的版本
 kind: Deployment    #该配置的类型，我们使用的是 Deployment
 metadata:            #译名为元数据，即 Deployment 的一些基本属性和信息
@@ -51,7 +51,7 @@ spec:            #这是关于该Deployment的描述，可以理解为你期待�
 部署应用
 
 ```
-kubectl apply -f https://ysicing.me/hack/demo/deploy.yaml
+kubectl apply -f https://sh.ysicing.me/k8s/demo/deploy.yaml
 deployment.apps/demo-deployment created
 ```
 
@@ -132,7 +132,7 @@ LoadBalancer: 负载均衡(依赖云访问)。此时 ClusterIP 和 NodePort 的�
 ``` yaml
 kubectl explain svc
 
-# https://ysicing.me/hack/demo/svc.yaml
+# https://sh.ysicing.me/k8s/demo/svc.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -154,7 +154,7 @@ spec:	    #这是关于该 Service 的定义，描述了 Service 如何选择 Po
 生效
 
 ```
-kubectl apply -f https://ysicing.me/hack/demo/svc.yaml
+kubectl apply -f https://sh.ysicing.me/k8s/demo/svc.yaml
 service/demo-service created
 ```
 
@@ -203,7 +203,7 @@ root@k8s1:~# curl 192.168.100.102:32600
 那么问题来了，如果想通过clusterip方式提供对外服务，该怎么做？
 
 ```
-# https://ysicing.me/hack/demo/ing.yaml
+# https://sh.ysicing.me/k8s/demo/ing.yaml
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
@@ -225,7 +225,7 @@ spec:
 生效
 
 ```
-kubectl apply -f https://ysicing.me/hack/demo/ing.yaml
+kubectl apply -f https://sh.ysicing.me/k8s/demo/ing.yaml
 ingress.networking.k8s.io/demo-ingress created
 
 kubectl get ing
@@ -249,7 +249,7 @@ curl godemo.slb.k7s.xyz
 ```
 # replicas: 1 ---> replicas: 4
 # 改完生效
-kubectl apply -f https://ysicing.me/hack/demo/deploy2.yaml
+kubectl apply -f https://sh.ysicing.me/k8s/demo/deploy2.yaml
 deployment.apps/demo-deployment configured
 
 # 查看pod
@@ -313,7 +313,7 @@ hostNetwork：共享宿主机的网络名称空间
 这里可以这么测试使用hostPort
 
 ```
-kubectl apply -f https://ysicing.me/hack/demo/deploy3.yaml
+kubectl apply -f https://sh.ysicing.me/k8s/demo/deploy3.yaml
 kubectl get pods  -l app=demo -o wide
 NAME                               READY   STATUS    RESTARTS   AGE    IP              NODE   NOMINATED NODE   READINESS GATES
 demo-deployment-6c5664f4d6-s6w8v   1/1     Running   0          112s   172.16.109.68   k8s2   <none>           <none>

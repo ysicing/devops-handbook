@@ -62,8 +62,8 @@ showmount -e 127.0.0.1
 
 ```
 # 未安装存储
-curl https://ysicing.me/hack/k7s/install/nfs/deploy.sh | bash
+curl https://sh.ysicing.me/k7s/install/nfs/deploy.sh | bash
 # 已有存储
-wget https://ysicing.me/hack/k7s/install/nfs/deploy_exist_nfs.sh
+wget https://sh.ysicing.me/k7s/install/nfs/deploy_exist_nfs.sh
 ./deploy_exist_nfs.sh <ip> <path>
 ```

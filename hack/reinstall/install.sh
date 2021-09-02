@@ -30,7 +30,7 @@ export setInterfaceName='0'
 export UNKNOWHW='0'
 export UNVER='6.4'
 
-curl --fail --silent --location -o /tmp/stdlib.sh https://ysicing.me/hack/help/func.sh || {
+curl --fail --silent --location -o /tmp/stdlib.sh https://sh.ysicing.me/help/func.sh || {
 	curl --fail --silent --location -o /tmp/stdlib.sh https://raw.githubusercontent.com/ysicing/devops-handbook/master/hack/help/func.sh
 }
 

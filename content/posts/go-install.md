@@ -1,7 +1,7 @@
 ---
-title: "安装golang"
+title: "一键安装go1.17"
 date: 2019-05-18T22:55:18+08:00
-description: "安装golang"
+description: "一键安装go1.17"
 draft: false
 hideToc: false
 enableToc: true
@@ -66,9 +66,9 @@ source .bashrc
 go env
 ```
 
-### 一键脚本(废弃)
+### 一键脚本
 
 ```bash
 # 20210819 废弃
-curl https://ysicing.me/hack/install/go.sh | bash
+curl https://sh.ysicing.me/install/go.sh | bash
 ```

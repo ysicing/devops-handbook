@@ -20,7 +20,7 @@ image: images/docker/docker-logo-1024x914.png
 ## 安装docker
 
 ```
-curl -fsSL https://ysicing.me/hack/docker/install.sh | bash 
+curl -fsSL https://sh.ysicing.me/install/docker.sh | bash 
 或者
 ergo install docker -h
 ```

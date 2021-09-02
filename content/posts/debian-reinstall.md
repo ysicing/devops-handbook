@@ -1,7 +1,7 @@
 ---
 title: "如何在线重装Debian"
 date: 2020-05-22T22:55:18+08:00
-description: "介绍如何给云服务商提供的机器在线重装Debian，以阿里轻量云为例"
+description: "介绍如何给云服务商提供的机器在线重装Debian，以轻量云为例"
 draft: false
 hideToc: false
 enableToc: true
@@ -35,14 +35,14 @@ image: images/debian/Debian_logo.png
 ## 3. 安装
 
 ```bash
-curl -sSL https://ysicing.me/hack/reinstall/install.sh | bash
+curl -sSL https://sh.ysicing.me/reinstall/install.sh | bash
 # 指定参数
-bash <(wget --no-check-certificate -qO- 'https://ysicing.me/hack/reinstall/install.sh') -p thah6oob7KieChie
+bash <(wget --no-check-certificate -qO- 'https://sh.ysicing.me/reinstall/install.sh') -p thah6oob7KieChie
 ```
 
 ### 3.1 特殊: 自定义硬盘
 
-> 存在多个硬盘时，需要下载 [`https://ysicing.me/hack/reinstall/installhk.sh`](https://ysicing.me/hack/reinstall/installhk.sh)文件，编辑如下部分即可
+> 存在多个硬盘时，需要下载 [`https://sh.ysicing.me/reinstall/installhk.sh`](https://sh.ysicing.me/reinstall/installhk.sh)文件，编辑如下部分即可
 
 ```bash
 d-i partman-auto/disk string /dev/sdb

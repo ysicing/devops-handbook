@@ -49,7 +49,7 @@ image:
 ### 创建持久化存储
 
 ```yaml
-# https://ysicing.me/hack/demo/pvc.yaml
+# https://sh.ysicing.me/k8s/demo/pvc.yaml
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -83,7 +83,7 @@ spec:
 
 ```
 # nfs 地址需要按需调整一下
-kubectl apply -f https://ysicing.me/hack/demo/pvc.yaml
+kubectl apply -f https://sh.ysicing.me/k8s/demo/pvc.yaml
 kubectl get pvc
 ```
 
