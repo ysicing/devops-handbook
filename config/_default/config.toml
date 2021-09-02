@@ -35,7 +35,6 @@ googleAnalytics = "6C2eF2ifIPu7u8lWFgdBAvJ77nQ_7ufGPK1MRpieszA"
     startLevel = 2
 
 [outputs]
-  page = ["HTML", "SearchIndex"]
   home = ["HTML", "RSS", "SearchIndex"]
   section = ["HTML", "RSS", "SearchIndex"]
   taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
@@ -46,7 +45,7 @@ googleAnalytics = "6C2eF2ifIPu7u8lWFgdBAvJ77nQ_7ufGPK1MRpieszA"
     mediaType = "application/json"
     baseName = "index"
     isPlainText = true
-    notAlternative = true  
+    notAlternative = true
 
 [taxonomies]
   category = "categories"
