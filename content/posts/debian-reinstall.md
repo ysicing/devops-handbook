@@ -1,5 +1,5 @@
 ---
-title: "如何在线重装Debian"
+title: "如何在线重装Debian11"
 date: 2020-05-22T22:55:18+08:00
 description: "介绍如何给云服务商提供的机器在线重装Debian，以轻量云为例"
 draft: false

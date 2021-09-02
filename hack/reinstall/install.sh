@@ -8,7 +8,7 @@
 
 
 export tmpVER='amd64'
-export tmpDIST='stretch'
+export tmpDIST='bullseye'
 export tmpURL=''
 export tmpWORD='vagrant'
 export tmpMirror=''
@@ -209,7 +209,7 @@ fi
 [ -z "$VER" ] && VER='amd64'
 
 if [[ -z "$tmpDIST" ]]; then
-  [ "$Relese" == 'Debian' ] && tmpDIST='stretch' && DIST='stretch';
+  [ "$Relese" == 'Debian' ] && tmpDIST='bullseye' && DIST='bullseye';
   [ "$Relese" == 'Ubuntu' ] && tmpDIST='bionic' && DIST='bionic';
   [ "$Relese" == 'CentOS' ] && tmpDIST='6.10' && DIST='6.10';
 fi
@@ -224,6 +224,7 @@ if [[ -z "$DIST" ]]; then
       [[ -n $isDigital ]] && {
         [[ "$isDigital" == '9' ]] && DIST='stretch';
         [[ "$isDigital" == '10' ]] && DIST='buster';
+        [[ "$isDigital" == '11' ]] && DIST='bullseye';
       }
     }
     LinuxMirror=$(SelectMirror "$Relese" "$DIST" "$VER" "$tmpMirror")
@@ -237,6 +238,7 @@ if [[ -z "$DIST" ]]; then
       [[ -n $isDigital ]] && {
         [[ "$isDigital" == '16.04' ]] && DIST='xenial';
         [[ "$isDigital" == '18.04' ]] && DIST='bionic';
+        [[ "$isDigital" == '20.04' ]] && DIST='focal';
       }
     }
     LinuxMirror=$(SelectMirror "$Relese" "$DIST" "$VER" "$tmpMirror")
@@ -615,8 +617,8 @@ d-i apt-setup/use_mirror boolean true
 d-i apt-setup/main boolean true
 d-i apt-setup/non-free boolean true
 d-i apt-setup/contrib boolean true
-d-i apt-setup/local0/repository string http://mirror.xtom.com.hk/debian/ stretch-backports main contrib non-free
-d-i apt-setup/local0/comment string stretch backports
+d-i apt-setup/local0/repository string http://mirror.xtom.com.hk/debian/ bullseye-backports main contrib non-free
+d-i apt-setup/local0/comment string bullseye backports
 apt-mirror-setup apt-setup/use_mirror boolean true
 
 ### Package selection
@@ -636,8 +638,8 @@ openssh-server openssh-server/permit-root-login	boolean	true
 #d-i	preseed/late_command string \
 #    sed -i -e 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /target/etc/ssh/sshd_config; \
 #    sed -i -e 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /target/etc/ssh/sshd_config; \
-#    apt-install -y linux-image-amd64 -t stretch-backports; \
-#    in-target /usr/bin/apt-get install -y -t stretch-backports iproute2 htop zsh; \
+#    apt-install -y linux-image-amd64 -t bullseye-backports; \
+#    in-target /usr/bin/apt-get install -y -t bullseye-backports iproute2 htop zsh; \
 #    in-target /usr/bin/apt-get remove --purge linux-image-4.9.0-8-amd64 -y;\
 #    update-grub; \
 #    echo "666" > /target/etc/ysicing
