@@ -37,7 +37,7 @@
 </span><span class=lnt>26
 </span><span class=lnt>27
 </span><span class=lnt>28
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-yaml data-lang=yaml><span class=c># https://ysicing.me/hack/demo/pvc.yaml</span><span class=w>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-yaml data-lang=yaml><span class=c># https://sh.ysicing.me/k8s/demo/pvc.yaml</span><span class=w>
 </span><span class=w></span><span class=nt>apiVersion</span><span class=p>:</span><span class=w> </span><span class=l>v1</span><span class=w>
 </span><span class=w></span><span class=nt>kind</span><span class=p>:</span><span class=w> </span><span class=l>PersistentVolume</span><span class=w>
 </span><span class=w></span><span class=nt>metadata</span><span class=p>:</span><span class=w>
@@ -66,7 +66,7 @@
 </span><span class=w>      </span><span class=nt>storage</span><span class=p>:</span><span class=w> </span><span class=l>2Gi</span><span class=w>
 </span><span class=w>  </span><span class=nt>storageClassName</span><span class=p>:</span><span class=w> </span><span class=l>nfs-test</span><span class=w>
 </span></code></pre></td></tr></table></div></div><p>示例</p><pre><code># nfs 地址需要按需调整一下
-kubectl apply -f https://ysicing.me/hack/demo/pvc.yaml
+kubectl apply -f https://sh.ysicing.me/k8s/demo/pvc.yaml
 kubectl get pvc
 </code></pre><h3 id=安装>安装</h3><blockquote><p>本文使用helm方式安装，因为需要对配置做些调整，需要自定义一些配置</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
