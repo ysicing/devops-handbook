@@ -37,15 +37,20 @@ image: images/debian/Debian_logo.png
 ```bash
 curl -sSL https://sh.ysicing.me/reinstall/install.sh | bash
 # 指定参数
+# -p 默认密码vagrant
+# -m 默认源aliyun
 bash <(wget --no-check-certificate -qO- 'https://sh.ysicing.me/reinstall/install.sh') -p thah6oob7KieChie
 ```
 
 ### 3.1 特殊: 自定义硬盘
 
-> 存在多个硬盘时，需要下载 [`https://sh.ysicing.me/reinstall/installhk.sh`](https://sh.ysicing.me/reinstall/installhk.sh)文件，编辑如下部分即可
+> 存在多个硬盘时，需要下载 [`https://sh.ysicing.me/reinstall/install-sdev.sh`](https://sh.ysicing.me/reinstall/install-sdev.sh)文件，编辑如下部分即可
 
 ```bash
-d-i partman-auto/disk string /dev/sdb
+# -p 默认密码vagrant
+# -m 默认源aliyun
+# -s 指定启动硬盘
+bash <(wget --no-check-certificate -qO- 'https://sh.ysicing.me/reinstall/install-sdev.sh') -p thah6oob7KieChie -s /dev/sdb
 ```
 
 ## 4. 参考附录

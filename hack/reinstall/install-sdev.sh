@@ -24,6 +24,10 @@ while [[ $# -ge 1 ]]; do
       shift
       LinuxMirror="$1"
       shift  
+    -s|--dev)
+      shift
+      sDev="$1"
+      shift 
     *)
       notice "not support"
       ;;
@@ -54,6 +58,8 @@ check_dependence wget,awk,grep,sed,cut,cat,cpio,gzip,find,dirname,basename,opens
 [[ -z "$LinuxMirror" ]] && LinuxMirror="https://mirrors.aliyun.com/debian"
 
 [[ -z "$myPASSWORD" ]] && myPASSWORD='vagrant';
+
+[[ -z "$sDev" ]] && notice "dev not found"
 
 progress "installing..."
 
@@ -294,6 +300,7 @@ d-i time/zone string Asia/Shanghai
 
 
 ### Partitioning
+d-i partman-auto/disk string $sDev
 d-i partman-auto/method string regular
 d-i partman-auto/expert_recipe string \
         scheme ::                     \
