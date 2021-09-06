@@ -4,6 +4,10 @@ images:
     arch: "x86_64"
   - location: "https://cloud.debian.org/images/cloud/bullseye/20210814-734/debian-11-generic-amd64-20210814-734.qcow2"
     arch: "x86_64"
+  - location: "~/hack/iso/debian-11-generic-arm64-20210814-734.qcow2"
+    arch: "aarch64"
+  - location: "https://cloud.debian.org/images/cloud/bullseye/20210814-734/debian-11-generic-arm64-20210814-734.qcow2"
+    arch: "aarch64"  
 cpus: 2
 memory: "4GiB"
 disk: "100GiB"
