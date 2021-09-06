@@ -1,0 +1,37 @@
+arch: "default"
+images:
+  - location: "~/hack/iso/debian-11-generic-amd64-20210814-734.qcow2"
+    arch: "x86_64"
+  - location: "https://cloud.debian.org/images/cloud/bullseye/20210814-734/debian-11-generic-amd64-20210814-734.qcow2"
+    arch: "x86_64"
+cpus: 2
+memory: "4GiB"
+disk: "100GiB"
+mounts:
+  - location: "~"
+    writable: false
+  - location: "/tmp/lima"
+    writable: true
+ssh:
+  localPort: 60024 # 端口需要注意避免冲突
+containerd:
+  system: true
+  user: true
+provision:
+  - mode: system
+    script: |
+      #!/bin/bash
+      echo "/usr/local/bin/nerdctl \$@" > /usr/local/bin/docker
+      chmod +x /usr/local/bin/docker
+  - mode: system
+    script: |
+      #!/bin/bash
+      nerdctl run --rm -v /usr/local/bin:/sysdir registry.cn-beijing.aliyuncs.com/k7scn/tools tar zxf /pkg.tgz -C /sysdir
+probes:
+- script: |
+    #!/bin/bash
+    set -eux -o pipefail
+    if ! timeout 120s bash -c "until test -f /usr/local/bin/dps; do sleep 3; done"; then
+            echo >&2 "tools is not installed yet"
+            exit 0
+    fi
