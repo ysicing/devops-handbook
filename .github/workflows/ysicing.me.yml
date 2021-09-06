@@ -35,8 +35,10 @@ jobs:
       run: |
           rm -rf config/_default/params.toml
           rm -rf config/_default/config.toml
+          rm -rf config/_default/menus.zh.toml
           cp -a scripts/config/ysicing.me.toml config/_default/config.toml
           cp -a scripts/config/ysicing.me.params.toml config/_default/params.toml
+          cp -a scripts/config/ysicing.me.menus.zh.toml config/_default/menus.zh.toml
           hugo --minify
           docker build -t ysicing/devops-handbook:ysicing.me -f scripts/caddy/ysicing.me/Dockerfile .
           docker push ysicing/devops-handbook:ysicing.me
