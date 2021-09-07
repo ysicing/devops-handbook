@@ -1,4 +1,4 @@
-arch: "default"
+arch: "x86_64" #"default"
 images:
   - location: "~/hack/iso/debian-11-generic-amd64-20210814-734.qcow2"
     arch: "x86_64"
