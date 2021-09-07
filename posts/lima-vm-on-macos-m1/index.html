@@ -29,7 +29,7 @@ mkdir build &amp;&amp; cd build
 make -j8 
 # 安装
 sudo make install
-</code></pre><p>注意一点:</p><blockquote><p>可能通过brew安装的qume，会识别默认该路径下的<code>/opt/homebrew/bin/qemu-system-aarch64</code>, 而patch生成的则在<code>/usr/local/bin/qemu-system-aarch64</code>。</p></blockquote><pre><code>rm /opt/homebrew/bin/qemu-system-aarch64
+</code></pre><p>注意一点:</p><blockquote><p>可能通过brew安装的qemu，会识别默认该路径下的<code>/opt/homebrew/bin/qemu-system-aarch64</code>, 而patch生成的则在<code>/usr/local/bin/qemu-system-aarch64</code>。</p></blockquote><pre><code>rm /opt/homebrew/bin/qemu-system-aarch64
 </code></pre><h3 id=测试patch>测试patch</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
