@@ -55,7 +55,7 @@ sudo make install
 
 注意一点:
 
-> 可能通过brew安装的qume，会识别默认该路径下的`/opt/homebrew/bin/qemu-system-aarch64`, 而patch生成的则在`/usr/local/bin/qemu-system-aarch64`。
+> 可能通过brew安装的qemu，会识别默认该路径下的`/opt/homebrew/bin/qemu-system-aarch64`, 而patch生成的则在`/usr/local/bin/qemu-system-aarch64`。
 
 ```
 rm /opt/homebrew/bin/qemu-system-aarch64
