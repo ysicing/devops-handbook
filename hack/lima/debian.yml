@@ -10,7 +10,7 @@ images:
     arch: "aarch64"  
 cpus: 2
 memory: "4GiB"
-disk: "100GiB"
+disk: "40GiB"
 mounts:
   - location: "~"
     writable: false
@@ -19,7 +19,7 @@ mounts:
 ssh:
   localPort: 60024 # 端口需要注意避免冲突
 containerd:
-  system: true
+  system: false
   user: true
 provision:
   - mode: system
