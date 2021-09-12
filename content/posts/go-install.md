@@ -1,7 +1,7 @@
 ---
 title: "一键安装go1.17"
 date: 2019-05-18T22:55:18+08:00
-description: "一键安装go1.17"
+description: "一键安装go1.17.1"
 draft: false
 hideToc: false
 enableToc: true
@@ -17,6 +17,18 @@ categories:
 image: images/other/go1.svg
 ---
 
+## Linux环境一键脚本
+
+```bash
+curl https://sh.ysicing.me/install/go.sh | bash
+```
+
+### ChangeLog
+
+#### 20210911
+
+- 更新脚本支持lima普通用户
+- go升级到1.17.1
 
 ## Mac安装
 
@@ -66,9 +78,3 @@ source .bashrc
 go env
 ```
 
-### 一键脚本
-
-```bash
-# 20210819 废弃
-curl https://sh.ysicing.me/install/go.sh | bash
-```

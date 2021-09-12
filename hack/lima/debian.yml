@@ -19,7 +19,7 @@ mounts:
 ssh:
   localPort: 60024 # 端口需要注意避免冲突
 containerd:
-  system: false
+  system: true
   user: true
 provision:
   - mode: system
@@ -27,15 +27,13 @@ provision:
       #!/bin/bash
       echo "/usr/local/bin/nerdctl \$@" > /usr/local/bin/docker
       chmod +x /usr/local/bin/docker
-  - mode: system
-    script: |
-      #!/bin/bash
+      nerdctl pull registry.cn-beijing.aliyuncs.com/k7scn/tools
       nerdctl run --rm -v /usr/local/bin:/sysdir registry.cn-beijing.aliyuncs.com/k7scn/tools tar zxf /pkg.tgz -C /sysdir
 probes:
 - script: |
     #!/bin/bash
     set -eux -o pipefail
-    if ! timeout 120s bash -c "until test -f /usr/local/bin/dps; do sleep 3; done"; then
+    if ! timeout 240s bash -c "until test -f /usr/local/bin/dps; do sleep 3; done"; then
             echo >&2 "tools is not installed yet"
             exit 0
     fi
