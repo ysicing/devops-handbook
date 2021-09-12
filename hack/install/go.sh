@@ -38,11 +38,11 @@ go::install(){
     $sh_c 'tar -C /usr/local -xzf /tmp/go1.17.1.linux-amd64.tar.gz'
     echo "配置"
     cat >> $HOME/.bashrc <<EOF
-    export GO111MODULE=on
-    export GOPROXY=https://goproxy.cn
-    export GOPATH="$HOME/go"
-    export GOBIN="$GOPATH/bin"
-    export PATH=$PATH:$GOBIN:/usr/local/go/bin
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+export GOPATH="$HOME/go"
+export GOBIN="\$GOPATH/bin"
+export PATH=\$PATH:\$GOBIN:/usr/local/go/bin
 EOF
 
     source $HOME/.bashrc
