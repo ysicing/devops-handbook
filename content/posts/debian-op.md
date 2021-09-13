@@ -18,6 +18,13 @@ categories:
 image: images/debian/Debian_logo.png
 ---
 
+## 一键最新脚本
+
+```bash
+export MIRRORS="http://mirrors.aliyun.com" # 默认是清华源
+curl https://sh.ysicing.me/debian/init.sh | bash
+```
+
 ## Debian 11
 
 > 赶紧升级Debian 11, 好处多多
