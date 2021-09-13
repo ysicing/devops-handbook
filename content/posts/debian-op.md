@@ -22,7 +22,7 @@ image: images/debian/Debian_logo.png
 
 ```bash
 export MIRRORS="http://mirrors.aliyun.com" # 默认是清华源
-curl https://sh.ysicing.me/debian/init.sh | bash
+curl -s https://sh.ysicing.me/debian/init.sh | bash
 ```
 
 ## Debian 11

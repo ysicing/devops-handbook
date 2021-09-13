@@ -10,11 +10,12 @@ tocPosition: outer
 tocLevels: ["h2", "h3", "h4"]
 tags: 
 - docker
+- cri
 series:
 -
 categories: 
 - docker
-image: images/docker/docker-logo-1024x914.png
+image: images/cri/docker.png
 ---
 
 ## 安装docker

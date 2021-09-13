@@ -5,5 +5,5 @@ description: 自用运维脚本镜像 # apperared on a card component
 weight: 1 # card ordering
 link: https://github.com/ysicing/tools
 repo: https://github.com/ysicing/tools
-thumb: docker/docker-logo-1024x914.png # relative path in static/images
+thumb: cri/docker.png # relative path in static/images
 ---
