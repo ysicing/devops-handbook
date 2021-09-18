@@ -1,7 +1,7 @@
 ---
 title: "开源k8slb工具Metallb"
 date: 2020-06-19T22:14:20+08:00
-description:
+description: 本文主要讲述穷人如何使用LoadBalancer
 draft: false
 hideToc: false
 enableToc: true
@@ -14,6 +14,7 @@ authorEmoji: 🐶
 tags: 
 - kubernetes
 - LoadBalancer
+- 负载均衡
 series:
 -
 categories:
@@ -23,11 +24,16 @@ image: images/custom/graph.png
 
 ## 简介
 
-k8s的LoadBalancer类型的Service依赖云服务商的Load Balancer, 如阿里云的slb。
+kubernetes本身并没有实现LoadBalancer, 如果是云上用户，可以使用云服务商提供k8s的LoadBalancer, 如阿里云的slb。
 
 当我们把k8s部署在私有云时，需要简单的LoadBalancer来验证工作，开源的metallb就是一个不错的选择。
 
 通过k8s原生的方式提供LB类型的Service支持，开箱即用。
+
+核心特性:
+
+- `地址分配` MetalLB会为用户的lb类型service分配IP地址，该IP地址需要用户预先分配
+- `外部申明` 地址分配后还需要通知到网络中的其他主机, 有两种方式基于ARP的Layer2和BGP
 
 ## 原理
 
@@ -49,23 +55,24 @@ k8s的LoadBalancer类型的Service依赖云服务商的Load Balancer, 如阿里�
 ## 安装
 
 ```
-kubectl get ns | grep metallb-system && exit 0
-kubectl apply -f https://gitee.com/ysicing/ergo/raw/master/hack/k8s/metallb/metallb.yaml
-kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
-kubectl apply -f https://gitee.com/ysicing/ergo/raw/master/hack/k8s/metallb/lbconfig.yaml
-# 或者使用ergo
-ergo install mlb --pass vagrant
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update 
+helm upgrade -i metallb bitnami/metallb  --create-namespace -n metallb-system
+
+# 默认空配置
+kubectl get cm/metallb-config  -n metallb-system -o yaml 
+kubectl apply -f https://sh.ysicing.me/k8s/metallb/lbconfig.yaml
 ```
 
 ### 配置说明
 
 ```
-# https://gitee.com/ysicing/ergo/raw/master/hack/k8s/metallb/lbconfig.yaml
+# https://sh.ysicing.me/k8s/metallb/lbconfig.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   namespace: metallb-system
-  name: config
+  name: metallb-config
 data:
   config: |
     address-pools:
