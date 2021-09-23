@@ -61,13 +61,13 @@ helm upgrade -i metallb bitnami/metallb  --create-namespace -n metallb-system
 
 # 默认空配置
 kubectl get cm/metallb-config  -n metallb-system -o yaml 
-kubectl apply -f https://sh.ysicing.me/k8s/metallb/lbconfig.yaml
+kubectl apply -f https://sh.ysicing.me/k8s/helm/metallb/lbconfig.yaml
 ```
 
 ### 配置说明
 
 ```
-# https://sh.ysicing.me/k8s/metallb/lbconfig.yaml
+# https://sh.ysicing.me/k8s/helm/metallb/lbconfig.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
