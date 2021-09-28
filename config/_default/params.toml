@@ -78,6 +78,7 @@ showSocialLinks = false # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
 showBA = true
 beianhao = "京ICP备17001940号"
+mengicp = "20212379"
 showCN = false # 大陆403
 
 # service

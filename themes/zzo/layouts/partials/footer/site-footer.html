@@ -31,7 +31,9 @@
             </p>
         {{ end }}
         {{ if $.Param "showBA" }}
-            <p class="caption"><a href="https://beian.miit.gov.cn/" target="_blank">{{ .Site.Params.beianhao }}</a></p>
+            <p class="caption"><a href="https://beian.miit.gov.cn/" target="_blank">{{ .Site.Params.beianhao }}</a> / <a href="https://icp.gov.moe/?keyword={{ .Site.Params.mengicp }}" target="_blank">萌ICP备{{ .Site.Params.mengicp }}号</a></p>
+        {{ else }}
+            <p class="caption"><a href="https://icp.gov.moe/?keyword={{ .Site.Params.mengicp }}" target="_blank">萌ICP备{{ .Site.Params.mengicp }}号</a></p>
         {{ end }}
         {{ if $.Param "showPoweredBy" }}
             <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
