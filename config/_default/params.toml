@@ -83,7 +83,7 @@ showCN = false # 大陆403
 # service
 googleTagManager = "GTM-MCKFWVL" # GTM-XXXXXX
 baiduAnalytics = "" # alternative of google analytics
-enableBusuanzi = true # if set true, total page view, total unique visitors show up in the footer.
+enableBusuanzi = false # if set true, total page view, total unique visitors show up in the footer.
 busuanziSiteUV = true # unique visitors (total number of visitors)
 busuanziSitePV = true # site total page view count
 busuanziPagePV = true # post view count
