@@ -30,10 +30,11 @@
                 {{ end }}
             </p>
         {{ end }}
-
+        {{ if $.Param "showBA" }}
+            <p class="caption"><a href="https://beian.miit.gov.cn/" target="_blank">{{ .Site.Params.beianhao }}</a></p>
+        {{ end }}
         {{ if $.Param "showPoweredBy" }}
             <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
         {{ end }}
-        
     </div> 
 </footer>

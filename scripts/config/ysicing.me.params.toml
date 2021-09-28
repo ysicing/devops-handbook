@@ -75,6 +75,8 @@ showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
 showFeedLinks = true # RSS Feed 
 showSocialLinks = false # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
+showBA = false
+beianhao = "京ICP备17001940号"
 
 # service
 googleTagManager = "GTM-MCKFWVL" # GTM-XXXXXX
