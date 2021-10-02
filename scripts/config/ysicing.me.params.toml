@@ -77,7 +77,7 @@ showSocialLinks = false # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
 showBA = false
 beianhao = "京ICP备17001940号"
-mengicp = "20212379"
+mengicp = "20212380"
 
 # service
 googleTagManager = "GTM-MCKFWVL" # GTM-XXXXXX
