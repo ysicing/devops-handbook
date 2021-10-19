@@ -33,3 +33,8 @@
   name = "实时访客"
   url = "https://umami.external.ysicing.net/share/WlfYV9qH/ysicing.me"
   weight = 7  
+[[main]]
+  identifier = "kgy"
+  name = "科学"
+  url = "https://kgy.moe/#/register?code=TJV9t6nB"
+  weight = 8
