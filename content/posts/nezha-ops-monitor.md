@@ -86,6 +86,10 @@ services:
 ```
 
 
+## 演示
+
+[金吒监控](https://nezha.external.ysicing.net/)
+
 ## 致谢
 
 [naiba/nezha](https://github.com/naiba/nezha)
