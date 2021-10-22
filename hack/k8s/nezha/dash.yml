@@ -1,0 +1,132 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nezha-dash-config
+data:
+  dash.yml: |
+    debug: true
+    httpport: 80
+    grpcport: 5555
+    admin:
+      user: ysicing
+      pass: 12345678
+    oauth2:
+      type: "github" #gitee/github
+      admin: "ysicing" #管理员列表，半角逗号隔开
+      clientid: "" # 在 https://github.com/settings/developers 创建，无需审核 Callback 填 http(s)://域名或IP/oauth2/callback
+      clientsecret: ""
+    site:
+      brand: "金吒监控"
+      cookiename: "nezha-dashboard" #浏览器 Cookie 字段名，可不改
+      theme:  "default" #"daynight"
+    db:
+      type: sqlite
+      dsn: "nezha.sqlite"
+      # type: mysql
+      # dsn: root:root@tcp(k8s.ysicing.local:3306)/njdb?charset=utf8mb4&parseTime=True&loc=Local
+      debug: false
+      metrics:
+        name: nezha-api
+        enable: true
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  nezha-dash
+  labels:
+    app:  nezha-dash
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nezha-dash
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app:  nezha-dash
+    spec:
+      restartPolicy: Always
+      containers:
+      - image:  ghcr-proxy.hk1.godu.dev/ysicing/nezha-dash:edge
+        imagePullPolicy: Always
+        name: nezha-dash
+        readinessProbe:
+          httpGet:
+            port: 80
+            path: /healthz
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            port: 80
+            path: /healthz
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        resources:
+          limits:
+            cpu: "100m"
+            memory: "128M"
+          requests:
+            cpu: "20m"
+            memory: "55M"  
+        ports:
+        - containerPort:  80
+          name:  http-80
+        - containerPort: 5555
+          name:  rcp-5555  
+        volumeMounts:
+        - mountPath: /conf/
+          name: dashcfg
+          readOnly: true
+      volumes:
+        - name: dashcfg
+          configMap:
+            name: nezha-dash-config
+            items:
+              - key: dash.yml
+                path: dash.yml
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nezha-dash
+  labels:
+    app: nezha-dash
+spec:
+  type: LoadBalancer
+  selector:
+    app: nezha-dash
+  ports:
+    - port: 80
+      protocol: TCP
+      name: http-80
+    - port: 5555
+      protocol: TCP
+      name: grcp-5555
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: nezha.external.ysicing.net
+# spec:
+#   rules:
+#   - host: nezha.external.ysicing.net
+#     http:
+#       paths:
+#       - backend:
+#           service:
+#             name: dash
+#             port:
+#               number: 80
+#         path: /
+#         pathType: ImplementationSpecific
+#   tls:
+#   - hosts:
+#     - nezha.external.ysicing.net
+#     secretName: tls-ysicing.net

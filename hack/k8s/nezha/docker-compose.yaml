@@ -1,0 +1,12 @@
+version: '2'
+services:
+  nezha-agent:
+    image: ghcr.io/ysicing/nezha-agent:edge
+    container_name: nezha-agent
+    network_mode: "host"
+    pid: "host"
+    privileged: true
+    volumes:
+      - ./agentdata:/var/lib/nezha
+    # command:
+    # - "--p=cdxxxxxxx" # 被动注册
