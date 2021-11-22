@@ -10,6 +10,7 @@ tocPosition: inner
 tocLevels: ["h2", "h3", "h4"]
 tags:
 - kubernetes
+- cert-manager
 series:
 -
 categories:
