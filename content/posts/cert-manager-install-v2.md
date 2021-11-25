@@ -1,5 +1,5 @@
 ---
-title: "k8s 上利用 cert-manager 自动签发 TLS 证书 2021版"
+title: "k8s上基于DNSPOD利用cert-manager自动签发TLS证书"
 date: 2021-11-22T10:51:42+08:00
 description: k8s上利用cert-manager自动签发 TLS 证书
 draft: true
