@@ -1,5 +1,5 @@
 ---
-title: "k8s 上利用 cert-manager 自动签发 TLS 证书"
+title: "基于ALIDNS使用cert-manager自动签发TLS证书"
 date: 2020-10-26T11:02:44+08:00
 description: "k8s 上利用 cert-manager 自动签发 TLS 证书"
 draft: false
@@ -11,6 +11,7 @@ tocLevels: ["h2", "h3", "h4"]
 tags:
 - kubernetes
 - cert-manager
+- 阿里云
 series:
 -
 categories:
