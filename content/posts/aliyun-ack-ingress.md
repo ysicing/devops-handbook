@@ -16,6 +16,7 @@ series:
 -
 categories: 
 - kubernetes
+- ack
 image: images/custom/graph.png
 ---
 
