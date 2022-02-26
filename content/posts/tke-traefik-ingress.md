@@ -449,3 +449,11 @@ X-Forwarded-Proto: https
 X-Forwarded-Server: sh-pre
 X-Real-Ip: 101.35.53.4
 ```
+
+---
+
+欢迎关注我的公众号“**缘生小助手**”，原创实践文章第一时间推送。
+
+<center>
+    <img src="https://gitee.com/godu/blogimage/raw/master/wechat/wx_qrcode.jpg" style="width: 100px;">
+</center>
