@@ -11,16 +11,20 @@ type: about
 
 > 记录本站变更信息
 
-#### 29210924 变更
+### 20220226 变更
 
-- [blog.ysicing.net](https://blog.ysicing.net) 
-    - k3s集群升级到1.21.5,网络组件使用`cilium`
-    - 添加备案号
+- 底层系统升级到Debian11
+- k3s集群升级到1.23.4
 
+### 20210924 变更
 
-#### 20210830 变更
+- [blog.ysicing.net](https://blog.ysicing.net)
+  - k3s集群升级到1.21.5,网络组件使用`cilium`
+  - 添加备案号
 
-- [ysicing.me](https://ysicing.me) 
-    - 境外访问 非大陆访问, 部署在hk 阿里云k3s集群上
-- [blog.ysicing.net](https://blog.ysicing.net) 
-    - 大陆访问, 部署在南京 腾讯云k3s集群上
+### 20210830 变更
+
+- [ysicing.me](https://ysicing.me)
+  - 境外访问 非大陆访问, 部署在hk 阿里云k3s集群上
+- [blog.ysicing.net](https://blog.ysicing.net)
+  - 大陆访问, 部署在南京 腾讯云k3s集群上
