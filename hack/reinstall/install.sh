@@ -23,7 +23,8 @@ while [[ $# -ge 1 ]]; do
     -m|--mirror)
       shift
       LinuxMirror="$1"
-      shift  
+      shift
+      ;;
     *)
       notice "not support"
       ;;
