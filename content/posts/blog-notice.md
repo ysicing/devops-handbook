@@ -18,6 +18,8 @@ categories:
 image: images/custom/code-file.png
 ---
 
+> 如果你觉得我的文章或者项目对你有用，那么来做一只小可爱吧！[爱发电@ysicing](https://afdian.net/@ysicing)
+
 ## 开始之前
 
 在阅读本书之前希望您掌握以下知识和准备以下环境：
@@ -28,8 +30,8 @@ image: images/custom/code-file.png
 
 ## 系列主题
 
-- Kubernetes(1.18.19)实践
-- Go(1.17)开发实践
+- Kubernetes(1.23)实践
+- Go(1.18)开发实践
 - 运维实践(主要是基于Debian(bullseye)发行版)
 
 ## ？
