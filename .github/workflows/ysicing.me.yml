@@ -11,10 +11,7 @@ jobs:
     name: build & deploy
     runs-on: 	ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-      with:
-        fetch-depth: 0
-        submodules: true
+    - uses: actions/checkout@v13
     - name: Login GHCR
       uses: docker/login-action@v1
       with:
@@ -26,20 +23,26 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
+    - uses: actions/setup-node@v3
       with:
-        hugo-version: '0.85.0'
-        extended: true        
+        node-version: 18
+        cache: yarn
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+    - uses: actions/cache@v3
+      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+    - name: Install dependencies
+      run: yarn install
     - name: build
       run: |
-          rm -rf config/_default/params.toml
-          rm -rf config/_default/config.toml
-          rm -rf config/_default/menus.zh.toml
-          cp -a scripts/config/ysicing.me.toml config/_default/config.toml
-          cp -a scripts/config/ysicing.me.params.toml config/_default/params.toml
-          cp -a scripts/config/ysicing.me.menus.zh.toml config/_default/menus.zh.toml
-          hugo --minify
+          sed -i "s#wiki.ysicing.me#ysicing.me" docusaurus.config.js
+          yarn build
           docker build -t ysicing/devops-handbook:ysicing.me -f scripts/caddy/ysicing.me/Dockerfile .
           docker push ysicing/devops-handbook:ysicing.me
           docker tag ysicing/devops-handbook:ysicing.me ghcr.io/ysicing/devops-handbook:ysicing.me
