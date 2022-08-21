@@ -41,7 +41,7 @@ jobs:
       run: yarn install
     - name: Build website
       run: |
-          sed -i "s#wiki.ysicing.me#blog.ysicing.net" docusaurus.config.js
+          sed -i "s#wiki.ysicing.me#blog.ysicing.net#g" docusaurus.config.js
           yarn build
           docker build -t ysicing/devops-handbook:blog.ysicing.net -f scripts/caddy/blog.ysicing.net/Dockerfile .
           docker push ysicing/devops-handbook:blog.ysicing.net
