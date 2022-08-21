@@ -49,7 +49,7 @@ jobs:
           docker push ghcr.io/ysicing/devops-handbook:ysicing.me
 
     - name: deploy
-      uses: peaceiris/actions-gh-pages@v2
+      uses: peaceiris/actions-gh-pages@v3
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
