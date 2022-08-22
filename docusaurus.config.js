@@ -63,18 +63,10 @@ const config = {
           ],
         },
         {
-          label: '学习',
+          label: '笔记',
           position: 'right',
-          items: [
-            {
-              label: "运维笔记",
-              to: "/ops",
-            },
-            {
-              label: "安全笔记",
-              to: "/security",
-            },
-          ],
+          type: 'doc',
+          docId: 'intro',
         },
         {
           label: '导航',
@@ -96,7 +88,7 @@ const config = {
           items: [
             {
               label: '技术笔记',
-              to: 'docs',
+              to: 'docs/intro',
             },
             {
               label: '实战项目',
@@ -234,30 +226,6 @@ const config = {
           copyright: `Copyright © ${new Date().getFullYear()} ysicing Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       }
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "ops",
-        path: "docs/ops",
-        routeBasePath: "ops",
-        sidebarPath: require.resolve("./sidebars.js"),
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "security",
-        path: "docs/security",
-        routeBasePath: "security",
-        sidebarPath: require.resolve("./sidebars.js"),
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
     ],
     path.resolve(__dirname, './src/plugin/plugin-baidu-push'),
     'docusaurus-plugin-image-zoom',

@@ -17,7 +17,6 @@ import {SocialLinks} from '@site/src/components/Hero';
 import {useThemeConfig} from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import React from 'react';
 
 type Count = {
   blog: number;
@@ -89,7 +88,7 @@ export function BlogUser({
         </Link>
         <Link
           className="bloginfo__num-item"
-          href="/docs/skill"
+          href="/docs/intro"
           data-tips="笔记数">
           <FontAwesomeIcon icon={faBook as IconProp} /> {count.doc}
         </Link>
