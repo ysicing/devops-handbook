@@ -21,6 +21,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@dipakparmar/docusaurus-plugin-umami": "^1.0.2",
     "@docusaurus/core": "^2.0.1",
     "@docusaurus/plugin-debug": "^2.0.1",
     "@docusaurus/plugin-ideal-image": "^2.0.1",

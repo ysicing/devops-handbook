@@ -1615,6 +1615,13 @@
   resolved "https://registry.npmmirror.com/@csstools/selector-specificity/-/selector-specificity-2.0.2.tgz#1bfafe4b7ed0f3e4105837e056e0a89b108ebe36"
   integrity sha512-IkpVW/ehM1hWKln4fCA3NzJU8KwD+kIOvPZA4cqxoJHtE21CCzjyp+Kxbu0i5I4tBNOlXPL9mjwnWlL0VEG4Fg==
 
+"@dipakparmar/docusaurus-plugin-umami@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/@dipakparmar/docusaurus-plugin-umami/-/docusaurus-plugin-umami-1.0.2.tgz#54e73d1e0ce6b152069b933c5840c434f1633bfe"
+  integrity sha512-nrdHMHvhnH5TfSLF6i9bYHTLvxEf3Re8lSlZF8gLllW2VURDLoNdmWefrfHRCpUaiRYN+cwb1oHMatXKr4NUog==
+  dependencies:
+    "@docusaurus/core" "^2.0.1"
+
 "@docsearch/css@3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-3.1.1.tgz#e0976bf995e383f8ee8657306311b9cb95016330"

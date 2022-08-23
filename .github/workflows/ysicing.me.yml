@@ -42,6 +42,7 @@ jobs:
     - name: build
       run: |
           sed -i "s#wiki.ysicing.me#ysicing.me#g" docusaurus.config.js
+          sed -i "s#your-website-id#57ced802-d5bd-4987-a0c3-b4062978d343#g" docusaurus.config.js
           yarn build
           docker build -t ysicing/devops-handbook:ysicing.me -f scripts/caddy/ysicing.me/Dockerfile .
           docker push ysicing/devops-handbook:ysicing.me
@@ -53,4 +54,4 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
+        PUBLISH_DIR: ./build

@@ -2,7 +2,7 @@
 const path = require('path')
 const beian = '京ICP备17001940号'
 
-const announcementBarContent = `关于 <a href='/docs/skill/docusaurus/docusaurus-guides'>Docusaurus2 主题魔改</a>`
+const announcementBarContent = `关于 <a href='https://github.com/ysicing/spot' target='_blank'>新轮子 竞价机器助手</a>`
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -234,6 +234,17 @@ const config = {
         disableInDev: false,
       }
     ],
+    ['@dipakparmar/docusaurus-plugin-umami', {
+      // options
+      websiteID: "your-website-id", // Required
+      analyticsDomain: "umami.external.ysicing.net", // Required
+      scriptName: "",
+      dataHostURL: "",
+      dataAutoTrack: true,
+      dataDoNoTrack: true,
+      dataCache: true,
+      dataDomains: "", // comma separated list of domains, *Recommended*
+    }],
     [
       '@docusaurus/plugin-pwa',
       {
