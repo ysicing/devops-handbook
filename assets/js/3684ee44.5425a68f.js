@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[7549],{74790:function(a){a.exports=JSON.parse('{"label":"wireguard","permalink":"/tags/wireguard","allTagsPath":"/tags","count":3}')}}]);

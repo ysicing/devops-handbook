@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[604],{50670:function(a){a.exports=JSON.parse('{"label":"tailscale","permalink":"/en/tags/tailscale","allTagsPath":"/en/tags","count":3}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[7965],{61063:function(a){a.exports=JSON.parse('{"label":"calico","permalink":"/tags/calico","allTagsPath":"/tags","count":1}')}}]);

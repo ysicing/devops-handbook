@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[2912],{61104:function(e){e.exports=JSON.parse('{"label":"nerdctl","permalink":"/en/tags/nerdctl","allTagsPath":"/en/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[8519],{4765:function(a){a.exports=JSON.parse('{"label":"minipc","permalink":"/tags/minipc","allTagsPath":"/tags","count":1}')}}]);

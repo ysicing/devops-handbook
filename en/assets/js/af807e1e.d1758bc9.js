@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[3765],{57836:function(s){s.exports=JSON.parse('{"label":"k3s","permalink":"/en/tags/k-3-s","allTagsPath":"/en/tags","count":3}')}}]);

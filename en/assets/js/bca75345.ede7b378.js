@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[6899],{53733:function(e){e.exports=JSON.parse('{"label":"cilium","permalink":"/en/tags/cilium","allTagsPath":"/en/tags","count":1}')}}]);

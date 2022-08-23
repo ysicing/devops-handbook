@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[6175],{36732:function(a){a.exports=JSON.parse('{"label":"chartmuseum","permalink":"/tags/chartmuseum","allTagsPath":"/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[4258],{19402:function(e){e.exports=JSON.parse('{"label":"traefik","permalink":"/en/tags/traefik","allTagsPath":"/en/tags","count":1}')}}]);

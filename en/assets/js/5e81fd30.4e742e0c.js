@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[4971],{29068:function(e){e.exports=JSON.parse('{"label":"openkruise","permalink":"/en/tags/openkruise","allTagsPath":"/en/tags","count":1}')}}]);

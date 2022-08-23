@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[7609],{50842:function(e){e.exports=JSON.parse('{"label":"cert-manager","permalink":"/en/tags/cert-manager","allTagsPath":"/en/tags","count":2}')}}]);

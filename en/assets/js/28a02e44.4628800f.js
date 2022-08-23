@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[8694],{67504:function(a){a.exports=JSON.parse('{"label":"caddy-plugin","permalink":"/en/tags/caddy-plugin","allTagsPath":"/en/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[2841],{39711:function(s){s.exports=JSON.parse('{"label":"istio","permalink":"/en/tags/istio","allTagsPath":"/en/tags","count":1}')}}]);
