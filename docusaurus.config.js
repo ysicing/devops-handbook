@@ -48,7 +48,7 @@ const config = {
       },
       items: [
         {
-          label: '博客',
+          label: '🔒博客',
           // to: '',
           position: 'right',
           items: [
@@ -63,7 +63,7 @@ const config = {
           ],
         },
         {
-          label: '笔记',
+          label: '笔记🔥',
           position: 'right',
           type: 'doc',
           docId: 'intro',

@@ -6,12 +6,18 @@ export type Friend = {
 };
 
 export const Friends: Friend[] = [
-  // {
-  //   title: '峰华前端工程师',
-  //   description: '致力于帮助你以最直观、最快速的方式学会前端开发',
-  //   website: 'https://zxuqian.cn',
-  //   avatar: require('./avatar/zxuqian.png'),
-  // },
+  {
+    title: '博客umami',
+    description: 'blog.ysicing.net实时访问',
+    website: 'https://umami.external.ysicing.net/share/MYQbDFlN/blog.ysicing.net',
+    avatar: require('./avatar/umami.png'),
+  },
+  {
+    title: '镜像-博客umami',
+    description: 'ysicing.me实时访问',
+    website: 'https://umami.external.ysicing.net/share/YHVuuQQP/ysicing.me',
+    avatar: require('./avatar/umami.png'),
+  },
 ];
 
 export function sortFriend() {
