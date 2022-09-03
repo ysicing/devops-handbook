@@ -1,5 +1,5 @@
 ---
-title: cilium升级
+title: 升级
 tag:
 - cilium
 - 升级
