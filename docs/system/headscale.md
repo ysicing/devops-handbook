@@ -215,17 +215,21 @@ sudo tailscale up --login-server=https://自定义域名 --accept-dns=false
 
 #### 容器接入
 
-:::danger
-打通k8s, cilium容器网络就挂了。
-暂时不打通
-:::
-
 ```bash
 # 服务端生成可复用 preauthkey 的 token，有效期可以设置为 72 小时
 headscale preauthkeys create -e 72h --reusable --namespace default
 # 查看已经生成的 key
 headscale -n default preauthkeys list
 ```
+
+:::danger
+<del>打通k8s, cilium容器网络就挂了。
+暂时不打通</del>
+:::
+
+:::info
+调整成默认网络就好了
+:::
 
 ### 局域网打通
 
