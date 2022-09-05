@@ -6,7 +6,9 @@ tags:
 - caddy
 ---
 
-# Caddy2使用小记
+> `Caddy2`使用小记
+
+<!-- truncate -->
 
 > 将**Caddy**升级到 **Caddy2**， 记录一下。 2.0版本改变挺大的。
 
