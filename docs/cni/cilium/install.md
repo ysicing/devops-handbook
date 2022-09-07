@@ -1,8 +1,7 @@
 ---
 title: 安装
-tag:
+tags:
 - cilium
-- 安装
 ---
 
 ## 目前最新版本安装

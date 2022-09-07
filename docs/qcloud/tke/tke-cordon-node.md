@@ -1,7 +1,9 @@
 ---
 title: tke集群禁止调度注意事项
-tag:
-- 容器服务
+tags:
+- k8s
+- qcloud
+- tke
 ---
 
 # tke集群禁止调度注意事项

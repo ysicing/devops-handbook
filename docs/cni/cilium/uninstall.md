@@ -1,5 +1,7 @@
 ---
 title: 卸载
+tags:
+- cilium
 ---
 
 ## 卸载

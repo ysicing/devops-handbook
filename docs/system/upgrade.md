@@ -1,6 +1,6 @@
 ---
 title: debian升级内核
-tag:
+tags:
 - debian
 - 升级
 ---

@@ -1,6 +1,6 @@
 ---
 title: Headscale 的部署方法和使用教程
-tag:
+tags:
 - headscale
 - tailscale
 - 内网穿透

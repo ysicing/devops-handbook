@@ -1,8 +1,7 @@
 ---
 title: 升级
-tag:
+tags:
 - cilium
-- 升级
 ---
 
 ## 升级cilium

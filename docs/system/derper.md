@@ -1,6 +1,6 @@
 ---
 title: Headscale 部署私有 DERP 中继服务器
-tag:
+tags:
 - headscale
 - tailscale
 - derper
