@@ -5,6 +5,17 @@
     "description": "缘生笔记 Blog",
     "items": [
         {
+            "id": "/posts/docs",
+            "content_html": "<p>后面主要更新<a href=\"/en/docs/intro\">📒笔记🔥</a>, 博客仅为存档。</p><h2 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"爱发电\">爱发电<a class=\"hash-link\" href=\"#爱发电\" title=\"Direct link to heading\">​</a></h2><blockquote><p>如果你觉得项目对你可能有用，那么来支持一下吧！<a href=\"https://afdian.net/@ysicing\" target=\"_blank\" rel=\"noopener noreferrer\">爱发电@ysicing</a></p></blockquote>",
+            "url": "https://ysicing.me/en/posts/docs",
+            "title": "博客更新说明",
+            "summary": "后面主要更新[文档](/docs/)",
+            "date_modified": "2022-09-07T14:09:20.000Z",
+            "tags": [
+                "site"
+            ]
+        },
+        {
             "id": "/posts/bigcat-ergo",
             "content_html": "<blockquote><p>以前养了一只狗叫大猫，一只猫叫二狗.</p></blockquote><h2 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"大猫bigcat\">大猫(BigCat)<a class=\"hash-link\" href=\"#大猫bigcat\" title=\"Direct link to heading\">​</a></h2><blockquote><p>平台项目, 简单理解应该是个人版的轻量化容器平台。</p></blockquote><p><a href=\"https://github.com/ysicing/next\" target=\"_blank\" rel=\"noopener noreferrer\">还未开源</a></p><h3 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"功能介绍\">功能介绍<a class=\"hash-link\" href=\"#功能介绍\" title=\"Direct link to heading\">​</a></h3><ul><li>待定</li></ul><h2 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"二狗ergo\">二狗(ErGo)<a class=\"hash-link\" href=\"#二狗ergo\" title=\"Direct link to heading\">​</a></h2><blockquote><p>命令行工具, 集成常见的运维功能。</p></blockquote><p><a href=\"https://github.com/ysicing/ergo\" target=\"_blank\" rel=\"noopener noreferrer\">ysicing/ergo</a></p><h3 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"功能介绍-1\">功能介绍<a class=\"hash-link\" href=\"#功能介绍-1\" title=\"Direct link to heading\">​</a></h3><ul><li>创建k3s集群, 大猫就完全依托k8s(k3s)集群</li><li>安装常见服务，如docker/containerd</li><li>Debian系的初始化，重装等操作</li><li>还有一些运维命令</li></ul><h2 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"爱发电\">爱发电<a class=\"hash-link\" href=\"#爱发电\" title=\"Direct link to heading\">​</a></h2><blockquote><p>如果你觉得项目对你可能有用，那么来支持一下吧！<a href=\"https://afdian.net/@ysicing\" target=\"_blank\" rel=\"noopener noreferrer\">爱发电@ysicing</a></p></blockquote>",
             "url": "https://ysicing.me/en/posts/bigcat-ergo",

@@ -2,12 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ysicing.me/</id>
     <title>ysicing</title>
-    <updated>2022-05-10T14:09:20.000Z</updated>
+    <updated>2022-09-07T14:09:20.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ysicing.me/"/>
     <subtitle>缘生笔记 Blog</subtitle>
     <icon>https://ysicing.me/https://github.com/ysicing.png</icon>
     <rights>Copyright © 2022 ysicing Built with Docusaurus.&lt;p&gt;&lt;a href="http://beian.miit.gov.cn/" class="footer_lin"&gt;京ICP备17001940号&lt;/a&gt;&lt;/p&gt;</rights>
+    <entry>
+        <title type="html"><![CDATA[博客更新说明]]></title>
+        <id>/posts/docs</id>
+        <link href="https://ysicing.me/posts/docs"/>
+        <updated>2022-09-07T14:09:20.000Z</updated>
+        <summary type="html"><![CDATA[后面主要更新[文档](/docs/)]]></summary>
+        <content type="html"><![CDATA[<p>后面主要更新<a href="/docs/intro">📒笔记🔥</a>, 博客仅为存档。</p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="爱发电">爱发电<a class="hash-link" href="#爱发电" title="标题的直接链接">​</a></h2><blockquote><p>如果你觉得项目对你可能有用，那么来支持一下吧！<a href="https://afdian.net/@ysicing" target="_blank" rel="noopener noreferrer">爱发电@ysicing</a></p></blockquote>]]></content>
+        <category label="site" term="site"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[大猫二狗开发者计划]]></title>
         <id>/posts/bigcat-ergo</id>

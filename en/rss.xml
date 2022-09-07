@@ -4,11 +4,20 @@
         <title>ysicing</title>
         <link>https://ysicing.me/en/</link>
         <description>缘生笔记 Blog</description>
-        <lastBuildDate>Tue, 10 May 2022 14:09:20 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 07 Sep 2022 14:09:20 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2022 ysicing Built with Docusaurus.&lt;p&gt;&lt;a href="http://beian.miit.gov.cn/" class="footer_lin"&gt;京ICP备17001940号&lt;/a&gt;&lt;/p&gt;</copyright>
+        <item>
+            <title><![CDATA[博客更新说明]]></title>
+            <link>https://ysicing.me/en/posts/docs</link>
+            <guid>/posts/docs</guid>
+            <pubDate>Wed, 07 Sep 2022 14:09:20 GMT</pubDate>
+            <description><![CDATA[后面主要更新[文档](/docs/)]]></description>
+            <content:encoded><![CDATA[<p>后面主要更新<a href="/en/docs/intro">📒笔记🔥</a>, 博客仅为存档。</p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="爱发电">爱发电<a class="hash-link" href="#爱发电" title="Direct link to heading">​</a></h2><blockquote><p>如果你觉得项目对你可能有用，那么来支持一下吧！<a href="https://afdian.net/@ysicing" target="_blank" rel="noopener noreferrer">爱发电@ysicing</a></p></blockquote>]]></content:encoded>
+            <category>site</category>
+        </item>
         <item>
             <title><![CDATA[大猫二狗开发者计划]]></title>
             <link>https://ysicing.me/en/posts/bigcat-ergo</link>
