@@ -20,6 +20,8 @@
     # TLS、HSTS、ACME 等通用配置
     import COMMON_CONFIG
 
+    import ERROR_CFG
+
     metrics /metrics
 
     root * /root/www
