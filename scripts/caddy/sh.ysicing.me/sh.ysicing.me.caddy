@@ -17,12 +17,11 @@
     # 日志
     import LOG "/var/log/sh.ysicing.me.log"
 
-    # TLS、HSTS、ACME 等通用配置
-    import COMMON_CONFIG
+    encode zstd gzip
 
-    import ERROR_CFG
-
-    metrics /metrics
+    handle_errors {
+	    respond "err: {err.status_code}, https://blog.ysicing.net"
+    }
 
     root * /root/hack
 

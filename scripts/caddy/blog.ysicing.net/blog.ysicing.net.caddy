@@ -4,6 +4,10 @@
 
     encode zstd gzip
 
+    handle_errors {
+	    respond "err: {err.status_code}, https://blog.ysicing.net"
+    }
+
     root * /root/www
 
     @geofilter {
