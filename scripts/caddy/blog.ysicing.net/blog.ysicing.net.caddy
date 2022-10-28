@@ -2,18 +2,13 @@
     # 日志
     import LOG "/var/log/blog.ysicing.net.log"
 
-    # TLS、HSTS、ACME 等通用配置
-    import COMMON_CONFIG
-
-    import ERROR_CFG
-
-    metrics /metrics
+    encode zstd gzip
 
     root * /root/www
 
     @geofilter {
         not geocn {
-            db_file "/root/geoip.mmdb"
+            db_file "/etc/caddy/geoip.mmdb"
         }
     }
 
