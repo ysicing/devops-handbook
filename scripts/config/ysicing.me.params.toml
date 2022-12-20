@@ -72,7 +72,7 @@ enableSidebarPostsByOrder = false # another lists in the sidebar
 
 # footer
 showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
-showFeedLinks = true # RSS Feed 
+showFeedLinks = true # RSS Feed
 showSocialLinks = false # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
 showBA = false
@@ -88,12 +88,12 @@ busuanziSitePV = true # site total page view count
 busuanziPagePV = true # post view count
 
 enableumami = true
-umamiID = "57ced802-d5bd-4987-a0c3-b4062978d343"
+umamiID = "4c49e691-9efd-4049-ba15-fac0e5a34ea6"
 googlesiteverification = "6C2eF2ifIPu7u8lWFgdBAvJ77nQ_7ufGPK1MRpieszA"
 
 # comment
 enableComment = false
-disqus_shortname = "" 
+disqus_shortname = ""
 commento = false
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
@@ -121,7 +121,7 @@ commento = false
   appKey = '你的appKey'
   notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
   verify = false # Verification code
-  avatar = 'mm' 
+  avatar = 'mm'
   placeholder = '说点什么吧...'
   visitor = false
 

@@ -26,10 +26,10 @@
   identifier = "showcase"
   name = "开源项目"
   url = "showcase"
-  weight = 6  
+  weight = 6
 
 [[main]]
   identifier = "umami"
   name = "实时访客"
-  url = "https://umami.external.ysicing.net/share/MYQbDFlN/blog.ysicing.net"
-  weight = 7  
+  url = "https://umami.external.ysicing.net/share/LnFwnhur/%E5%8D%9A%E5%AE%A2"
+  weight = 7
