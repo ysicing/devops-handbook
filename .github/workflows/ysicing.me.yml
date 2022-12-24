@@ -42,7 +42,7 @@ jobs:
     - name: build
       run: |
           sed -i "s#wiki.ysicing.me#ysicing.me#g" docusaurus.config.js
-          sed -i "s#your-website-id#57ced802-d5bd-4987-a0c3-b4062978d343#g" docusaurus.config.js
+          sed -i "s#your-website-id#4c49e691-9efd-4049-ba15-fac0e5a34ea6#g" docusaurus.config.js
           yarn build
           docker build -t ysicing/devops-handbook:ysicing.me -f scripts/caddy/ysicing.me/Dockerfile .
           docker push ysicing/devops-handbook:ysicing.me
