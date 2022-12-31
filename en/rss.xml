@@ -4,11 +4,20 @@
         <title>ysicing</title>
         <link>https://ysicing.me/en/</link>
         <description>缘生笔记 Blog</description>
-        <lastBuildDate>Wed, 07 Sep 2022 14:09:20 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 31 Dec 2022 15:59:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2022 ysicing Built with Docusaurus.&lt;p&gt;&lt;a href="http://beian.miit.gov.cn/" class="footer_lin"&gt;京ICP备17001940号&lt;/a&gt;&lt;/p&gt;</copyright>
+        <item>
+            <title><![CDATA[2022年度总结]]></title>
+            <link>https://ysicing.me/en/posts/2022</link>
+            <guid>/posts/2022</guid>
+            <pubDate>Sat, 31 Dec 2022 15:59:59 GMT</pubDate>
+            <description><![CDATA[2022年度总结]]></description>
+            <content:encoded><![CDATA[<blockquote><p>距离2022年结束不到1小时，回想这一年，真的是发生了太多的事情。</p></blockquote><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="回顾2022">回顾2022<a class="hash-link" href="#回顾2022" title="Direct link to heading">​</a></h2><p>回想一下，不堪回首就不回首了。</p><h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="读书">读书<a class="hash-link" href="#读书" title="Direct link to heading">​</a></h3><p>年初的时候决定记录今年的阅读情况，记录读了什么书，以及简单的读后感。另外感谢公司的每日读书挑战赛，额外丰富了我的阅读。</p><p>今年阅读了接近800小时。看完了大概60本书，留下了128条笔记和总结。这里简单列下，我觉得值得推荐的书籍</p><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="2022读书">2022读书<a class="hash-link" href="#2022读书" title="Direct link to heading">​</a></h4><ul><li>人月神话</li><li>爱你就像爱生命</li><li>用博弈的思维看世界</li><li>法治的细节</li><li>大明王朝1566</li></ul><h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="观影">观影<a class="hash-link" href="#观影" title="Direct link to heading">​</a></h3><blockquote><p>主要B站/youtube为主</p></blockquote><ul><li>电影23部, 其中电影院4部</li><li>电视剧6部</li><li>记录片8部，主要是人文社科，历史，文学</li></ul><p>这里特别感谢</p><ul><li>B站UP主: 孙悟穷, 刀马刻森, 次级英雄娄不凡, 小约翰可汗</li><li>Youtube: 科幻FANS, 户外小北哥, CCTV科教</li></ul><h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="技术">技术<a class="hash-link" href="#技术" title="Direct link to heading">​</a></h3><blockquote><p>仅从个人方面</p></blockquote><ul><li>造了几个轮子, 给自己节省了很多时间，哈哈哈这可能是唯一比较值得的</li><li>在开源社区方面,给几个开源项目水了几个patch, 看的代码越多越深入就越认识到自己的不足</li></ul><blockquote><p>上述数据来自众多APP年度总结</p></blockquote><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="其他">其他<a class="hash-link" href="#其他" title="Direct link to heading">​</a></h2><p>在漫长而又短暂的一年中,生活不过多了一些艰难度过的坎坷与波折。</p><blockquote><p>路途漫漫终有一日，幸与不幸都有尽头。</p></blockquote><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="即将开始的2023年">即将开始的2023年<a class="hash-link" href="#即将开始的2023年" title="Direct link to heading">​</a></h2><ul class="contains-task-list containsTaskList_mC6p"><li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->生活健康自律，2022年意识到健康十分无比重要<ul class="contains-task-list containsTaskList_mC6p"><li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->早睡觉, 不熬夜: 由于之前都睡得比较晚，无特殊情况，每周最多一天晚睡(12点之后睡觉)</li><li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->坚持锻炼: 去年累计锻炼了121天</li><li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->健康饮食、控制体重: 保持在60-65KG</li></ul></li><li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->知识图谱构建</li></ul><p>Flag 就先立这么多，预祝大家新年快乐 :-)</p>]]></content:encoded>
+            <category>年度总结</category>
+        </item>
         <item>
             <title><![CDATA[博客更新说明]]></title>
             <link>https://ysicing.me/en/posts/docs</link>
