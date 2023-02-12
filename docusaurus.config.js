@@ -122,7 +122,7 @@ const config = {
         ],
         },
       ],
-      copyright: `<p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2020 – ${new Date().getFullYear()} ysicing. </p>`,
+      copyright: `<p><a href="https://icp.gov.moe/?keyword=20212380" class="footer_lin">萌ICP备20212380号</a></p><p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2020 – ${new Date().getFullYear()} ysicing. </p>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -159,7 +159,7 @@ const config = {
     socials: {
       github: 'https://github.com/ysicing',
       telegram: 'https://t.me/ysicing',
-      wx: 'https://wx.ysicing.me',
+      wx: 'https://ysicing.ysicing.cloud/wx@ysicing',
     },
   }),
   presets: [
@@ -182,15 +182,6 @@ const config = {
           changefreq: 'daily',
           priority: 0.5,
         },
-        // googleAnalytics: {
-        //   trackingID: "UA-118572241-1",
-        //   anonymizeIP: true, // Should IPs be anonymized?
-        // },
-        // gtag: {
-        //   trackingID: "G-S4SD5NXWXF",
-        //   anonymizeIP: true, // Should IPs be anonymized?
-        // },
-        // debug: true,
       }),
     ],
   ],
@@ -223,7 +214,7 @@ const config = {
         feedOptions: {
           type: 'all',
           title: 'ysicing',
-          copyright: `Copyright © ${new Date().getFullYear()} ysicing Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          copyright: `Copyright © ${new Date().getFullYear()} ysicing Built with Docusaurus.<p><a href="https://icp.gov.moe/?keyword=20212380" class="footer_lin">萌ICP备20212380号</a></p><p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       }
     ],

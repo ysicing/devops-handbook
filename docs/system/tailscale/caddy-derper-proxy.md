@@ -7,6 +7,10 @@ tags:
 - caddy
 ---
 
+:::warning
+根据我个人最近的实践caddy + derper 貌似不可用.
+:::
+
 ## 场景
 
 通常derper节点上也需要跑一些web服务，需要复用443端口
