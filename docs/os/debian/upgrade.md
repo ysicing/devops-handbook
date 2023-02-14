@@ -1,8 +1,8 @@
 ---
 title: debian升级内核
+description: 本文主要记录本人升级Debian内核。
 tags:
 - debian
-- 升级
 ---
 
 ## 配置并更新软件源

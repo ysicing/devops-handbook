@@ -1,5 +1,6 @@
 ---
 title: 轻量云debian挂载数据盘
+description: 本文主要记录本人在Debian挂载硬盘
 tags:
 - debian
 ---
