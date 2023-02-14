@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[6116],{46668:function(s){s.exports=JSON.parse('{"label":"k3s","permalink":"/docs/tags/k-3-s","allTagsPath":"/docs/tags","count":1,"items":[{"id":"k3s/install","title":"\u5b89\u88c5k3s\u96c6\u7fa4","description":"\u4e0b\u8f7d\u4e8c\u8fdb\u5236","permalink":"/docs/k3s/install"}]}')}}]);
