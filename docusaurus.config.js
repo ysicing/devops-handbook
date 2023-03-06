@@ -48,25 +48,14 @@ const config = {
       },
       items: [
         {
-          label: '🔒博客',
-          // to: '',
-          position: 'right',
-          items: [
-            {
-              label: '标签',
-              to: 'tags',
-            },
-            {
-              label: '归档',
-              to: 'archive',
-            },
-          ],
+          label: '标签',
+          position: 'left',
+          to: 'tags',
         },
         {
-          label: '笔记🔥',
-          position: 'right',
-          type: 'doc',
-          docId: 'intro',
+          label: '归档',
+          position: 'left',
+          to: 'archive',
         },
         {
           label: '导航',
