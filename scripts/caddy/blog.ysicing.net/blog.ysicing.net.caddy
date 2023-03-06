@@ -5,7 +5,7 @@
     encode zstd gzip
 
     handle_errors {
-	    respond "err: {err.status_code}, https://blog.ysicing.net"
+	    redir https://blog.ysicing.net/tags
     }
 
     root * /root/www
