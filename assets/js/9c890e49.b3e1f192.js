@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[2218],{380:function(e){e.exports=JSON.parse('{"label":"derper","permalink":"/tags/derper","allTagsPath":"/tags","count":2}')}}]);

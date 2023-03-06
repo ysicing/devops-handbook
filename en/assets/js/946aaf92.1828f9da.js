@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[9436],{49294:function(s){s.exports=JSON.parse('{"label":"dnspod","permalink":"/en/tags/dnspod","allTagsPath":"/en/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[413],{12115:function(e){e.exports=JSON.parse('{"permalink":"/tags/debian/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":11,"previousPage":"/tags/debian","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
