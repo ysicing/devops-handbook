@@ -73,7 +73,7 @@ deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://mirror
 ### caddy2
 
 ```bash
-mirrors.ysicing.cloud {
+<自定义域名> {
  import LOG "/var/log/caddy/mirrors.log"
  handle_path /tailscale/* {
   reverse_proxy https://pkgs.tailscale.com {
