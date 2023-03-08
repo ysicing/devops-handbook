@@ -10,12 +10,5 @@
 
     root * /root/www
 
-    @geofilter {
-        geocn {
-            db_file "/etc/caddy/geoip.mmdb"
-        }
-    }
-
-    redir @geofilter https://blog.ysicing.net{uri} permanent
     file_server
 }
