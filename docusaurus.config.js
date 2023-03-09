@@ -8,7 +8,7 @@ const announcementBarContent = `关于 <a href='https://github.com/ysicing/spot'
 const config = {
   title: '缘生笔记',
   titleDelimiter: '-',
-  url: 'https://ysicing.me',
+  url: 'https://wiki.ysicing.me',
   baseUrl: '/',
   favicon: 'https://github.com/ysicing.png',
   organizationName: 'ysicing',
