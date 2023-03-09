@@ -4,6 +4,8 @@
 
     encode zstd gzip
 
+    header Blog-Header {$POD_NAME:k3s-nj}
+
     handle_errors {
 	    redir https://blog.ysicing.net/tags
     }
