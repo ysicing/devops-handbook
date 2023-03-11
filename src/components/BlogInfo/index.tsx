@@ -79,10 +79,6 @@ export function BlogUser({
           <Icon icon="ri:price-tag-3-line" width="20" height="20" />
           {count.tag}
         </Link>
-        <Link className="bloginfo__num-item" href="/docs/skill">
-          <Icon icon="carbon:notebook" width="20" height="20" />
-          {count.doc}
-        </Link>
         <Link
           className="bloginfo__num-item"
           href="/project"
