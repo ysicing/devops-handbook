@@ -1,9 +1,18 @@
 .showcaseCard {
-  transition: all 0.2s ease-in-out;
+  position: relative;
+  box-shadow: 0 10px 30px -5px rgb(0 0 0 / 30%);
+  transition: box-shadow 0.5s, opacity 0.5s;
+  will-change: transform;
+  overflow: hidden;
+  touch-action: none;
 }
 
-.showcaseCard:hover {
-  transform: scale(1.05);
+.showcaseCard::before {
+  display: block;
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .showcaseCardImage {

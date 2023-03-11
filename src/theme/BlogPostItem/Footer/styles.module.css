@@ -3,16 +3,18 @@
 }
 
 .blogPostInfo {
+  margin-top: 0.5em;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: var(--ifm-spacing-m);
-  gap: 5px;
+  gap: 4px;
+  color: rgb(156 163 175);
 }
 
 .blogPostInfoTags {
   display: flex;
-  gap: 5px;
+  gap: 4px;
 }
 
 .blogPostInfoTags > a {
@@ -22,7 +24,7 @@
 
 .blogPostAuthor {
   display: inline-block;
-  margin: 0 4px;
+  margin: 0 2px;
   font-size: 0.95rem;
   font-weight: 400;
   color: inherit;
@@ -46,4 +48,8 @@
   border: 0;
   height: var(--ifm-hr-height);
   margin: 0.25rem 0;
+}
+
+html[data-theme='dark'] .divider {
+  background-color: #2f3336;
 }

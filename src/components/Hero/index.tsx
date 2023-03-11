@@ -1,156 +1,83 @@
-import React from 'react';
+import React from 'react'
 
-import {useTrail, animated} from 'react-spring';
-import Translate, {translate} from '@docusaurus/Translate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Link from '@docusaurus/Link';
+import { useTrail, animated } from '@react-spring/web'
+import Translate from '@docusaurus/Translate'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import Link from '@docusaurus/Link'
 
-import HeroMain from './img/hero_main.svg';
+import HeroMain from './img/hero_main.svg'
 
-import GithubIcon from '@site/static/icons/github.svg';
-import JuejinIcon from '@site/static/icons/juejin.svg';
-import RssIcon from '@site/static/icons/rss.svg';
-import QqIcon from '@site/static/icons/qq.svg';
-import WxIcon from '@site/static/icons/wx.svg';
-import CsdnIcon from '@site/static/icons/csdn.svg';
-import CloudMusicIcon from '@site/static/icons/cloud-music.svg';
-import TwitterIcon from '@site/static/icons/twitter.svg';
-import TgIcon from '@site/static/icons/telegram.svg';
-import Button from '../Button';
+import { Icon } from '@iconify/react'
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss'
 
 function Hero() {
-  const {
-    // 当前语言
-    i18n: {currentLocale},
-  } = useDocusaurusContext();
-
-  // animation
-  const animatedTexts = useTrail(5, {
-    from: {opacity: 0, transform: 'translateY(3em)'},
-    to: {opacity: 1, transform: 'translateY(0)'},
+  const trails = useTrail(4, {
+    from: { opacity: 0, transform: 'translate3d(0px, 2em, 0px)' },
+    to: { opacity: 1, transform: 'translate3d(0px, 0px, 0px)' },
     config: {
       mass: 3,
-      friction: 45,
       tension: 460,
+      friction: 45,
     },
-  });
+  })
 
   return (
     <animated.div className={styles.hero}>
       <div className={styles.bloghome__intro}>
-        <animated.div style={animatedTexts[0]} className={styles.hero_text}>
+        <animated.div style={trails[0]} className={styles.hero_text}>
           Hello! 我是
           <span className={styles.intro__name}><ruby>缘生<rt>ysicing</rt></ruby></span>
         </animated.div>
-        <animated.p style={animatedTexts[1]}>
-          <Translate
-            id="homepage.hero.text"
-            description="hero text"
-            values={{
-              blogs: (
-                <Link to="#homepage_blogs">
-                  <Translate
-                    id="hompage.hero.text.blog"
-                    description="Blog link label">
-                    技术博客
-                  </Translate>
-                </Link>
-              ),
-              project: (
-                <Link to="/project">
-                  <Translate
-                    id="hompage.hero.text.project"
-                    description="Project link label">
-                    实战项目
-                  </Translate>
-                </Link>
-              ),
-              links: (
-                <Link to="/resources">
-                  <Translate
-                    id="hompage.hero.text.link"
-                    description="Link link label">
-                    资源导航
-                  </Translate>
-                </Link>
-              ),
-            }}>
-            {`在这里你能了解到各类实战开发的所遇到的问题，帮助你在学习的过程了解最新的技术栈，并希望我的个人经历对你有所启发。`}
-          </Translate>
+        <animated.p style={trails[1]}>
+            {`希望我的运维开发笔记对你有所启发, 也欢迎大家指出我的不足. `}
+          <br />
         </animated.p>
-        {/* {currentLocale === 'zh-CN' && (
-          <animated.p style={animatedTexts[3]}>
-            <Translate id='homepage.qqgroup1' description='qq group1'>
-              QQ 群：5478458
-            </Translate>
-          </animated.p>
-        )} */}
-        <SocialLinks animatedProps={animatedTexts[4]} />
-        {
-          <animated.div style={animatedTexts[2]}>
-            <Button isLink href={'./about'}>
-              自我介绍
-            </Button>
-          </animated.div>
-        }
+        <SocialLinks style={trails[2]} />
+        <animated.div style={trails[3]}>
+          <a className={styles.intro} href={'./about'}>
+            <Translate id="hompage.hero.introduce">自我介绍</Translate>
+          </a>
+        </animated.div>
       </div>
-      <HeroMainImage />
+      <div className={styles.bloghome__image}>
+        <HeroMain />
+      </div>
     </animated.div>
-  );
+  )
 }
 
-export function SocialLinks({animatedProps, ...props}) {
-  const {siteConfig} = useDocusaurusContext();
-  const {themeConfig} = siteConfig;
+export function SocialLinks({ ...prop }) {
+  const { siteConfig } = useDocusaurusContext()
+  const { themeConfig } = siteConfig
   const socials = themeConfig.socials as {
-    github: string;
-    twitter: string;
-    juejin: string;
-    csdn: string;
-    qq: string;
-    wx: string;
-    cloudmusic: string;
-    telegram: string;
-  };
+    github: string
+    twitter: string
+    juejin: string
+    csdn: string
+    qq: string
+    wx: string
+    cloudmusic: string
+    zhihu: string
+    telegram: string
+  }
 
   return (
-    <animated.div className={styles.social__links} style={animatedProps}>
-      <a href="./rss.xml" target="_blank">
-        <RssIcon />
+    <animated.div className={styles.social__links} {...prop}>
+      <a href="/rss.xml" target="_blank">
+        <Icon icon="ri:rss-line" />
       </a>
       <a href={socials.github} target="_blank">
-        <GithubIcon />
+        <Icon icon="ri:github-line" />
       </a>
-      {/* <a href={socials.juejin} target="_blank">
-        <JuejinIcon />
+      <a href={socials.wx} target="_blank">
+        <Icon icon="ri:wechat-line" />
       </a>
-      <a href={socials.qq} target="_blank">
-        <QqIcon />
-      </a> */}
-      <a href={socials.wx} target='_blank'>
-        <WxIcon />
+      <a href={socials.telegram} target="_blank">
+        <Icon icon="ri:telegram-line" />
       </a>
-      <a href={socials.telegram} target='_blank'>
-        <TgIcon />
-      </a>
-      {/* <a href={socials.twitter} target="_blank">
-        <TwitterIcon />
-      </a> */}
-      {/* <a href={socials.cloudmusic} target="_blank">
-        <CloudMusicIcon />
-      </a> */}
     </animated.div>
-  );
+  )
 }
 
-function HeroMainImage() {
-  return (
-    <div className={styles.bloghome__image}>
-      <HeroMain />
-    </div>
-  );
-}
-
-export default Hero;
+export default Hero

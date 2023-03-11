@@ -76,8 +76,12 @@ const config = {
           title: '文档',
           items: [
             {
-              label: '技术笔记',
-              to: 'docs/intro',
+              label: '标签',
+              to: 'tags',
+            },
+            {
+              label: '归档',
+              to: 'archive',
             },
             {
               label: '实战项目',
@@ -105,18 +109,26 @@ const config = {
               label: 'GitHub',
               href: 'https://github.com/ysicing',
             },
+            {
+              label: '友情链接',
+              to: '/friends',
+            },
+            {
+              label: '导航',
+              to: '/website',
+            },
           {
             html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/buildwith.png" /><a/>`
           },
         ],
         },
       ],
-      copyright: `<p><a href="https://icp.gov.moe/?keyword=20212380" class="footer_lin">萌ICP备20212380号</a></p><p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2020 – ${new Date().getFullYear()} ysicing. </p>`,
+      copyright: `<p><a href="https://icp.gov.moe/?keyword=20212380" class="footer_lin">萌ICP备20212380号</a></p><p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2013 – ${new Date().getFullYear()} ysicing. </p>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
       darkTheme: require('prism-react-renderer/themes/vsDark'),
-      additionalLanguages: ['bash', 'docker', 'yaml', 'json','markdown','python', 'javascript', 'typescript', 'php'],
+      additionalLanguages: ['bash', 'docker', 'yaml', 'json','markdown','python', 'javascript', 'typescript', 'php', 'rust'],
       defaultLanguage: 'go',
       magicComments: [
         {
@@ -151,6 +163,15 @@ const config = {
       wx: 'https://ysicing.ysicing.cloud/wx@ysicing',
     },
   }),
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'description',
+        content: '缘生(ysicing)的个人博客',
+      },
+    },
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -165,7 +186,7 @@ const config = {
         },
         blog: false,
         theme: {
-          customCss: [require.resolve('./src/css/custom.css')],
+          customCss: [require.resolve('./src/css/custom.scss')],
         },
         sitemap: {
           changefreq: 'daily',
@@ -193,13 +214,16 @@ const config = {
       path.resolve(__dirname, './src/plugin/plugin-content-blog'), {
         path: 'blog',
         routeBasePath: '/',
+        editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
+          `https://github.com/ysicing/devops-handbook/edit/master/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
+        blogDescription: '缘生(ysicing)的个人博客',
         blogSidebarTitle: '近期文章',
         blogSidebarCount: 10,
         postsPerPage: 10,
         showReadingTime: true,
         readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-          frontMatter.hide_reading_time ? undefined : defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+          defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
           title: 'ysicing',
@@ -207,8 +231,8 @@ const config = {
         },
       }
     ],
-    path.resolve(__dirname, './src/plugin/plugin-baidu-push'),
     'docusaurus-plugin-image-zoom',
+    'docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-ideal-image', {
         disableInDev: false,
