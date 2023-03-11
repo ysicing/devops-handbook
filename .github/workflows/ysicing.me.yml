@@ -50,8 +50,3 @@ jobs:
           docker tag ysicing/devops-handbook:ysicing.me ghcr.io/ysicing/devops-handbook:ysicing.me
           docker push ghcr.io/ysicing/devops-handbook:ysicing.me
 
-    - name: deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./public
