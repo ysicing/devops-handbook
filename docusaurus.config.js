@@ -114,8 +114,8 @@ const config = {
               to: '/friends',
             },
             {
-              label: '导航',
-              to: '/website',
+              label: '赞助',
+              href: 'https://sponsor.ysicing.net',
             },
           {
             html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/buildwith.png" /><a/>`

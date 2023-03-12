@@ -34,6 +34,12 @@ export const resourceData: ResourceCategory[] = [
     name: '站长服务',
     resources: [
       {
+        name: '赞助',
+        desc: '赞助博主',
+        href: 'https://sponsor.ysicing.net',
+        logo: require('./avatar/default.png'),
+      },
+      {
         name: '博客umami',
         desc: 'blog.ysicing.net实时访问',
         href: 'https://umami.external.ysicing.net/share/ZkVuBlLX/%E5%8D%9A%E5%AE%A2',
