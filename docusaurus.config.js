@@ -178,7 +178,7 @@ const config = {
     socials: {
       github: 'https://github.com/ysicing',
       telegram: 'https://t.me/ysicing',
-      wx: 'https://ysicing.ysicing.cloud/wx@ysicing',
+      wx: 'https://s4.ysicing.cloud/ysicing.jpeg',
     },
   }),
   headTags: [
