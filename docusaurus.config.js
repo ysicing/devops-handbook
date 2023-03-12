@@ -67,6 +67,24 @@ const config = {
           position: 'right',
           to: 'project',
         },
+        {
+          label: '实验室',
+          position: 'right',
+          items: [
+            {
+              label: 'IP查询',
+              to: "https://ip.ysicing.cloud"
+            },
+            {
+              label: '镜像站',
+              to: "https://mirrors.ysicing.cloud"
+            },
+            {
+              label: '金榜题名',
+              to: "sponsor"
+            }
+          ]
+        },
       ],
     },
     footer: {
@@ -100,6 +118,10 @@ const config = {
               label: '日志',
               to: '/site',
             },
+            {
+              label: '打赏赞助',
+              to: '/sponsor',
+            },
           ],
         },
         {
@@ -112,10 +134,6 @@ const config = {
             {
               label: '友情链接',
               to: '/friends',
-            },
-            {
-              label: '赞助',
-              href: 'https://sponsor.ysicing.net',
             },
           {
             html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/buildwith.png" /><a/>`
