@@ -82,6 +82,10 @@ const config = {
             {
               label: '金榜题名',
               to: "sponsor"
+            },
+            {
+              label: '小声哔哔',
+              to: "https://note.ysicing.cloud/explore"
             }
           ]
         },
