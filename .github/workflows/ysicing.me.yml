@@ -43,6 +43,7 @@ jobs:
       run: |
           sed -i "s#wiki.ysicing.me#ysicing.me#g" docusaurus.config.js
           sed -i "s#your-website-id#4c49e691-9efd-4049-ba15-fac0e5a34ea6#g" docusaurus.config.js
+          sed -i "s#京ICP##g" docusaurus.config.js
           mv data/Invitelink.ts.hk data/Invitelink.ts
           yarn build
           docker build -t ysicing/devops-handbook:ysicing.me -f scripts/caddy/ysicing.me/Dockerfile .

@@ -43,6 +43,7 @@ jobs:
       run: |
           sed -i "s#wiki.ysicing.me#blog.ysicing.net#g" docusaurus.config.js
           sed -i "s#your-website-id#23f3d65f-fc86-46d2-b55a-dce133268e92#g" docusaurus.config.js
+          sed -i "s#京ICP#京ICP备17001940号#g" docusaurus.config.js
           rm -rf blog/posts/451-*
           yarn build
           docker build -t ysicing/devops-handbook:blog.ysicing.net -f scripts/caddy/blog.ysicing.net/Dockerfile .

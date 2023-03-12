@@ -1,6 +1,6 @@
 // @ts-check
 const path = require('path')
-const beian = '京ICP备17001940号'
+const beian = '京ICP'
 
 const announcementBarContent = `关于 <a href='https://github.com/ysicing/spot' target='_blank'>新轮子 竞价机器助手</a>`
 
