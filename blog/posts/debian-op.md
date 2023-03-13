@@ -11,8 +11,8 @@ tags:
 ## 一键最新脚本
 
 ```bash
-export MIRRORS="http://mirrors.aliyun.com" # 默认是清华源
-curl -s https://sh.ysicing.me/debian/init.sh | bash
+# export MIRRORS="http://mirrors.tencent.com" # 默认腾讯源, 可以指定其他软件源
+curl -s https://cos.ysicing.cloud/oss/scripts/debian-upcore.sh | bash
 ```
 
 ## Debian 11
@@ -49,7 +49,7 @@ Flags:
       --vmcpus string   虚拟机CPU数 (default "2")
       --vmmem string    虚拟机Mem MB数 (default "4096")
       --vmname string   虚拟机名
-      --vmnum string    虚拟机副本数 (default "1")   
+      --vmnum string    虚拟机副本数 (default "1")
 ```
 
 默认使用ergo创建虚拟机
@@ -95,14 +95,14 @@ end
 
 ### 初始化Debian
 
-```
+```bash
 ergo vm init --ip 11.11.11.111 --docker
 # 默认会使用ysicing/ansible镜像，执行ansible脚本初始化debian，--docker参数默认表示安装docker
 ```
 
 #### 手动执行之宿主机初始化
 
-```
+```bash
 git clone https://github.com/ysicing/play-ansible.git
 cd play-ansible
 # 安装ansible,如果已安装可跳过
@@ -128,7 +128,7 @@ exit
 
 > 添加buster-backports源，如果你使用ysicin/debian镜像可跳过
 
-```
+```bash
 # 默认
 cat >/etc/apt/sources.list <<EOF
 deb http://mirrors.aliyun.com/debian buster-backports main contrib non-free

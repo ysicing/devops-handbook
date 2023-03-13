@@ -11,7 +11,7 @@ tags:
 ## Linux环境一键脚本
 
 ```bash
-curl https://sh.ysicing.me/install/go.sh | bash
+curl https://cos.ysicing.cloud/oss/scripts/go.sh | bash
 ```
 
 ### ChangeLog

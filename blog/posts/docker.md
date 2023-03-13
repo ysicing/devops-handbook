@@ -9,12 +9,11 @@ tags:
 
 <!-- truncate -->
 
-## 安装docker
+## 安装docker并配置docker
 
-```
-curl -fsSL https://sh.ysicing.me/install/docker.sh | bash 
-或者
-ergo install docker -h
+```bash
+curl -fsSL https://cos.ysicing.cloud/oss/scripts/docker.sh | bash
+curl -fsSL https://cos.ysicing.cloud/oss/scripts/dockerconfig.sh | bash
 ```
 
 做了如下设置
@@ -37,7 +36,7 @@ ergo install docker -h
 
 ## 安装tools
 
-```
+```bash
 docker run --rm -v /usr/local/bin:/sysdir ysicing/tools tar zxf /pkg.tgz -C /sysdir
 ```
 

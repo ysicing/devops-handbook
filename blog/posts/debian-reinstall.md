@@ -26,22 +26,22 @@ tags:
 ## 3. 安装
 
 ```bash
-curl -sSL https://sh.ysicing.me/reinstall/install.sh | bash
+curl -sSL https://cos.ysicing.cloud/oss/scripts/debian-reinstall.sh | bash
 # 指定参数
 # -p 默认密码vagrant
 # -m 默认源aliyun
-bash <(wget --no-check-certificate -qO- 'https://sh.ysicing.me/reinstall/install.sh') -p thah6oob7KieChie
+bash <(wget --no-check-certificate -qO- 'https://cos.ysicing.cloud/oss/scripts/debian-reinstall.sh') -p thah6oob7KieChie
 ```
 
 ### 3.1 特殊: 自定义硬盘
 
-> 存在多个硬盘时，需要下载 [`https://sh.ysicing.me/reinstall/install-sdev.sh`](https://sh.ysicing.me/reinstall/install-sdev.sh)文件，编辑如下部分即可
+> 存在多个硬盘时，需要下载 [`https://cos.ysicing.cloud/oss/scripts/debian-reinstall-sdev.sh`](https://cos.ysicing.cloud/oss/scripts/debian-reinstall-sdev.sh)文件，编辑如下部分即可
 
 ```bash
 # -p 默认密码vagrant
 # -m 默认源aliyun
 # -s 指定启动硬盘
-bash <(wget --no-check-certificate -qO- 'https://sh.ysicing.me/reinstall/install-sdev.sh') -p thah6oob7KieChie -s /dev/sdb
+bash <(wget --no-check-certificate -qO- 'https://cos.ysicing.cloud/oss/scripts/debian-reinstall-sdev.sh') -p thah6oob7KieChie -s /dev/sdb
 ```
 
 ## 4. 参考附录

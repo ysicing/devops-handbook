@@ -22,7 +22,7 @@ nerdctl默认提供了两个压缩包
 
 ```bash
 # 从github下载
-wget https://github.techoc.workers.dev/https://github.com/containerd/nerdctl/releases/download/v0.12.1/nerdctl-full-0.12.1-linux-amd64.tar.gz
+wget https://ghproxy.com/https://github.com/containerd/nerdctl/releases/download/v0.12.1/nerdctl-full-0.12.1-linux-amd64.tar.gz
 # 解压
 tar Cxzvvf /usr/local nerdctl-full-0.12.1-linux-amd64.tar.gz
 # 开启启动
@@ -37,9 +37,9 @@ Containerd 的默认配置文件为 `/etc/containerd/config.toml`, 可以使用�
 containerd config default > /etc/containerd/config.toml
 ```
 
-#### 生成docker执行文件
+### 生成docker执行文件
 
-```
+```bash
 cat > /usr/local/bin/docker <<EOF
 #!/bin/bash
 /usr/local/bin/nerdctl $@
@@ -47,12 +47,16 @@ EOF
 chmod +x /usr/local/bin/docker
 ```
 
-#### 安装docker常用扩展插件
+### 安装docker常用扩展插件
 
 ```docker
 docker run --rm -v /usr/local/bin:/sysdir registry.cn-beijing.aliyuncs.com/k7scn/tools tar zxf /pkg.tgz -C /sysdir
 ```
 
-#### 其他
+### 其他
 
-快速安装containerd脚本 [containerd-install](https://sh.ysicing.me/k8s/cri/containerd-install)
+快速安装containerd脚本 [containerd-install](https://cos.ysicing.cloud/oss/scripts/containerd.sh)
+
+```bash
+curl https://cos.ysicing.cloud/oss/scripts/containerd.sh | bash
+```
