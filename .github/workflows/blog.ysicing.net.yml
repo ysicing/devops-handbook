@@ -50,3 +50,5 @@ jobs:
           docker push ysicing/devops-handbook:blog.ysicing.net
           docker tag ysicing/devops-handbook:blog.ysicing.net ghcr.io/ysicing/devops-handbook:blog.ysicing.net
           docker push ghcr.io/ysicing/devops-handbook:blog.ysicing.net
+          sleep 10
+          curl https://ergo-hooks.ysicing.me/auto
