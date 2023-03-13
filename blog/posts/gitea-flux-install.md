@@ -6,6 +6,7 @@ tags:
 - k8s
 - gitops
 - flux
+- gitea
 ---
 
 <!-- truncate -->
