@@ -1,6 +1,6 @@
 ---
 title: "部署轻量私有化备忘录memos"
-date: 2023-12-31T23:59:59+08:00
+date: 2023-03-12T23:59:59+08:00
 description: "本文主要介绍如何部署"
 tags:
 - self-hosted
@@ -172,9 +172,11 @@ Display name: user
 Email: email
 ```
 
-### 小程序部署
+### 多端支持
 
-具体可以参考 [Rabithua/memos_wmp](https://github.com/Rabithua/memos_wmp)
+小程序部署具体可以参考 [Rabithua/memos_wmp](https://github.com/Rabithua/memos_wmp)
+
+移动端支持具体可以参考 [Moe Memos](https://memos.moe/)
 
 ## 附录
 
