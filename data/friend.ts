@@ -6,6 +6,13 @@ export type Friend = {
 };
 
 export const Friends: Friend[] = [
+  // https://www.unmz.net/
+  {
+    title: 'Faritor',
+    description: 'Faritor',
+    website: 'https://www.unmz.net',
+    avatar: 'https://www.unmz.net/Picture/Avatar.png',
+  },
   {
     title: 'M言M语',
     description: 'M言M语',
