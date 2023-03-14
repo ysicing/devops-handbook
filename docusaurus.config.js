@@ -84,6 +84,10 @@ const config = {
               to: "sponsor"
             },
             {
+              label: '状态页',
+              to: "https://status.ysicing.cloud/"
+            },
+            {
               label: '小声哔哔',
               to: "https://note.ysicing.cloud/explore"
             }
