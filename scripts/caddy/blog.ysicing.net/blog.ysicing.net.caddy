@@ -16,10 +16,6 @@
         }
     }
 
-    handle_path /posts/451-* {
-      redir https://ysicing.me/posts/451-{uri} permanent
-    }
-
     root * /root/www
 
     redir @geofilter https://ysicing.me{uri} permanent
