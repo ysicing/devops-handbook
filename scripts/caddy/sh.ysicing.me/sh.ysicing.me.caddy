@@ -19,6 +19,8 @@
 
     encode zstd gzip
 
+    header Blog-Header {$POD_NAME:k3s-hk}
+
     handle_errors {
 	    respond "err: {err.status_code}, https://blog.ysicing.net"
     }
