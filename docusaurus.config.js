@@ -180,6 +180,14 @@ const config = {
       },
       config: {}
     },
+    giscus: {
+      repo: 'ysicing/devops-handbook',
+      repoId: 'MDEwOlJlcG9zaXRvcnkyMjY2ODA1NjU=',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDODYLe9c4CU3Sp',
+      theme: 'light',
+      darkTheme: 'dark',
+    },
     liveCodeBlock: {
       playgroundPosition: 'top',
     },
