@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'LXGWWenKai Regular';
+  src: url('/font/LXGWWenKai-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'LXGWWenKai Mono Regular';
+  src: url('/font/LXGWWenKaiMono-Regular.ttf');
+}
+
 :root {
   --ifm-color-primary: #12affa;
   --ifm-color-primary-dark: #05a1ec;
@@ -7,10 +17,13 @@
   --ifm-color-primary-lighter: #b0e6ff;
   --ifm-color-primary-lightest: #d5f1fd;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Inter', ui-sans-serif, system-ui, -apple-system,
-    'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,
-    sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
+  // --ifm-font-family-base: 'Inter', ui-sans-serif, system-ui, -apple-system,
+  //   'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  //   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,
+  //   sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
+
+  --ifm-font-family-base: "LXGWWenKai Regular";
+  --ifm-font-family-monospace: "LXGWWenKai Mono Regular";
 
   --ifm-heading-font-family: var(var(--ifm-font-family-base));
   /* --content-font-family: "Raleway", "Kai", "楷体", "Kaiti", serif; */
