@@ -9,7 +9,7 @@ import Layout from '@theme/Layout'
 import MDXContent from '@theme/MDXContent'
 import TOC from '@theme/TOC'
 import type { Props } from '@theme/MDXPage'
-
+import Comment from '@site/src/components/Comment'
 import styles from './styles.module.css'
 
 export default function MDXPage(props: Props): JSX.Element {
@@ -17,7 +17,7 @@ export default function MDXPage(props: Props): JSX.Element {
   const {
     metadata: { title, description, frontMatter },
   } = MDXPageContent
-  const { wrapperClassName, hide_table_of_contents: hideTableOfContents } =
+  const { wrapperClassName, hide_table_of_contents: hideTableOfContents, hide_comment: hideComment } =
     frontMatter
 
   return (
@@ -35,6 +35,7 @@ export default function MDXPage(props: Props): JSX.Element {
               <MDXContent>
                 <MDXPageContent />
               </MDXContent>
+              {!hideComment && <Comment />}
             </div>
             {!hideTableOfContents && MDXPageContent.toc && (
               <div className="col col--2">
