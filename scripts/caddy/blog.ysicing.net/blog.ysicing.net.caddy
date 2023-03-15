@@ -1,6 +1,6 @@
 :80 {
     # 日志
-    import LOG "/var/log/blog.ysicing.net.log"
+    log
 
     encode zstd gzip
 
