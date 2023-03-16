@@ -1,16 +1,22 @@
 ---
-title: Headscale 的部署方法和使用教程
-date: 2022-05-25T22:55:18+08:00
+title: Headscale 的部署方法和使用教程(20230316版)
+date: 2023-03-16T20:55:18+08:00
 description: Headscale 的部署方法和使用教程
 tags:
 - headscale
 - tailscale
 - 内网穿透
+- wireguard
+keywords:
+- self-hosted
+- headscale
+- tailscale
+- wireguard
 ---
 
 <!-- truncate -->
 
-> 目的打通所有环境, 组建大局域网
+> 目的打通所有环境(VM和k8s以及移动端), 组建大局域网
 
 ## WireGuard是什么
 
@@ -34,9 +40,9 @@ Tailscale 是一款商业产品，但个人用户是可以白嫖的, 基本可�
 ### 下载二进制
 
 ```bash
-wget https://ghproxy.com/https://github.com/juanfont/headscale/releases/download/v0.17.0-alpha1/headscale_0.17.0-alpha1_linux_amd64
-chmod +x headscale_0.17.0-alpha1_linux_amd64
-mv headscale_0.17.0-alpha1_linux_amd64 /usr/local/bin/headscale
+wget https://ghproxy.com/https://github.com/juanfont/headscale/releases/download/v0.20.0/headscale_0.20.0_linux_amd64
+chmod +x headscale_0.20.0_linux_amd64
+mv headscale_0.20.0_linux_amd64 /usr/local/bin/headscale
 ```
 
 ### 准备相关目录或者文件
@@ -59,7 +65,7 @@ chown -R headscale:headscale /var/lib/headscale
 
 ```yaml
 ---
-server_url: https://<headscale.knj01.ysicing.net>:443
+server_url: https://global.vip.ysicing.cloud:443
 listen_addr: 0.0.0.0:443
 metrics_listen_addr: 127.0.0.1:9090
 grpc_listen_addr: 0.0.0.0:50443
@@ -71,16 +77,17 @@ ip_prefixes:
   - 10.77.0.0/24
 derp:
   server:
-    enabled: false
+    enabled: true
     region_id: 999
     region_code: "headscale"
     region_name: "Headscale Embedded DERP"
     stun_listen_addr: "0.0.0.0:3478"
   urls:
     - https://controlplane.tailscale.com/derpmap/default
-  paths: []
+  paths:
+    - /etc/headscale/derp.yaml
   auto_update_enabled: true
-  update_frequency: 2h
+  update_frequency: 1h
 disable_check_updates: false
 ephemeral_node_inactivity_timeout: 30m
 node_update_check_interval: 10s
@@ -88,14 +95,16 @@ db_type: sqlite3
 db_path: /var/lib/headscale/db.sqlite
 acme_url: https://acme-v02.api.letsencrypt.org/directory
 acme_email: "root@ysicing.net"
-tls_letsencrypt_hostname: "<自己的域名>"
+tls_letsencrypt_hostname: "global.vip.ysicing.cloud"
 tls_client_auth_mode: relaxed
 tls_letsencrypt_cache_dir: /var/lib/headscale/cache
-tls_letsencrypt_challenge_type: HTTP-01
+tls_letsencrypt_challenge_type: TLS-ALPN-01
 tls_letsencrypt_listen: ":http"
 tls_cert_path: ""
 tls_key_path: ""
-log_level: info
+log:
+  level: info
+  format: text
 acl_policy_path: ""
 dns_config:
   nameservers:
@@ -108,6 +117,27 @@ unix_socket_permission: "0770"
 logtail:
   enabled: false
 randomize_client_port: false
+```
+
+:::note
+如上只需要将`global.vip.ysicing.cloud`替换成自己的域名即可, 另外如果默认的ipv4段`10.77.0.0/24`冲突, 可自行替换其他可用ip端
+:::
+
+### derp配置
+
+```yaml
+regions:
+  900: # 自定义derper从900-999
+    regionid: 900
+    regioncode: sh
+    regionname: china
+    nodes:
+      - name: 900a
+        regionid: 900
+        hostname: derper.sh.ysicing.cloud
+        stunport: 0 # 0表示默认
+        stunonly: false
+        derpport: 7777
 ```
 
 ### 启动HeadScale
@@ -172,9 +202,30 @@ ID | Name    | Created
 1  | default | 2022-09-02 13:00:37
 ```
 
-### 多端接入
+## 多端接入
+
+### Linux接入
+
+Debian 11安装:
 
 ```bash
+# 使用我提供的镜像站加速哈哈哈
+curl -fsSL https://pkgs.tailscale.com/stable/debian/bullseye.noarmor.gpg | tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://mirrors.ysicing.cloud/tailscale/stable/debian bullseye main" | tee /etc/apt/sources.list.d/tailscale.list
+# 安装
+apt update
+apt install tailscale
+```
+
+默认脚本安装:
+
+```bash
+# 安装
+curl -fsSL https://tailscale.com/install.sh | sh
+```
+
+```bash
+# 默认不开启dns, 不然会很影响体验, 更多参数参考 tailscale up --help
 tailscale up --login-server=https://<自定义域名> --accept-routes=true --accept-dns=false
 ```
 
@@ -190,24 +241,24 @@ https://xxxxxx:443/register/de703e5f2e326cfa4b95c866ce13397433b81fcc22de6cf4e397
 在浏览器中打开该链接, 将页面的命令复制粘贴到 headscale 所在机器的终端中，并将 NAMESPACE 替换为前面所创建的 namespace, 类似如下:
 
 ```bash
- headscale -n default nodes register --key de703e5f2e326cfa4b95c866ce13397433b81fcc22de6cf4e39770095facf921
+headscale -u default nodes register --key de703e5f2e326cfa4b95c866ce13397433b81fcc22de6cf4e39770095facf921
 ```
 
 如果节点比较多:
 
 ```bash
 #!/bin/bash
-headscale -n default nodes register --key $1
+headscale -u default nodes register --key $1
 headscale node list
 ```
 
-#### macOS安装
+### macOS安装
 
 可以参考[macOS配置](https://icloudnative.io/posts/how-to-set-up-or-migrate-headscale/#macos)
 
-#### 群晖DS218+安装
+### 群晖DS218+安装
 
-下载客户端并安装[tailscale-x86_64-dsm7](https://pkgs.tailscale.com/stable/tailscale-x86_64-1.30.0-300007-dsm7.spk)
+下载客户端并安装[tailscale-x86_64-dsm7](https://pkgs.tailscale.com/stable/tailscale-x86_64-1.38.1-380017-dsm7.spk)
 
 ssh登录群晖
 
@@ -217,33 +268,23 @@ sudo tailscale up --login-server=https://自定义域名 --accept-dns=false
 # 后续同
 ```
 
-#### 容器接入
+另外需要额外设置如下, 不过在任务计划里设置开机任务, 具体设置参考官方文档[synology](https://tailscale.com/kb/1131/synology/#enabling-synology-outbound-connections)
+
 
 ```bash
-# 服务端生成可复用 preauthkey 的 token，有效期可以设置为 72 小时
-headscale preauthkeys create -e 72h --reusable --namespace default
-# 查看已经生成的 key
-headscale -n default preauthkeys list
+sudo /var/packages/Tailscale/target/bin/tailscale configure-host
+sudo synosystemctl restart pkgctl-Tailscale.service
 ```
 
-:::danger
-<del>打通k8s, cilium容器网络就挂了。
-暂时不打通</del>
-:::
-
-:::info
-调整成默认网络就好了
-:::
-
-### 局域网打通
+### 局域网(含容器网络)打通
 
 ```bash
 # 添加route
 tailscale up --login-server=https://<自定义域名> --accept-routes=true --accept-dns=false --advertise-routes=10.80.0.0/16,10.90.0.0/16
 # 开启路由
-headscale routes enable -i 6 -r "10.90.0.0/16,10.80.0.0/16"
+headscale routes enable -r 21
 # 路由列表
-headscale routes list -i 6
+headscale routes list
 Route        | Enabled
 10.80.0.0/16 | true
 10.90.0.0/16 | true
@@ -256,5 +297,20 @@ Route        | Enabled
 ip route show table 52 | grep 10.80.0.0/16
 10.80.0.0/16 dev tailscale0
 # 测试访问k3s coredns
-
 ```
+
+### iOS支持
+
+在1.38.x版本后支持自定义控制端地址，可以设置为headscale地址.
+
+## 注意
+
+:::danger
+在阿里云部署可能会导致服务访问阿里云服务，需要手动执行如下，删除默认tailscale路由
+
+```bash
+iptables -D ts-input -s 100.64.0.0/10 ! -i tailscale0 -j DROP
+iptables -D ts-forward -s 100.64.0.0/10 -o tailscale0 -j DROP
+```
+
+:::
