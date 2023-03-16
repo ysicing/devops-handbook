@@ -276,6 +276,8 @@ sudo /var/packages/Tailscale/target/bin/tailscale configure-host
 sudo synosystemctl restart pkgctl-Tailscale.service
 ```
 
+其他细节也可以参考 [群晖上基于Headscale内网穿透](/posts/headscale-dsm7/)
+
 ### 局域网(含容器网络)打通
 
 ```bash
