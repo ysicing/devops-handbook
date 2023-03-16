@@ -1,14 +1,14 @@
-@font-face {
-  font-family: 'LXGWWenKai Regular';
-  src: url('/fonts/LXGWWenKai-Regular.ttf');
-  // src: url('https://s4.ysicing.cloud/fonts/LXGWWenKai-Regular.ttf');
-}
+// @font-face {
+//   font-family: 'LXGWWenKai Regular';
+//   src: url('/fonts/LXGWWenKai-Regular.ttf');
+//   // src: url('https://s4.ysicing.cloud/fonts/LXGWWenKai-Regular.ttf');
+// }
 
-@font-face {
-  font-family: 'LXGWWenKai Mono Regular';
-  src: url('/fonts/LXGWWenKaiMono-Regular.ttf');
-  // src: url('https://s4.ysicing.cloud/fonts/LXGWWenKaiMono-Regular.ttf');
-}
+// @font-face {
+//   font-family: 'LXGWWenKai Mono Regular';
+//   src: url('/fonts/LXGWWenKaiMono-Regular.ttf');
+//   // src: url('https://s4.ysicing.cloud/fonts/LXGWWenKaiMono-Regular.ttf');
+// }
 
 :root {
   --ifm-color-primary: #12affa;
@@ -24,8 +24,8 @@
   //   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,
   //   sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
 
-  --ifm-font-family-base: "LXGWWenKai Regular";
-  --ifm-font-family-monospace: "LXGWWenKai Mono Regular";
+  --ifm-font-family-base: "LXGW WenKai";
+  --ifm-font-family-monospace: "LXGW WenKai Mono";
 
   --ifm-heading-font-family: var(var(--ifm-font-family-base));
   /* --content-font-family: "Raleway", "Kai", "楷体", "Kaiti", serif; */

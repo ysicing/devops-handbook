@@ -308,7 +308,13 @@ const config = {
       },
     ],
   ],
-  stylesheets: [],
+  stylesheets: [
+    {
+      href: 'https://cdn.staticfile.org/lxgw-wenkai-webfont/1.7.0/style.css',
+      type: 'text/css',
+      crossorigin: 'anonymous',
+    },
+  ],
   i18n: {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans', 'en'],
