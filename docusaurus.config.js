@@ -127,7 +127,7 @@ const config = {
               to: '/site',
             },
             {
-              label: '打赏赞助',
+              label: '赞助(金榜题名)',
               to: '/sponsor',
             },
           ],

@@ -1,7 +1,7 @@
 ---
-title: "docker快速安装"
-date: 2020-05-19T22:55:18+08:00
-description: "使用ergo快速安装docker"
+title: "懒人版一键快速安装docker(20230317更新)"
+date: 2023-03-17T18:34:18+08:00
+description: "懒人版一键快速安装docker(20230317更新)"
 tags:
 - docker
 - cri
@@ -9,7 +9,7 @@ tags:
 
 <!-- truncate -->
 
-## 安装docker并配置docker
+## 安装并配置
 
 ```bash
 curl -fsSL https://cos.ysicing.cloud/oss/scripts/docker.sh | bash
@@ -43,21 +43,13 @@ docker run --rm -v /usr/local/bin:/sysdir ysicing/tools tar zxf /pkg.tgz -C /sys
 内置了
 
 ```bash
-etcdctl
-helm(v3)
 helminit
 docker-compose
-calicoctl
 ctop
 cclear (清理退出容器)
 din (进入容器 din <cname/>cid> ash/bash(默认)/sh)
 dps (容器状态)
-etcdcli (特别支持k8s集群的etcd)
-kbtoken (查看kuboard admin用户token)
-kdtoken (查看dashboard-admin 用户token)
-
-istioctl
-linkerd
-
 upgrade-tools // 升级二进制
 ```
+
+源码可以参见 [ysicing/tools](https://github.com/ysicing/tools/blob/master/tools/release.sh)
