@@ -10,7 +10,7 @@ export const InviteLink: Resource[] = [
   },
   {
     name: 'jms',
-    desc: '优质的代理服务',
+    desc: '传家宝稳定, 28.88USD/年, 100GB/月',
     logo: require('./avatar/default.png'),
     href: 'https://justmysocks2.net/members/aff.php?aff=2191',
     tags: ['科学'],
@@ -18,9 +18,17 @@ export const InviteLink: Resource[] = [
   },
   {
     name: '一元',
-    desc: '优质的代理服务',
+    desc: '11RMB/年,100G/月',
     logo: require('./avatar/default.png'),
     href: 'https://xn--4gq62f52gdss.com/#/register?code=tl6rVK1d',
+    tags: ['科学'],
+    disableChina: true,
+  },
+  {
+    name: '两元',
+    desc: '21RMB/年,1024G/月',
+    logo: require('./avatar/default.png'),
+    href: 'https://xn--5hqx9equq.com/#/register?code=eQT9Cl9z',
     tags: ['科学'],
     disableChina: true,
   },
