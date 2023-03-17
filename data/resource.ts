@@ -63,6 +63,18 @@ export const resourceData: ResourceCategory[] = [
         href: 'https://mirrors.ysicing.cloud',
         logo: require('./avatar/default.png'),
       },
+      {
+        name: '小声哔哔',
+        desc: '小声哔哔',
+        href: 'https://note.ysicing.cloud/explore',
+        logo: require('./avatar/default.png'),
+      },
+      {
+        name: '云缘生IP解析趋势',
+        desc: '云缘生IP解析趋势',
+        href: 'https://ds.ysicing.cloud',
+        logo: require('./avatar/default.png'),
+      },
     ],
   },
   {
