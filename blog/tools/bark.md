@@ -47,7 +47,10 @@ M系列架构的MacMini也可以用哦
 
 自主可控选择自己安装服务端哈。支持多种安装方式. 这里我们以k8s为例, 其实服务比较简单, 在k8s跑起来也比较简单
 
-```yaml
+<details>
+<summary>k8s yaml</summary>
+
+```yaml title="bs.yaml"
 # apiVersion: v1
 # kind: PersistentVolumeClaim
 # metadata:
@@ -145,6 +148,8 @@ spec:
         path: /
         pathType: ImplementationSpecific
 ```
+
+</details>
 
 将上述文件保存为bs.yaml并apply到集群
 

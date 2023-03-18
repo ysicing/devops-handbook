@@ -24,8 +24,10 @@ keywords:
 
 ### docker方式
 
-```docker
-# docker-compose.yaml
+<details>
+<summary>docker-compose.yaml</summary>
+
+```docker title="docker-compose.yaml"
 version: "3.0"
 services:
   memos:
@@ -38,6 +40,8 @@ services:
       - 5230:5230
 ```
 
+</details>
+
 启动服务
 
 ```bash
@@ -47,8 +51,10 @@ docker compose up -d
 
 ### k8s方式
 
-```yaml
-# memos.yaml
+<details>
+<summary>k8s yaml</summary>
+
+```docker title="memos.yaml"
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -139,6 +145,8 @@ spec:
         path: /
         pathType: ImplementationSpecific
 ```
+
+</details>
 
 然后apply到集群即可
 

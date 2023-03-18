@@ -58,12 +58,12 @@ const config = {
           to: 'archive',
         },
         {
-          label: '导航',
+          label: '收藏',
           position: 'right',
           to: 'website',
         },
         {
-          label: '项目',
+          label: '开源',
           position: 'right',
           to: 'project',
         },
@@ -110,7 +110,7 @@ const config = {
               to: 'archive',
             },
             {
-              label: '实战项目',
+              label: '开源',
               to: 'project',
             },
           ],
@@ -127,7 +127,7 @@ const config = {
               to: '/site',
             },
             {
-              label: '赞助(金榜题名)',
+              label: '赞助',
               to: '/sponsor',
             },
           ],
@@ -140,7 +140,7 @@ const config = {
               href: 'https://github.com/ysicing',
             },
             {
-              label: '友情链接',
+              label: '邻居',
               to: '/friends',
             },
           {
@@ -275,7 +275,7 @@ const config = {
     ['@dipakparmar/docusaurus-plugin-umami', {
       // options
       websiteID: "your-website-id", // Required
-      analyticsDomain: "umami.external.ysicing.net", // Required
+      analyticsDomain: "umami.external.ysicing.cloud", // Required
       scriptName: "",
       dataHostURL: "",
       dataAutoTrack: true,

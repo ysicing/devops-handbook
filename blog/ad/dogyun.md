@@ -23,7 +23,7 @@ keywords:
 
 如果自己有境外机器可以碰碰运气, 开启幸运模式
 
-:::info
+:::tip 幸运模式
 幸运模式下系统会分配中国大陆屏蔽的IP给您，即中国大陆无法访问，海外可正常访问，但是我们会将实际创建周期（不含续费周期）翻倍，这期间将无法更换IP，也不能退款，什么时候中国大陆可以访问全靠运气。
 :::
 
@@ -31,9 +31,10 @@ keywords:
 
 ## 测试
 
-```bash
-wget -qO- bench.sh | bash
+<details>
+<summary><code>wget -qO- bench.sh | bash</code></summary>
 
+```bash title="wget -qO- bench.sh | bash"
 -------------------- A Bench.sh Script By Teddysun -------------------
  Version            : v2022-06-01
  Usage              : wget -qO- bench.sh | bash
@@ -80,6 +81,8 @@ wget -qO- bench.sh | bash
  Timestamp          : 2023-03-17 20:05:37 HKT
 ----------------------------------------------------------------------
 ```
+
+</details>
 
 脚本2没跑完就挂了哈哈
 

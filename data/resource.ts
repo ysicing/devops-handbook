@@ -35,14 +35,14 @@ export const resourceData: ResourceCategory[] = [
     resources: [
       {
         name: '博客umami',
-        desc: 'blog.ysicing.net实时访问',
-        href: 'https://umami.external.ysicing.net/share/ZkVuBlLX/%E5%8D%9A%E5%AE%A2',
+        desc: 'ysicing.me实时访问',
+        href: 'https://umami.external.ysicing.net/share/LnFwnhur/%E5%8D%9A%E5%AE%A2',
         logo: require('./avatar/umami.png'),
       },
       {
-        name: '镜像-博客umami',
-        desc: 'ysicing.me实时访问',
-        href: 'https://umami.external.ysicing.net/share/LnFwnhur/%E5%8D%9A%E5%AE%A2',
+        name: '博客镜像umami',
+        desc: 'blog.ysicing.net实时访问',
+        href: 'https://umami.external.ysicing.net/share/ZkVuBlLX/%E5%8D%9A%E5%AE%A2',
         logo: require('./avatar/umami.png'),
       },
       {
