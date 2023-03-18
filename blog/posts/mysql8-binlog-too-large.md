@@ -8,7 +8,7 @@ tags:
 
 <!-- truncate -->
 
-:::info
+:::tip
 基于`bitnami/mysql:8.0`操作
 :::
 

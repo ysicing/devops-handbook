@@ -19,12 +19,6 @@ export const Friends: Friend[] = [
     website: 'https://mikizhuzhu.cn',
     avatar: 'https://mikizhuzhu.cn/wp-content/uploads/2023/01/cropped-IMG_3221.jpeg',
   },
-  {
-    title: '愧怍',
-    description: '愧怍, 博客主题Owner',
-    website: 'https://kuizuo.cn',
-    avatar: 'https://kuizuo.cn/img/logo.png',
-  },
 ];
 
 export function sortFriend() {

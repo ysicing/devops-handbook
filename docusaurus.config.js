@@ -93,6 +93,16 @@ const config = {
             }
           ]
         },
+        {
+          label: 'wiki',
+          position: 'right',
+          items: [
+            {
+              label: 'Newsletter',
+              to: "/newsletter"
+            }
+          ]
+        },
       ],
     },
     footer: {
@@ -264,6 +274,17 @@ const config = {
           copyright: `Copyright © ${new Date().getFullYear()} ysicing Built with Docusaurus.<p><a href="https://icp.gov.moe/?keyword=20212380" class="footer_lin">萌ICP备20212380号</a></p><p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       }
+    ],
+    [ '@docusaurus/plugin-content-docs', {
+        id: 'newsletter',
+        path: 'newsletter',
+        routeBasePath: 'newsletter',
+        editCurrentVersion: false,
+        sidebarPath: require.resolve('./sidebars.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        sidebarCollapsed: false,
+      },
     ],
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
