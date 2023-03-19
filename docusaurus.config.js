@@ -331,7 +331,7 @@ const config = {
   ],
   stylesheets: [
     {
-      href: 'https://cdn.staticfile.org/lxgw-wenkai-webfont/1.7.0/style.css',
+      href: 'https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css',
       type: 'text/css',
       crossorigin: 'anonymous',
     },
