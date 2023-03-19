@@ -10,7 +10,7 @@ const config = {
   titleDelimiter: '-',
   url: 'https://wiki.ysicing.me',
   baseUrl: '/',
-  favicon: 'https://github.com/ysicing.png',
+  favicon: '/img/logo.png',
   organizationName: 'ysicing',
   projectName: 'docusaurus',
   tagline: '新时代云缘生农民工',
@@ -43,8 +43,8 @@ const config = {
       hideOnScroll: true,
       logo: {
         alt: '云缘生',
-        src: 'https://github.com/ysicing.png',
-        srcDark: 'https://github.com/ysicing.png',
+        src: '/img/logo.png',
+        srcDark: '/img/logo.png',
       },
       items: [
         {
