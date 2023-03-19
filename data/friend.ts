@@ -10,13 +10,13 @@ export const Friends: Friend[] = [
   {
     title: 'Faritor',
     description: 'Faritor',
-    website: 'https://www.unmz.net',
+    website: 'https://www.unmz.net?blog_source=ysicing.me',
     avatar: 'https://www.unmz.net/Picture/Avatar.png',
   },
   {
     title: 'M言M语',
     description: 'M言M语',
-    website: 'https://mikizhuzhu.cn',
+    website: 'https://mikizhuzhu.cn?blog_source=ysicing.me',
     avatar: 'https://mikizhuzhu.cn/wp-content/uploads/2023/01/cropped-IMG_3221.jpeg',
   },
 ];
