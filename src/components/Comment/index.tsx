@@ -1,6 +1,7 @@
 import React, { useEffect }  from 'react'
 import 'artalk/dist/Artalk.css'
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { useThemeConfig, useColorMode } from '@docusaurus/theme-common'
 import { useLocalPathname } from '@docusaurus/theme-common/internal';
 
 export default function Comment(): JSX.Element {
@@ -8,6 +9,7 @@ export default function Comment(): JSX.Element {
   if (pathname.endsWith('/')) {
     pathname = pathname.slice(0, -1);
   }
+  let mode = useColorMode().colorMode === 'dark'
   return (
     <BrowserOnly fallback={<div>Loading Comments...</div>}>
       {() => {
@@ -20,6 +22,7 @@ export default function Comment(): JSX.Element {
             server: 'https://artalk.ysicing.cloud/',
             site: '缘生笔记',
           });
+          Artalk.setDarkMode(mode);
         });
 
         return <div id="comment" className="artalk-comments" />;
