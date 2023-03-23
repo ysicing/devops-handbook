@@ -2,8 +2,9 @@
 title: "CaddyV1升级到V2版本"
 date: 2022-02-26T20:18:08+08:00
 description: 主要讲述caddy v1升级到v2版本的过程
-
 tags:
+- caddy
+keywords:
 - caddy
 ---
 

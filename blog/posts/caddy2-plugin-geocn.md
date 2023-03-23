@@ -2,8 +2,10 @@
 title: "Caddy2插件Geocn"
 date: 2021-08-31T16:00:25+08:00
 description: Caddy2插件Geocn相关信息
-
 tags:
+- caddy
+- caddy-plugin
+keywords:
 - caddy
 - caddy-plugin
 ---
