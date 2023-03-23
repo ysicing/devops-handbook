@@ -1,8 +1,10 @@
 ---
-title: "一键安装go1.17"
+title: "一键安装go"
 date: 2019-05-18T22:55:18+08:00
-description: "一键安装go1.17.1"
+description: "一键安装go"
 tags:
+- go
+keywords:
 - go
 ---
 
@@ -14,18 +16,11 @@ tags:
 curl https://cos.ysicing.cloud/oss/scripts/go.sh | bash
 ```
 
-### ChangeLog
-
-#### 20210911
-
-- 更新脚本支持lima普通用户
-- go升级到1.17.1
-
 ## Mac安装
 
 如果已经安装了brew，就可以快速安装了
 
-```
+```bash title="安装go"
 # 安装git
 brew install git
 
@@ -42,7 +37,7 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/opt/mysql-client/bin:$GOBIN:$PAT
 
 ### 配置Visual Studio Code Editor
 
-```
+```bash
 快捷键cmd+shift+p
 键入: go install
 选择 "Go: Install/Update Tools"
@@ -55,9 +50,9 @@ Check all the checkboxes
 
 ```bash
 # 下载
-wget https://dl.google.com/go/go1.17.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.20.2.linux-amd64.tar.gz
 # 解压
-tar -C /usr/local -xzf go1.17.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
 # 配置 .bashrc
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
