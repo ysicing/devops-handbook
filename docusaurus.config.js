@@ -2,7 +2,7 @@
 const path = require('path')
 const beian = '京ICP'
 
-const announcementBarContent = `目前已支持评论哈,需要刷新页面才可以鸭 | 关于新轮子 <a href='https://github.com/ysicing/spot' target='_blank'>竞价机器助手</a>`
+const announcementBarContent = `目前已支持评论哈,需要刷新页面才可以鸭`
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {

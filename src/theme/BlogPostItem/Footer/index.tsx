@@ -101,6 +101,11 @@ export default function BlogPostItemFooter(): JSX.Element | null {
           <TagsListInline tags={tags} />
         </div>
       )}
+      {isBlogPostPage && (
+        <div className="col margin-top--sm">
+          <b>版权声明: 自由转载-非商用-非衍生-转载请注明出处(<a href='https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh' target='_blank'>创意共享4.0许可证</a>)</b>
+        </div>
+      )}
 
       {isBlogPostPage && editUrl && (
         <div className="col margin-top--sm">

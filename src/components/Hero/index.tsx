@@ -30,7 +30,7 @@ function Hero() {
           <span className={styles.intro__name}><ruby>缘生<rt>ysicing</rt></ruby></span>
         </animated.div>
         <animated.p style={trails[1]}>
-            {`希望我的运维开发笔记对你有所启发, 也欢迎大家指出我的不足. `}
+            {`希望我的笔记对你有所启发, 也欢迎大家指出我的不足. `}
             <br />
             <Translate
             id="homepage.hero.look"
