@@ -6,6 +6,12 @@ tags:
 - debian
 - 轻量云
 - qcloud
+- lighthouse
+keywords:
+- lighthouse
+- debian
+- 轻量云
+- qcloud
 ---
 
 <!-- truncate -->

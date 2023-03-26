@@ -19,4 +19,10 @@ export const DaLao: Resource[] = [
     href: 'https://immmmm.com?blog_source=ysicing.me',
     logo: require('./avatar/default.png'),
   },
+  {
+    name: 'ossinsight',
+    desc: 'Open Source Software Insight',
+    href: 'https://ossinsight.io/',
+    logo: '/img/website/ossinsight.png',
+  },
 ]
