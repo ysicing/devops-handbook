@@ -20,6 +20,12 @@ export const DaLao: Resource[] = [
     logo: require('./avatar/default.png'),
   },
   {
+    name: '安志合的学习博客',
+    desc: 'chegva.com',
+    href: 'https://chegva.com?blog_source=ysicing.me',
+    logo: require('./avatar/default.png'),
+  },
+  {
     name: 'ossinsight',
     desc: 'Open Source Software Insight',
     href: 'https://ossinsight.io/',

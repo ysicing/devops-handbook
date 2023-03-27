@@ -38,12 +38,12 @@ export const resourceData: ResourceCategory[] = [
     resources: YsicingService,
   },
   {
-    name: '每周必刷🔥',
-    resources: DaLao,
-  },
-  {
     name: '邀请链接',
     resources: InviteLink,
+  },
+  {
+    name: '每周必刷🔥',
+    resources: DaLao,
   },
   {
     name: '工具',
