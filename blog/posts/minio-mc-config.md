@@ -2,6 +2,7 @@
 title: "mc命令简单使用"
 date: 2023-03-23T23:38:56+08:00
 description: 本文主要记录一下minio客户端mc的简单使用
+authors: ysicing
 tags:
 - minio
 - 对象存储
@@ -73,3 +74,7 @@ mc cp ./* local/oss/cdn.ysicing.me/
 # 生成有效期1分钟的分享链接, 有效期最大7d如果是私有的
 mc share download --expire=1m local/oss/cdn.ysicing.me/scripts/docker.sh
 ```
+
+## 附录参考
+
+[部署私有对象存储服务Minio](/tools/minio-deploy)

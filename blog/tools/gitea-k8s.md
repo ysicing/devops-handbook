@@ -2,7 +2,6 @@
 title: "在k8s上部署私有Git服务: Gitea"
 date: 2023-03-27T12:30:59+08:00
 description: "本文主要介绍如何在k8s上安装Gitea"
-draft: true
 authors: ysicing
 tags:
 - self-hosted
