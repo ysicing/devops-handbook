@@ -21,10 +21,10 @@ export default function Comment(): JSX.Element {
             pageTitle: `${window.document.title}`,
             server: 'https://artalk.ysicing.cloud/',
             site: '缘生笔记',
+            disablePicture: true,
           });
           Artalk.setDarkMode(mode);
         });
-
         return <div id="comment" className="artalk-comments" />;
       }}
     </BrowserOnly>
