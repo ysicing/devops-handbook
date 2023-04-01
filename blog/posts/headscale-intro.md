@@ -1,5 +1,5 @@
 ---
-title: Headscale 的部署方法和使用教程(20230316版)
+title: Headscale 的部署方法和使用教程(20230401版)
 date: 2023-03-16T20:55:18+08:00
 description: Headscale 的部署方法和使用教程
 tags:
@@ -7,6 +7,7 @@ tags:
 - tailscale
 - 内网穿透
 - wireguard
+- self-hosted
 keywords:
 - self-hosted
 - headscale
@@ -316,3 +317,8 @@ iptables -D ts-forward -s 100.64.0.0/10 -o tailscale0 -j DROP
 ```
 
 :::
+
+## 附录阅读
+
+[基于 Caddy2 部署私有 DERP 中继服务器(20230401版)](/posts/headscale-caddy-derper-proxy)
+[Headscale 部署私有 DERP 中继服务器](/posts/headscale-derper)

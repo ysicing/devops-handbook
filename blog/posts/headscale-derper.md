@@ -1,11 +1,17 @@
 ---
-title: Headscale 部署私有 DERP 中继服务器
+title: Headscale 部署私有 DERP 中继服务器(20230401版)
 date: 2022-05-25T22:55:18+08:00
 description: Headscale 部署私有 DERP 中继服务器
 tags:
 - headscale
 - tailscale
 - derper
+- self-hosted
+keywords:
+- headscale
+- tailscale
+- derper
+- self-hosted
 ---
 
 > 本文将会介绍如何让 Headscale  使用自定义的 DERP Servers
@@ -21,26 +27,17 @@ tags:
 ### 构建derper
 
 :::info
-最新版本需要go1.19版本
 
-go环境:
-
-```bash
-wget https://golang.google.cn/dl/go1.19.linux-amd64.tar.gz
-tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
-go env -w GOPROXY=https://goproxy.cn,direct
+```bash title="最新版本需要go1.19+版本"
 go install tailscale.com/cmd/derper@latest
-# 默认derper二进制在 /root/go/bin/derper
 ```
 
+可以参考我写的[基于 Caddy2 部署私有 DERP 中继服务器(20230401版)](/posts/headscale-caddy-derper-proxy),本文与之最大区别是，derper不再使用caddy转发流量，而是直接使用443端口
 :::
 
 ### 启动derper
 
-
-```bash
-# /etc/systemd/system/derper.service
+```bash title="/etc/systemd/system/derper.service"
 [Unit]
 Description=derper
 
@@ -61,10 +58,10 @@ WantedBy=multi-user.target
 systemctl enable derper.service --now
 ```
 
-创建定时重启derper
+<details>
+<summary>创建定时重启derper(已废弃, 早已修复, 新版本不需要了, 仅为存档记录)</summary>
 
-```
-# /etc/systemd/system/derper.timer
+```bash title="/etc/systemd/system/derper.timer"
 [Unit]
 Description=derper timer
 
@@ -95,12 +92,13 @@ NEXT                        LEFT          LAST                        PASSED    
 Mon 2022-09-05 23:21:29 CST 59min left    Mon 2022-09-05 22:15:12 CST 6min ago      derper.timer                 derper.service
 ```
 
+</details>
+
 ### 配置Headscale
 
 可以参考
 
-```
-# https://github.com/juanfont/headscale/blob/main/derp-example.yaml
+```yaml title="https://github.com/juanfont/headscale/blob/main/derp-example.yaml"
 # If you plan to somehow use headscale, please deploy your own DERP infra: https://tailscale.com/kb/1118/custom-derp-servers/
 regions:
   900:
@@ -120,8 +118,7 @@ regions:
 
 我的参考示例
 
-```bash
-# /etc/headscale/derp.yaml
+```yaml title="/etc/headscale/derp.yaml"
 regions:
   900:
     regionid: 900
@@ -138,8 +135,7 @@ regions:
 
 修改配置
 
-```
-# /etc/headscale/config.yaml 变更如下
+```yaml title="/etc/headscale/config.yaml"
   paths:
     - /etc/headscale/derp.yaml
   # paths: []
@@ -162,5 +158,5 @@ tailscale netcheck
 ```
 
 :::danger
-请勿升级到`0.17.0-alpha2`, 否则可能导致服务无法正常启动
+<del>请勿升级到`0.17.0-alpha2`, 否则可能导致服务无法正常启动</del>
 :::
