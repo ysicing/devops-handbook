@@ -90,7 +90,11 @@ const config = {
             {
               label: '小声哔哔',
               to: "https://note.ysicing.cloud/explore"
-            }
+            },
+            {
+              label: '摸鱼日历',
+              to: "moyu"
+            },
           ]
         },
         {
