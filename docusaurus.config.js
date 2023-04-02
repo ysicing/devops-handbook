@@ -2,7 +2,7 @@
 const path = require('path')
 const beian = '京ICP'
 
-const announcementBarContent = `目前已支持评论哈,需要刷新页面才可以鸭`
+const announcementBarContent = `如果页面提示已奔溃,重新刷新一下页面就好啦(已知问题待修复)`
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
