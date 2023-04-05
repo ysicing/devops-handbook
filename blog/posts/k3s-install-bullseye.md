@@ -8,6 +8,8 @@ tags:
 - debian
 ---
 
+> 本文已经过时请参考 [傻瓜式教学: Debian安装k3s(长期维护版本)](/k3s/debian-install-k3s)
+
 <!-- truncate -->
 
 > k3s 是Rancher推出的轻量级 k8s.
