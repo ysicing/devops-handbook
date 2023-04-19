@@ -105,12 +105,22 @@ umount /home
 
 ```bash title="减少/home挂载点对应的逻辑卷大小"
 lvreduce -L 50G /dev/mapper/rl-home
+
+  WARNING: Reducing active logical volume to 50.00 GiB.
+  THIS MAY DESTROY YOUR DATA (filesystem etc.)
+Do you really want to reduce rl/home? [y/n]: y
+  Size of logical volume rl/home changed from <866.70 GiB (221875 extents) to 50.00 GiB (12800 extents).
+  Logical volume rl/home successfully resized.
+
 ```
 
 ### 扩容/逻辑卷
 
 ```bash
 lvextend -l +100%FREE /dev/rl/root
+
+  Size of logical volume rl/root changed from 70.00 GiB (17920 extents) to <886.70 GiB (226995 extents).
+  Logical volume rl/root successfully resized.
 ```
 
 :::tip 参数
@@ -159,4 +169,19 @@ tmpfs                6.2G   15M  6.2G   1% /run
 tmpfs                3.1G  100K  3.1G   1% /run/user/987
 tmpfs                3.1G   36K  3.1G   1% /run/user/0
 /dev/mapper/rl-home   50G  390M   50G   1% /home
+```
+
+## 补充
+
+如果/home不用可以执行卸载
+
+```bash
+umount /home
+# 删除逻辑卷
+lvremove /dev/rl/home
+# 查看卷组，记录 Free  PE
+lvdisplay
+
+# 删除home分区挂载配置
+vi /etc/fstab
 ```
