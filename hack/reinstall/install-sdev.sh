@@ -114,7 +114,7 @@ SelectMax() {
     ICFGN="$(find /etc/network/interfaces.d -name '*.cfg' |wc -l)" || ICFGN='0';
     [[ "$ICFGN" -ne '0' ]] && {
       for NetCFG in `ls -1 /etc/network/interfaces.d/*.cfg`
-        do 
+        do
           [[ -z "$(cat $NetCFG | sed -n '/iface.*inet static/p')" ]] && AutoNet='1' || AutoNet='0';
           [[ "$AutoNet" -eq '0' ]] && break;
         done
@@ -126,7 +126,7 @@ SelectMax() {
   ICFGN="$(find /etc/sysconfig/network-scripts -name 'ifcfg-*' |grep -v 'lo'|wc -l)" || ICFGN='0';
   [[ "$ICFGN" -ne '0' ]] && {
     for NetCFG in `ls -1 /etc/sysconfig/network-scripts/ifcfg-* |grep -v 'lo$' |grep -v ':[0-9]\{1,\}'`
-      do 
+      do
         [[ -n "$(cat $NetCFG | sed -n '/BOOTPROTO.*[dD][hH][cC][pP]/p')" ]] && AutoNet='1' || {
           AutoNet='0' && . $NetCFG;
           [[ -n $NETMASK ]] && MASK="$NETMASK";
@@ -209,9 +209,9 @@ BOOT_OPTION="auto=true priority=critical $Add_OPTION hostname=debian domain= -- 
 
 sed -i '$a\\n' /tmp/grub.new;
 
-[ -f '/etc/network/interfaces' -o -d '/etc/sysconfig/network-scripts' ] || {
-  notice "Not found interfaces config"
-}
+# [ -f '/etc/network/interfaces' -o -d '/etc/sysconfig/network-scripts' ] || {
+#   notice "Not found interfaces config"
+# }
 
 sed -i ''${INSERTGRUB}'i\\n' $GRUBDIR/$GRUBFILE;
 sed -i ''${INSERTGRUB}'r /tmp/grub.new' $GRUBDIR/$GRUBFILE;
@@ -345,7 +345,7 @@ apt-mirror-setup apt-setup/use_mirror boolean true
 
 ### Package selection
 tasksel tasksel/first multiselect standard, server
-#d-i pkgsel/include string debconf-utils openssh-server apt-transport-https sudo bzip2 acpid cryptsetup zlib1g-dev wget curl dkms rsync dnsutils make nfs-common net-tools  vim  procps git 
+#d-i pkgsel/include string debconf-utils openssh-server apt-transport-https sudo bzip2 acpid cryptsetup zlib1g-dev wget curl dkms rsync dnsutils make nfs-common net-tools  vim  procps git
 d-i pkgsel/include string curl openssh-server sudo sed apt-transport-https net-tools
 d-i pkgsel/update-policy select none
 d-i pkgsel/upgrade select full-upgrade
