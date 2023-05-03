@@ -12,10 +12,11 @@ tags:
 
 ```bash
 cat > /etc/apt/sources.list <<EOF
-deb http://mirrors.tencent.com/debian/ bullseye main contrib non-free
-deb http://mirrors.tencent.com/debian/ bullseye-updates main contrib non-free
-deb http://mirrors.tencent.com/debian/ bullseye-backports main contrib non-free
-deb http://mirrors.tencent.com/debian-security bullseye-security main contrib non-free
+deb http://mirrors.tencent.com/debian/ bookworm main contrib non-free non-free-firmware
+deb http://mirrors.tencent.com/debian/ bookworm-updates main contrib non-free non-free-firmware
+deb http://mirrors.tencent.com/debian/ bookworm-backports main contrib non-free non-free-firmware
+deb http://mirrors.tencent.com/debian/ bookworm-proposed-updates main contrib non-free non-free-firmware
+deb http://mirrors.tencent.com/debian-security bookworm-security main contrib non-free non-free-firmware
 EOF
 apt update
 ```
@@ -24,7 +25,7 @@ apt update
 
 ```bash
 apt dist-upgrade -y
-apt install -t bullseye-backports linux-image-amd64 -y
+apt install -t bookworm-backports linux-image-amd64 -y
 ```
 
 ## 更新引导并重启
