@@ -12,22 +12,22 @@ tags:
 
 ## 安装
 
-#### Debian
+### Debian
 
-```
+```bash
 # Debian Bullseye 之前版本都需要启用backports源来支持安装
 apt install wireguard -y
 ```
 
-#### macOS
+### macOS
 
-```
+```bash
 brew install wireguard-tools
 ```
 
 ## 配置服务端
 
-```
+```bash
 cd /etc/wireguard
 # 创建服务端密钥对
 umask 077
@@ -52,7 +52,7 @@ wg show
 
 ## 配置客户端
 
-```
+```bash
 umask 077
 wg genkey | tee privatekey | wg pubkey > publickey
 cat > /etc/wireguard/wg0.conf <<EOF
@@ -70,7 +70,7 @@ EOF
 2. 直接编辑客户端配置文件
 3. 启动`wg-quick up wg0;systemctl enable wg-quick@wg0`
 
-```
+```bash
 # /etc/wireguard/wg0.conf 新增
 [Peer]
 PublicKey = <Server Public key>
@@ -80,14 +80,13 @@ AllowedIPs = 10.0.0.2/24, fd86:ea04:1115::5/64
 
 ### 法二 服务端操作
 
-```
+```bash
 wg set wg0 peer <Client Public Key> endpoint <Client IP address>:51820 allowed-ips 203.0.113.12/24,fd86:ea04:1115::5/64
 ```
 
-
 ## 问题解决
 
-```
+```bash
 # 1. 内核模块没有
 lsmod | grep wireguard && echo yes || echo no
 no

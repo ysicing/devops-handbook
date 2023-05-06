@@ -5,13 +5,18 @@ description: "k8s配置默认存储"
 tags:
 - csi
 - kubernetes
+- k8s
+keywords:
+- csi
+- kubernetes
+- k8s
 ---
 
 <!-- truncate -->
 
 > 配置默认存储
 
-```
+```bash
 # 集群已有存储类型（StorageClass），执行 kubectl get sc看下当前是否设置了默认的 storageclass
 kubectl get sc
 
