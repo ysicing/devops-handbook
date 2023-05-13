@@ -301,7 +301,7 @@ const config = {
       // options
       websiteID: "your-website-id", // Required
       analyticsDomain: "umami.external.ysicing.cloud", // Required
-      scriptName: "",
+      scriptName: "script.js",
       dataHostURL: "",
       dataAutoTrack: true,
       dataDoNoTrack: true,
