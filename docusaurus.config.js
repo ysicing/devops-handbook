@@ -144,6 +144,9 @@ const config = {
               label: '赞助',
               to: '/sponsor',
             },
+            {
+              html: `<a href="https://notbyai.fyi/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/NotByAI.png" /><a/>`
+            },
           ],
         },
         {
