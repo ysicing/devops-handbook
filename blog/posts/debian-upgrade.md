@@ -25,7 +25,6 @@ apt update
 
 ```bash
 apt dist-upgrade -y
-apt install -t bookworm-backports linux-image-amd64 -y
 ```
 
 ## 更新引导并重启
