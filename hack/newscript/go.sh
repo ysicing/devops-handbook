@@ -7,8 +7,8 @@ command_exists() {
 go::dl(){
     pushd /tmp
     # 下载
-    [ -f "go1.20.4.linux-amd64.tar.gz" ] && rm -rf go1.20.4.linux-amd64.tar.gz
-    wget https://golang.google.cn/dl/go1.20.4.linux-amd64.tar.gz
+    [ -f "go1.20.5.linux-amd64.tar.gz" ] && rm -rf go1.20.5.linux-amd64.tar.gz
+    wget https://golang.google.cn/dl/go1.20.5.linux-amd64.tar.gz
     popd
 }
 
@@ -35,7 +35,7 @@ go::install(){
         $sh_c 'rm -rf /usr/local/go'
     fi
     echo "解压"
-    $sh_c 'tar -C /usr/local -xzf /tmp/go1.20.4.linux-amd64.tar.gz'
+    $sh_c 'tar -C /usr/local -xzf /tmp/go1.20.5.linux-amd64.tar.gz'
     echo "配置"
     if command_exists go; then
         [ ! -f "$HOME/.bashrc" ] && (
@@ -60,7 +60,7 @@ EOF
         source $HOME/.zshrc
     ) || true
     fi
-    rm -rf /tmp/go1.20.4.linux-amd64.tar.gz
+    rm -rf /tmp/go1.20.5.linux-amd64.tar.gz
 }
 
 go::test(){
