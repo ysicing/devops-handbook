@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="post">
+  <h2 class="post-title">{{.Title}}</h2>
+  <div id="hexo-circle-of-friends-root"></div>
+</div>
+<style>
+  .cf-article,#cf-state,#cf-more{background:#fff;border:1px solid #eaeaea;box-shadow:0 4px 6px rgba(0,0,0,.04)}
+  .cf-article[data-v-7eed2f8f]{margin:0;border-radius: 12px;}
+  #cf-state{margin-bottom:2rem !important;}
+  .dark .cf-article,.dark #cf-state,.dark #cf-more{background:#4a4b50;border:1px solid #3b3d42;}
+  .dark #cf-overlay,.dark .is-light{background-color:rgba(59,61,66,.42)}.dark .cf-overshow{background:#292a2d}.dark .cf-overshow p a{color:var(--lmm-fontcolor)}.dark .cf-overshow .cf-overshow-content,.dark .cf-overshow .cf-overshow-content-tail{background:#eaeaea}.dark #cf-more,.dark #cf-state{background:var(--lmm-dack-background);color:var(--lmm-dark-fontcolor)}.dark #cf-change,.dark .cf-article-floor,.dark .cf-time-created,.dark .cf-time-updated{color:var(--lmm-dark-floorcolor)}.dark .cf-article-author,.dark .cf-article a.cf-article-title{color:var(--lmm-dark-fontcolor)}.dark .cf-article{background:var(--lmm-dack-background)}.dark .cf-article:hover .cf-article-floor,.dark .cf-article:hover .cf-time-created,.dark .cf-article:hover .cf-time-updated,.dark .cf-overshow p span{color:var(--lmm-dark-fontcolor)}
+  .dark .is-light .el-popper__arrow:before{display: none;}
+  #cf-container{max-width:1000px;}
+  .post-title{text-align: center;}
+  div[data-v-7eed2f8f]{display:grid;grid-gap:1rem;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));}
+  div[data-v-7eed2f8f] > div[data-v-7eed2f8f]{display: block;}
+  .cf-article-title{white-space:nowrap;overflow: hidden;}
+  #cf-more[data-v-7eed2f8f],#cf-footer{right: -50%;position:relative;width:100%;text-align: center !important;}
+  #cf-more{top: 2rem;}
+  .cf-data-lastupdated{text-align: center !important;}
+  @media (max-width:855px){
+    #cf-more[data-v-7eed2f8f],#cf-footer{right:0;}
+    div[data-v-7eed2f8f]{display: block;}
+    div[data-v-7eed2f8f].cf-article{margin-bottom:1rem;}
+  }
+</style>
+{{ end }}
+
+
+{{ define "footer" }}
+<script>
+  let UserConfig = {
+      // 填写你的api地址
+      private_api_url: 'https://cf.edui.fun/',
+      // 点击加载更多时，一次最多加载几篇文章，默认10
+      page_turning_number: 10,
+      // 头像加载失败时，默认头像地址
+      error_img: 'https://gravatar.loli.net/avatar/57d8260dfb55501c37dde588e7c3852c',
+      // 进入页面时第一次的排序规则
+      sort_rule: 'created',
+      // 本地文章缓存数据过期时间（天）
+      expire_days: 1,
+  }
+</script>
+<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.12/dist/fcircle.min.js"></script>
+
+<script type="text/javascript" src="/theme-main-1.js"></script>
+<script>
+//随机日志
+function randomPost() {
+  fetch('/sitemap.xml').then(res => res.text()).then(str => (new window.DOMParser()).parseFromString(str, "text/xml")).then(data => {
+      let ls = data.querySelectorAll('url loc');
+      let locationHref,locSplit;
+      do {
+          locationHref = ls[Math.floor(Math.random() * ls.length)].innerHTML
+          locSplit = locationHref.split('/')[3] || ''
+      } while (locSplit == '' || locSplit == 'tags' || locSplit == 'posts'); 
+      location.href = locationHref
+  })
+}
+</script>
+{{ end }}

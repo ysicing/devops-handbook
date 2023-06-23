@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language }}">
+  <head>
+    {{ block "title" . }}
+      <title>{{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ end }}</title>
+    {{ end }}
+    {{ partial "head.html" . }}
+    {{ block "head" . }}
+    {{ end }}
+  </head>
+  <body class="">
+    <script>
+checkNightMode()
+function checkNightMode() {
+  var Mode = localStorage.getItem("theme") || ''
+  if (Mode == "dark") {
+    document.body.classList.add("dark")
+  }else if (Mode == null || Mode == "undefined" || Mode == "") {
+    if (matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add("dark")
+    }else if (matchMedia('(prefers-color-scheme: light)').matches) {
+      document.body.classList.remove("dark")
+    }
+  }
+}
+    </script>
+    <div class="container">
+      {{ partial "header.html" . }}
+      <div class="content">
+        {{ block "main" . }}
+        {{ end }}
+      </div>
+
+      {{ block "footer" . }}
+        {{ partial "footer.html" . }}
+      {{ end }}
+    </div>
+  </body>
+</html>
