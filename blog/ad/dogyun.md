@@ -18,6 +18,15 @@ keywords:
 
 <!-- truncate -->
 
+:::tip 自己用了才会安利哈
+
+我的博客`ysicing.me`就运行在狗云的环境下，访问速度还是不错的，可以自行看看效果
+
+- [服务状态页](https://status.ysicing.cloud/)
+- [探针](https://nzops.ysicing.cloud/)
+
+:::
+
 ## 推荐
 
 目前在用的经典云(`hk.mini`, 150一年)，活动特价🐔就不提了哈。

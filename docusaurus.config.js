@@ -88,6 +88,10 @@ const config = {
               to: "https://status.ysicing.cloud/"
             },
             {
+              label: '以针会友',
+              to: "https://nzops.ysicing.cloud/"
+            },
+            {
               label: '小声哔哔',
               to: "https://note.ysicing.cloud/explore"
             },
