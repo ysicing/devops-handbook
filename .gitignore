@@ -34,3 +34,4 @@ resources
 theme/zzoold
 build
 .docusaurus
+.hugo_build.lock

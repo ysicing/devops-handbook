@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ $goods := getJSON "static/suju/hardware.json" }}
+<div class="intro">
+  <h1>{{ .Title }}{{ if .Site.Params.addDot }}{{ end }}</h1>
+</div>
+<div class="pagetitle">一件称心的产品，从收到包裹那一刻就开始心潮澎湃，到日积月累逐步成为靠谱的伙伴，时刻让你的工作生活充满期待。以下为正在使用中的产品：( 2023-07-18 更新 )</div>
+<div class="quanju">
+  {{ range $goods.good}}
+  <div class="bankuai img-hide">
+    <emoji-reaction class="reactions" reacttargetid="goods-{{ .title }}" theme="system" endpoint="https://like.yangle.vip" availableArrayString="👍,thumbs-up;❤️,love;😎,cool;"></emoji-reaction>
+    <div class="duiqi img-hide"><img loading="lazy" decoding="async" src="{{ .image }}"></div>
+    <div class="hardware_link">
+      <a href="{{ .link }}" target="_blank"><div class="details">{{ .details }}</div></a>
+      <div class="jiage">{{ .jiage }}</div>
+      <div class="liing_2_right"><a href="{{ .link_2 }}"><div class="tiyi">{{ .tiyi }}</div></a></div>
+      </div>
+    <div class="title">{{ .title }}</div>
+    <div class="note">{{ .note }}</div>
+
+    </div>
+  {{ end }}
+  </div>
+  <div class="article-comments">
+    {{- partial "artalk" . -}}
+  </div>
+{{ end }}

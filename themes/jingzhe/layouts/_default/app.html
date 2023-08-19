@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ $goods := getJSON "static/suju/app.json" }}
+<div class="intro">
+  <h1>{{ .Title }}{{ if .Site.Params.addDot }}{{ end }}</h1>
+</div>
+<div class="pagetitle">一款合适的软件，在工作中能成为很好的生产力工具，让工作事半功倍；在生活中能成为很好的消遣工具，让生活充满多姿多彩。以下为日常工作生活中所常用：( 2023-07-29 更新 )</div>
+<div class="appdquanjudiv">
+  {{ range $goods.good}}
+<div class="appquanju img-hide">
+<div class="appimg"><img loading="lazy" decoding="async" src={{ .image }}> </div>
+<div class="appwenben">
+<div class="app-title-all">
+<div class="apptitle"><a href="{{ .link }}" target="_blank">{{ .title }}</a></div>
+<div class="appzhuangtai-right">
+  <a href="{{ .link }}" target="_blank"><div class="kaiyuan">{{ .kaiyuan }}</div></a>
+  <a href="{{ .link }}" target="_blank"><div class="shoufei">{{ .shoufei }}</div></a>
+  <a href="{{ .link }}" target="_blank"><div class="free">{{ .free }}</div></a>
+  </div>
+</div>
+<div class="appnote">{{ .info }}</div>
+<div class="appzhuangtai">
+<div class="macos">{{ .macos }}</div>
+<div class="macos">{{ .ios }}</div>
+<div class="macos">{{ .tvos }}</div>
+<div class="macos">{{ .web }}</div>
+<emoji-reaction class="reactions" reacttargetid="app-{{ .title }}" theme="system" endpoint="https://like.yangle.vip" availableArrayString="👍,thumbs-up;❤️,love;😎,cool;"></emoji-reaction>
+</div>
+
+</div>
+</div>
+  {{ end }}
+</div>
+  <div class="article-comments">
+    {{- partial "artalk" . -}}
+  </div>
+{{ end }}

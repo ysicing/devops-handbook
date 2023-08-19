@@ -1,0 +1,44 @@
+baseURL = "https://ysicing.me"
+languageCode = "zh-cn"
+theme = "jingzhe"
+themesDir = "themes"
+title = "缘生笔记"
+paginate = 6
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+enableRobotsTXT = true
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.55.0"
+
+[params]
+  showPostsOnHomepage = true
+  addDot = true
+  baseColor = "var(--background-color)"
+  baseOffsetColor = "#eaeaea"
+  headingColor = "#000"
+  dotColor = "var(--text-highlight-color)"
+
+[permalinks]
+  posts = '/posts/:filename/'
+
+[params.artalk]
+    server="https://artalk.ysicing.cloud"
+    site="Ysicing 缘生笔记"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = '首页'
+    url = '/'
+    weight = 1
