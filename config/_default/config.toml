@@ -27,7 +27,7 @@ enableRobotsTXT = true
 
 [params.artalk]
     server="https://artalk.ysicing.cloud"
-    site="Ysicing 缘生笔记"
+    site="缘生笔记"
 
 [markup]
   [markup.goldmark]
