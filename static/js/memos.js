@@ -257,11 +257,11 @@ function getTagNow(e){
 
 // 显示所有 TAG
 function showTaglist(){
-  let bbUrl = 'https://memostag.yangle.vip/'
+  let bbUrl = 'https://memostag.external.ysicing.cloud/'
   let tagListDom = ""
   fetch(bbUrl).then(res => res.json()).then( resdata =>{
-    for(let i=0;i < resdata.length;i++){
-      tagListDom += `<div class="memos-tag-all img-hide" onclick='getTagNow(this)'># ${resdata[i]}</div>`
+    for(let i=0;i < resdata.data.length;i++){
+      tagListDom += `<div class="memos-tag-all img-hide" onclick='getTagNow(this)'># ${resdata.data[i]}</div>`
     }
     document.querySelector('#tag-list-all').innerHTML = tagListDom
 
