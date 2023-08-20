@@ -15,7 +15,7 @@ jobs:
     - name: movie
       uses: lizheming/doumark-action@master
       with:
-        id: jnnsu
+        id: ysicing
         type: movie
         format: csv
         dir: ./data/douban
