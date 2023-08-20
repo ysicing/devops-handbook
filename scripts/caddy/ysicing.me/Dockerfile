@@ -1,5 +1,7 @@
-FROM caddy2
+FROM caddy
 
-COPY ./public /root/www
+COPY scripts/caddy/ysicing.me/ysicing.me.caddy /etc/caddy/Caddyfile
 
-COPY scripts/caddy/ysicing.me/ysicing.me.caddy /etc/caddy/default.caddy
+COPY ./public /srv
+
+EXPOSE 80

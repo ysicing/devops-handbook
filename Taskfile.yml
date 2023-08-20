@@ -1,0 +1,20 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - hugo --minify
+
+  docker:
+    desc: docker build
+    deps:
+      - build
+    cmds:
+      - docker buildx build --pull -t ysicing/devops-handbook:2023hugo -f scripts/caddy/ysicing.me/Dockerfile .
+      - docker push ysicing/devops-handbook:2023hugo
+
+  default:
+    cmds:
+      - task: docker

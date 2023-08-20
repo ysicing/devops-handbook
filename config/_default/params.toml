@@ -1,0 +1,13 @@
+email = "root@ysicing.net"
+github = "https://github.com/ysicing/devops-handbook"
+
+govcnbeianhao = "京ICP备17001940号 "
+govmoebeianhao = "20212380"
+
+[memos]
+  desc = "少叨叨"
+  url = "https://note.ysicing.cloud"
+
+[umami]
+  url = "https://umami.external.ysicing.cloud/script.js"
+  id = "4c49e691-9efd-4049-ba15-fac0e5a34ea6"

@@ -2,7 +2,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-  var bbUrl = "https://note.ysicing.cloud/api/v1/memo?creatorId=1&rowStatus=NORMAL&limit=4";
+  var bbUrl = "{{ .Site.Params.memos.url }}/api/v1/memo?creatorId=1&rowStatus=NORMAL&limit=4";
   fetch(bbUrl)
     .then(res => res.json())
     .then(resdata => {
@@ -63,7 +63,7 @@
             resLink = resexlink
           }else{
             fileId = resourceList[j].publicId || resourceList[j].filename
-            resLink = 'https://note.ysicing.cloud' + '/o/r/' + resourceList[j].id + '/' + fileId; //解析本地上传图片
+            resLink = '{{ .Site.Params.memos.url }}' + '/o/r/' + resourceList[j].id + '/' + fileId; //解析本地上传图片
           }
           if(restype == 'image'){
             imgUrl += '<figure class="gallery-thumbnail"><img loading="lazy" decoding="async" class="img thumbnail-image" src="'+resLink+'"/></figure>'

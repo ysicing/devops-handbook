@@ -11,7 +11,7 @@
 	    redir https://ysicing.me/tags
     }
 
-    root * /root/www
+    root * /srv
 
     file_server
 }

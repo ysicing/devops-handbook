@@ -1,8 +1,8 @@
 :root {
-  --font-family-paragraph: 'HarmonyOS_Regular', Helvetica, sans-serif;
-  --font-family-title: 'HarmonyOS_Medium', Helvetica, sans-serif;
-  --font-family-code: 'JetBrainsMono','HarmonyOS_Regular', Helvetica, sans-serif;
-  --font-family-monospace: 'HarmonyOS_Regular',monospace;
+  --font-family-paragraph: 'LXGW WenKai Screen R', Helvetica, sans-serif;
+  --font-family-title: 'LXGW WenKai Screen R', Helvetica, sans-serif;
+  --font-family-code: 'JetBrainsMono','LXGW WenKai Screen R', Helvetica, sans-serif;
+  --font-family-monospace: 'LXGW WenKai Screen R',monospace;
   --font-family-teshu: 'SmileySans',Helvetica,sans-serif;
   --base-color: {{ .Site.Params.baseColor | default "#ffffff" }};
   --base-offset-color: {{ .Site.Params.baseOffsetColor | default "#eaeaea" }};
@@ -40,8 +40,7 @@ $breakpoints: (
 @import 'photo';
 @import 'archive';
 @import 'about';
-@import url('//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css');
-@import url('https://s1.hdslb.com/bfs/static/jinkela/long/font/medium.css');
+@import url('https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreenr.css');
 
 @font-face {
   font-family: JetBrainsMono;
