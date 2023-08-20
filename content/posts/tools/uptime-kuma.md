@@ -14,6 +14,7 @@ keywords:
 - uptime-kuma
 - monitor
 - bark
+url: /tools/uptime-kuma
 ---
 
 Uptime Kuma 是一个开源的、简单易用的、自托管的监控工具，功能类似于 Uptime Robot。它可以帮助你监控你的网站或者任何暴露在互联网上的服务，如 HTTP、TCP、Ping、DNS 等，并且提供实时的状态和通知功能。本文将介绍如何安装、配置和使用 Uptime Kuma。

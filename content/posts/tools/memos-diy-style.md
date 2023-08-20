@@ -6,6 +6,7 @@ tags:
 - memos
 keywords:
 - memos
+url: /tools/memos-diy-style
 ---
 
 <!-- truncate -->

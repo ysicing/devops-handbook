@@ -14,6 +14,7 @@ keywords:
 - 渠成
 - 禅道
 - quickon
+url: /tools/qcadmin-cluster
 ---
 
 

@@ -12,11 +12,8 @@ keywords:
 - bark
 - docusaurus
 - artalk
+url: /tools/artalk
 ---
-
-
-
-
 
 Artalk 是一款简洁的自托管评论系统.
 

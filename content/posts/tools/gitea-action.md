@@ -11,11 +11,8 @@ keywords:
 - self-hosted
 - gitea
 - ci
+url: /tools/gitea-action
 ---
-
-
-
-
 
 [Gitea Action](https://github.com/go-gitea/gitea/issues/13539) 是一款基于Action协议且兼容Github Action的Gitea内置CI工具.
 

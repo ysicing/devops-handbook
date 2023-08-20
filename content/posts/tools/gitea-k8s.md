@@ -11,6 +11,7 @@ keywords:
 - self-hosted
 - gitea
 - k8s
+url: /tools/gitea-k8s
 ---
 
 

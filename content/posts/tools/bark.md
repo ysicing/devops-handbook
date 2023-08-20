@@ -10,6 +10,7 @@ keywords:
 - self-hosted
 - bark
 - macOS
+url: /tools/bark
 ---
 
 Bark是一款开源的iOS消息推送应用，可以让你通过简单的HTTP请求，给iPhone发送自定义的推送消息。

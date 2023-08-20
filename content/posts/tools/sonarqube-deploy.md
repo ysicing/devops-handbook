@@ -10,6 +10,7 @@ keywords:
 - self-hosted
 - sonarqube
 - devops
+url: /tools/sonarqube-deploy
 ---
 
 Sonarqube是一个开源的代码质量检测工具，可以帮助我们检测代码的质量，提供了很多检测项，如代码重复率、代码覆盖率、代码注释率、代码复杂度等等，可以帮助我们提高代码质量。本文将介绍如何安装、配置和使用Sonarqube。

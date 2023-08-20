@@ -11,14 +11,10 @@ keywords:
 - self-hosted
 - minio
 - 对象存储
+url: /tools/minio-deploy
 ---
 
-
-
-
-
-[Minio](https://github.com/minio/)是一种高性能、兼容S3的对象存储。
-.
+[Minio](https://github.com/minio/)是一种高性能、兼容S3的对象存储.
 
 <!-- truncate -->
 

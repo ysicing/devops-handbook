@@ -8,11 +8,8 @@ tags:
 keywords:
 - self-hosted
 - umami
+url: /tools/umami
 ---
-
-
-
-
 
 Umami 是一个简单、易于使用的开源网站分析解决方案。它的目标是提供一个清晰的视图，而不会让你的隐私权受到侵犯。
 

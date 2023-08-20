@@ -10,6 +10,7 @@ keywords:
 - self-hosted
 - memos
 - gitea
+url: /tools/memos
 ---
 
 <!-- truncate -->

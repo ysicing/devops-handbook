@@ -7,19 +7,14 @@ tags:
 - dns
 keywords:
 - dns
+url: /dns
 ---
-
-
-
-
-
-import TOCInline from '@theme/TOCInline';
 
 > 记录自己常用DNS(IP, `DoH`, `DoT`), 其中IP为基础DNS, DoH和DoT为加密DNS
 
 <!-- truncate -->
 
-<TOCInline toc={toc} />
+:toc:
 
 ## IP
 

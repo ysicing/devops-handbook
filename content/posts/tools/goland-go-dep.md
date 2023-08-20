@@ -11,6 +11,7 @@ keywords:
 - go
 - ide
 - goland
+url: /tools/goland-go-dep
 ---
 
 <!-- truncate -->
