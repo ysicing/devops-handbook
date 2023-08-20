@@ -2,7 +2,7 @@
 
 {{ define "main" }}
   <div class="blog">
-    
+
     <div class="intro">
       <h1 class="article_title">{{ .Title }}{{ if .Site.Params.addDot }}{{ end }}</h1>
       {{ if .Params.image }}
@@ -16,7 +16,7 @@
     <div class="single-biaoq">
  <div class="page-time">
   <script>
-    document.write(formatDate({{ .Date.Unix }})); 
+    document.write(formatDate({{ .Date.Unix }}));
   </script>
  </div>
  <div class="single-tag">
@@ -27,9 +27,9 @@
           {{ end }}
  </div>
  <div class="single-like">
-  <emoji-reaction class="reactions" reacttargetid="{{ .Slug }}" theme="system" endpoint="https://like.yangle.vip" availableArrayString="👍,thumbs-up;🎉,party-popper;😄,smile-face;😎,cool;"></emoji-reaction>
+  <emoji-reaction class="reactions" reacttargetid="{{ .Slug }}" theme="system" endpoint="https://dz.12306.work" availableArrayString="👍,thumbs-up;🎉,party-popper;😄,smile-face;😎,cool;"></emoji-reaction>
 </div>
-  </div> 
+  </div>
  </div>
     <div class="archives_nrong" >
       {{ with .PrevInSection }}
@@ -38,12 +38,12 @@
             <div class="archive-title"><a href="{{ .RelPermalink }}">{{.Title}}</a></div>
             <div class="archive-time">
               <script>
-                document.write(formatDate({{ .Date.Unix }})); 
+                document.write(formatDate({{ .Date.Unix }}));
               </script>
             </div>
             </div>
             <div class="archive-img">
-            <a href="{{ .RelPermalink }}"><img loading="lazy" decoding="async" src="{{ .Params.image | relURL }}" /></a>          
+            <a href="{{ .RelPermalink }}"><img loading="lazy" decoding="async" src="{{ .Params.image | relURL }}" /></a>
             </div>
         </div>
       {{ end }}
@@ -53,12 +53,12 @@
           <div class="archive-title"><a href="{{ .RelPermalink }}">{{.Title}}</a></div>
           <div class="archive-time">
             <script>
-              document.write(formatDate({{ .Date.Unix }})); 
+              document.write(formatDate({{ .Date.Unix }}));
             </script>
           </div>
           </div>
           <div class="archive-img">
-          <a href="{{ .RelPermalink }}"><img loading="lazy" decoding="async" src="{{ .Params.image | relURL }}" /></a>          
+          <a href="{{ .RelPermalink }}"><img loading="lazy" decoding="async" src="{{ .Params.image | relURL }}" /></a>
           </div>
       </div>
     {{ end }}
