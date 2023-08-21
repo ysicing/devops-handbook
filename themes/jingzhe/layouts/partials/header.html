@@ -11,7 +11,7 @@
       <a href="{{.URL}}">{{ .Name }}</a>
     </div>
     {{end}}
-    <a href="/index.xml" target="_blank" data-umami-event="Rss"><img class="header-rss" src="https://dfcos.ysicing.cloud/img/blog/rss.svg" alt="RSS" /></a><a href="mailto:ysicing@ysicing.cloud"><img class="header-rss" src="https://dfcos.ysicing.cloud/img/blog/email.svg" alt="E-mail" /></a>
+    <a href="/index.xml" target="_blank" data-umami-event="Rss"><img class="header-rss" src="https://dfcos.ysicing.cloud/img/blog/rss.svg" alt="RSS" /></a><a href="mailto:{{ .Site.Params.email }}"><img class="header-rss" src="https://dfcos.ysicing.cloud/img/blog/email.svg" alt="E-mail" /></a>
 </div>
   <div id="toggle-menu-main-mobile" class="hamburger-trigger">
     <button class="hamburger">Menu</button>

@@ -1,7 +1,7 @@
-email = "root@ysicing.net"
+email = "ysicing@ysicing.cloud"
 github = "https://github.com/ysicing/devops-handbook"
 
-govcnbeianhao = "京ICP备17001940号 "
+govcnbeianhao = "京ICP备17001940号"
 govmoebeianhao = "20212380"
 
 [memos]
@@ -11,3 +11,17 @@ govmoebeianhao = "20212380"
 [umami]
   url = "https://umami.external.ysicing.cloud/script.js"
   id = "4c49e691-9efd-4049-ba15-fac0e5a34ea6"
+
+[reaction]
+  url = "https://dz.12306.work"
+  custom = "👍,thumbs-up;❤️,love;😎,cool;"
+  memos = "👍,thumbs-up;🎉,party-popper;😄,smile-face;😎,cool;"
+
+[app]
+  desc = "一款合适的软件，在工作中能成为很好的生产力工具，让工作事半功倍；在生活中能成为很好的消遣工具，让生活充满多姿多彩。以下为日常工作生活中所常用：( 2023-08-21 更新 )"
+
+[movies]
+  desc = "数据来源豆瓣"
+
+[hardware]
+  desc = "一件称心的产品，从收到包裹那一刻就开始心潮澎湃，到日积月累逐步成为靠谱的伙伴，时刻让你的工作生活充满期待。以下为正在使用中的产品：( 2023-08-21 更新 )"
