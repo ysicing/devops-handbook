@@ -19,7 +19,7 @@
     <!--<div class="archive-month">
      {{- .Key }} 月
       <sup>{{ len .Pages }}</sup>
-    </div>-->  
+    </div>-->
       {{- range .Pages }}
       {{- if eq .Kind "page" }}
       <div class="archives_one">
@@ -34,7 +34,7 @@
         </div>
       </div>
       {{- end }}
-      {{- end }} 
+      {{- end }}
     </div>
   {{ end }}
 {{- end }}
