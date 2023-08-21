@@ -41,6 +41,8 @@
       //TAG 解析
       var tagArr = data[i].content.match(TAG_REG);
       var memosTag = '';
+      var reactionUrl = "{{ .Site.Params.reaction.url }}"
+      var reactionType = "{{ .Site.Params.reaction.memos }}"
 
       if (tagArr) {
         memosTag = tagArr.map(function(tag) {
@@ -85,7 +87,7 @@
         result += `
   <li class="memos_diaoyong img-hide">
     <div class="memos-pl">
-              <emoji-reaction class="reactions" reactTargetId="/m/${data[i].id}" theme="system" endpoint="{{ .Site.Params.reaction.url }}" availableArrayString="{{ .Site.Params.reaction.memos }}"></emoji-reaction>
+              <emoji-reaction class="reactions" reactTargetId="/m/${data[i].id}" theme="system" endpoint="${reactionUrl}" availableArrayString="${reactionType}"></emoji-reaction>
               </div>
       <!--<div class="memos-diaoyong-tag">${memosTag}</div>-->
       <div class="memos_diaoyong_info" view-image>${bbContREG}</div>
