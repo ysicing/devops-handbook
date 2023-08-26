@@ -3,9 +3,11 @@
 <!-- Artalk -->
 <div id="Comments"></div>
 <script>
+  var defaultPageKey = '{{ .RelPermalink }}';
+  var pageKey = defaultPageKey.replace(/\/$/, '');
   new Artalk({
     el:        '#Comments',
-    pageKey:   '{{ .Permalink }}',
+    pageKey:   `${pageKey}`,
     pageTitle: '{{ .Title }}',
     server:    '{{ $.Site.Params.artalk.server }}',
     site:      '{{ $.Site.Params.artalk.site }}',
