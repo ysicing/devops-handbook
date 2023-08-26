@@ -1,5 +1,5 @@
 .content-index{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-top: 30px;
 }
 .summary-nrong{
@@ -47,10 +47,9 @@
 }
 .summary-description{
   font-size: 16px;
-  line-height:1.6;
+  line-height:1.8;
   color: #666;
-  margin-top: 6px;
-  text-align: justify;
+  margin-top: 10px;
   overflow : hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -71,10 +70,10 @@
 // 页面宽度小于700样式
 @media (max-width:700px){
  .summary-nrong{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   }
-  
+
   // 页面宽度大于700小于900样式
   @media screen and (min-width:700px) and (max-width:900px){
     .summary{
@@ -83,12 +82,12 @@
       grid-gap: 10px;
     }
   }
-  // 页面宽度大于900样式   
+  // 页面宽度大于900样式
  @media (min-width:900px){
   .summary{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 15px;
     margin: 0 auto;
     max-width: 1000px;
   }

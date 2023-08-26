@@ -43,6 +43,7 @@
       var memosTag = '';
       var reactionUrl = "{{ .Site.Params.reaction.url }}"
       var reactionType = "{{ .Site.Params.reaction.memos }}"
+      var sourceName = "{{ .Site.Params.memos.name }}"
 
       if (tagArr) {
         memosTag = tagArr.map(function(tag) {
@@ -87,14 +88,13 @@
         result += `
   <li class="memos_diaoyong img-hide">
     <div class="memos-pl">
-              <emoji-reaction class="reactions" reactTargetId="/m/${data[i].id}" theme="system" endpoint="${reactionUrl}" availableArrayString="${reactionType}"></emoji-reaction>
+              <div class="memos-diaoyong-tag">${memosTag}</div><emoji-reaction class="reactions" reactTargetId="/m/${data[i].id}" theme="system" endpoint="${reactionUrl}" availableArrayString="${reactionType}"></emoji-reaction>
               </div>
-      <!--<div class="memos-diaoyong-tag">${memosTag}</div>-->
       <div class="memos_diaoyong_info" view-image>${bbContREG}</div>
       <div class="memos_diaoyong_top">
         <div class="memos_diaoyong_time">${moment(data[i].createdTs * 1000).twitterLong()}</div>
               <div class="memos_diaoyong_laiz">
-                  <a href="/memos">来自唠叨</a>
+                  <a href="/memos">来自${sourceName}</a>
               </div>
           </div>
   </li>`;

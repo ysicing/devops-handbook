@@ -2,8 +2,8 @@
 .movie-quanju{
   display: grid;
 	grid-template-columns: 1fr 1fr; /* 两列等宽 */
-	grid-gap: 10px; /* 中间空10px间距 */
-  margin-top: 20px;
+	grid-gap: 15px; /* 中间空10px间距 */
+  margin-top: 30px;
 }
 .movie-index{
   background: var(--bankuai-color);
@@ -42,7 +42,7 @@
   align-items: center;
 }
 .movie-content-left{
-  grid-column: 1; /* 放置在第一列 */ 
+  grid-column: 1; /* 放置在第一列 */
 }
 .movie-content-left img{
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
@@ -71,7 +71,7 @@
   font-size: 18px;
 }
 .movie-content-right-3{
-  line-height:1.6;
+  line-height:1.8;
   font-size: 16px;
   margin-top: 10px;
   color: #666;
@@ -175,10 +175,10 @@ color: var(--text-highlight-color);
   height: 180px;
 }
 .movie-index{
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .movie-quanju{
-  display: block; 
+  display: block;
 }
 .movies-nrong{
   display: none;
@@ -200,7 +200,7 @@ color: var(--text-highlight-color);
   display: none;
 }
 }
-// 页面宽度大于900样式   
+// 页面宽度大于900样式
 @media (min-width:900px){
   .movies-nrong{
     background: rgba(0, 0, 0, 0.6);
@@ -214,7 +214,7 @@ color: var(--text-highlight-color);
     font-size: 13px;
     display:none;
     position:absolute;
-  } 
+  }
   .HPRth:hover .movies-nrong{
     display:block;
   }

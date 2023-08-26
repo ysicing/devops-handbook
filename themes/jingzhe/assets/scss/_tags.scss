@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;//宽度显示不下自动换行
   grid-gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   }
 .list-tags {
   border-radius:4px;
@@ -27,7 +27,7 @@
   align-items: center;
 }
 .page-time,.single-tag-c{
-  font-size: 16px; 
+  font-size: 16px;
   border-radius:4px;
   background: #F2F2F2;
   color:var(--text-content-color);

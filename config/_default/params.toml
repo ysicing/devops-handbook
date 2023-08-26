@@ -5,7 +5,8 @@ govcnbeianhao = "京ICP备17001940号"
 govmoebeianhao = "20212380"
 
 [memos]
-  desc = "少叨叨"
+  name = "唠叨"
+  desc = "定位私人微博。难免有些负能量/吐槽同时，这里的内容经常会删删减减，在这里说的话多半不算数。"
   url = "https://note.ysicing.cloud"
 
 [umami]

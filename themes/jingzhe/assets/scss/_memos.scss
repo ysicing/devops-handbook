@@ -3,12 +3,12 @@
   margin-top: 20px;
   display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-	grid-gap: 10px; /* 中间空10px间距 */
+	grid-gap: 15px; /* 中间空10px间距 */
 }
 .memos_diaoyong,.bb-list-li,.memos-random-background,.memos-search-all{
   border-radius:4px;
   background: var(--bankuai-color) !important;
-  padding:20px; 
+  padding:20px;
   transition: all .3s cubic-bezier(0,0,.5,1);
 }
 .memos_diaoyong:hover,.bb-list-li:hover{
@@ -111,7 +111,7 @@
   display: grid;
   gap: 6px;
   width: 60%;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -128,7 +128,7 @@
   transform: scale(1.03);
 }
 .grid-3,.grid-5,.grid-6,.grid-7,.grid-8,.grid-9{
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
 }
 .grid-3 img,.grid-5 img,.grid-6 img,.grid-7 img,.grid-8 img,.grid-9 img{
   height: 140px !important;
@@ -169,7 +169,7 @@
 .memos-tag-sc-2{
   align-items: center;
   display: flex;
-  margin-top: 20px; 
+  margin-top: 20px;
   font-size: 16px;
   color: #999;
 }
@@ -218,7 +218,7 @@ pre{
   line-height: 1.8;
   background: var(--background-color);
   padding: 20px;
-  white-space: pre-wrap; 
+  white-space: pre-wrap;
 }
 pre code{
   background: transparent;
@@ -388,7 +388,7 @@ blockquote p{
 
 //填写api样式
 .memos-editor-option{
-  display: flex; 
+  display: flex;
 }
 .memos-open-api-input{
   border: transparent;
@@ -437,7 +437,7 @@ blockquote p{
   display: none;
 }
 .memos-edit:hover .memos-menu-d {
-  display: block; 
+  display: block;
 }
 .edit-btn,.archive-btn,.delete-btn {
   cursor: pointer;
@@ -475,13 +475,13 @@ blockquote p{
 @media (min-width:700px){
   .memos_diaoyong .resimg{
     width: 100% !important;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
   }
   .memos_diaoyong .gallery-thumbnail img{
     height: 90px !important;
   }
   .memos_diaoyong .grid-3,.memos_diaoyong .grid-5,.memos_diaoyong .grid-6,.memos_diaoyong .grid-7,.memos_diaoyong grid-8,.memos_diaoyong .grid-9{
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
   }
   .memos_diaoyong .grid-3 img,.memos_diaoyong .grid-5 img,.memos_diaoyong .grid-6 img,.memos_diaoyong .grid-7 img,.memos_diaoyong .grid-8 img,.memos_diaoyong .grid-9 img{
     height: 80px !important;
@@ -613,7 +613,7 @@ blockquote p{
 //表情
 .emoji-selector{
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 15px;
 }
