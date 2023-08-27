@@ -12,26 +12,26 @@ var memosEditorCont = `
       <div class="memos-editor-tools pt-3">
         <div class="d-flex">
           <div class="button outline action-btn image-btn mr-2" onclick="this.lastElementChild.click()">
-            <img src="https://img.koobai.com/memos/memos_img_up.svg">
+            <img src="https://dfcos.ysicing.cloud/img/blog/memos_img_up.svg">
             <input class="memos-upload-image-input d-none" type="file" accept="image/*">
           </div>
           <div class="button outline p-2 action-btn code-btn mr-2">
-            <img src="https://img.koobai.com/memos/memos_code.svg">
+            <img src="https://dfcos.ysicing.cloud/img/blog/memos_code.svg">
           </div>
           <div class="button outline action-btn code-single mr-2">
-          <img src="https://img.koobai.com/memos/memos-code-s.svg">
+          <img src="https://dfcos.ysicing.cloud/img/blog/memos-code-s.svg">
           </div>
           <div class="button outline action-btn mr-2 link-btn">
-            <img src="https://img.koobai.com/memos/memos_link.svg">
+            <img src="https://dfcos.ysicing.cloud/img/blog/memos_link.svg">
           </div>
           <div class="button outline action-btn mr-2 link-img">
-          <img src="https://img.koobai.com/memos/memos_img_quote.svg">
+          <img src="https://dfcos.ysicing.cloud/img/blog/memos_img_quote.svg">
         </div>
         <div class="button outline action-btn biao-qing mr-2">
-        <img src="https://img.koobai.com/memos/memos-emoji.svg">
+        <img src="https://dfcos.ysicing.cloud/img/blog/memos-emoji.svg">
         </div>
           <div class="button outline action-btn p-2 switchUser-btn">
-            <img src="https://img.koobai.com/memos/memos_user.svg">
+            <img src="https://dfcos.ysicing.cloud/img/blog/memos_user.svg">
           </div>
         </div>
         <div class="d-flex flex-fill">
