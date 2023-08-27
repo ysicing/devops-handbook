@@ -3,6 +3,7 @@ title: "README"
 date: 2013-07-28T13:21:00+08:00
 description: "你好,我的博客"
 sticky: 1
+weight: 1
 tags:
 - site
 ---

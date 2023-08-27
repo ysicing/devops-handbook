@@ -57,3 +57,28 @@ fetch('/suju/app.json')
 function getRandomApps(array, count) {
   return array.sort(() => 0.5 - Math.random()).slice(0, count);
 }
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   umiTongji();
+// });
+
+// umiTongji
+// function umiTongji() {
+//   var umiId = "4c49e691-9efd-4049-ba15-fac0e5a34ea6"
+//   var umiToken = "gEEGJxIDEwfZmhxeN3lNFbuJZ7jz9CpJk7sppq5/7gx/f1mf4/ouCoZUuyTXnMT06feKydZfgNWD6F3RQuCWxM8hWd9Ao8eN11Irs7SYIGJDVCJG9buVRPOeMUwmKg8sXiva9eK/17HYYH6GB6btLThLF430dEUr5tC7KyFiB5tTEOjVp5qlq5SlE25a7dip+uUFcK3G2nkPI6z48eMk4cOqBpLW6UgUP9SKOX5CrFGi2MyOLkXZVP0PY9+UERw4iksVHjT94deNK905Rlg1OhZn/85G4HPRwyHivsgcv4I/2Vf9tOmRi1dYzJrgJGcDamyP87Y90+0HawzmC2enOb7ybFIoEnG7qA=="
+//   var umiTime = Date.parse(new Date()); //获取当前时间戳
+//   var umiUrl = "https://umami.external.ysicing.cloud/api/websites/" + umiId + "/stats?start_at=0000000000&end_at=" + umiTime;
+//   fetch(umiUrl, {
+//     method: 'GET',
+//     mode: 'cors',
+//     cache: 'default',
+//     headers: {
+//       'Authorization': 'Bearer ' + umiToken,
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//     .then(res => res.json()).then(resdata => {
+//       document.querySelector('#pvStatic').innerHTML = resdata.pageviews.value
+//       document.querySelector('#uvStatic').innerHTML = resdata.uniques.value
+//     });
+// }

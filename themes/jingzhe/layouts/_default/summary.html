@@ -19,13 +19,15 @@
   </div>
 <div class="summary-date">
   <script>
-    document.write(formatDate({{ .Date.Unix }})); 
+    document.write(formatDate({{ .Date.Unix }}));
   </script>
   <span class="movie-laiz">
     <a href="/posts">来自博文</a>
 </span>
 </div>
-  <div class="summary-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+  <div class="summary-title">
+    <a href="{{ .RelPermalink }}">{{ if gt .Weight 0 }}📌 {{ end }}{{ .Title }}</a>
+  </div>
   <div class="summary-description">{{ .Params.description }}</div>
   {{ if not .Params.hideReadMore }}
   <div class="read-more"><a href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore | default "看全文 ..." }}</a></div>
