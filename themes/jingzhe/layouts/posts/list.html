@@ -19,17 +19,16 @@
     <div class="posts-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></div>
     <div class="archive-time">
       <script>
-        document.write(formatDate({{ .Date.Unix }})); 
+        document.write(formatDate({{ .Date.Unix }}));
       </script>
     </div>
-    
     <div class="posts-description">{{ .Params.description }}</div>
     <div class="list-more"><a href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore | default "看全文 ..." }}</a></div>
   </div>
     <div class="posts-img img-hide">
       {{ if .Params.image }}
       <a href="{{ .RelPermalink }}"><img src="{{ .Params.image | relURL }}" /></a>
-      {{ end }} 
+      {{ end }}
   </div>
 {{ end }}
 </div>
@@ -41,7 +40,7 @@
       <div class="archive-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
       <div class="archive-time">
         <script>
-          document.write(formatDate({{ .Date.Unix }})); 
+          document.write(formatDate({{ .Date.Unix }}));
         </script>
       </div>
       </div>

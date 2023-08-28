@@ -43,7 +43,7 @@
             </div>
             </div>
             <div class="archive-img">
-            <a href="{{ .RelPermalink }}"><img loading="lazy" decoding="async" src="{{ .Params.image | relURL }}" /></a>
+            <a href="{{ .RelPermalink }}">{{ if .Params.image }}<img loading="lazy" decoding="async" src="{{ .Params.image | relURL }}" />{{ end }}</a>
             </div>
         </div>
       {{ end }}
@@ -58,7 +58,7 @@
           </div>
           </div>
           <div class="archive-img">
-          <a href="{{ .RelPermalink }}"><img loading="lazy" decoding="async" src="{{ .Params.image | relURL }}" /></a>
+          <a href="{{ .RelPermalink }}">{{ if .Params.image }}<img loading="lazy" decoding="async" src="{{ .Params.image | relURL }}" />{{ end }}</a>
           </div>
       </div>
     {{ end }}
