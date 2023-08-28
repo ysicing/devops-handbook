@@ -3,6 +3,10 @@
 version: '3'
 
 tasks:
+  douban:
+    cmds:
+      - ./data/douban/upload.sh
+
   build:
     cmds:
       - hugo --minify
@@ -10,6 +14,7 @@ tasks:
   docker:
     desc: docker build
     deps:
+      - douban
       - build
     cmds:
       - docker buildx build --pull -t ysicing/devops-handbook:2023hugo -f scripts/caddy/ysicing.me/Dockerfile .
