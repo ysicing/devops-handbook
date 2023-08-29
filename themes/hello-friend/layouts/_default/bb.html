@@ -39,9 +39,9 @@ span.setid{opacity:0.1;}
 
 <script type="text/javascript">
   let bbMemos = {
-    memos : 'https://me.edui.fun/',//修改为自己的 apiurl，末尾有 / 斜杠
-    limit : '',//默认每次显示 10条 
-    creatorId:'' ,//默认为 101用户 https://demo.usememos.com/u/101
+    memos : '{{ .Site.Params.memos.url }}/',//修改为自己的 apiurl，末尾有 / 斜杠
+    limit : '',//默认每次显示 10条
+    creatorId:'1' ,//默认为 101用户 https://demo.usememos.com/u/101
     domId: '',//默认为 #bber
     twiEnv:'',//启开 twikoo 评论，需加载 twikoo.js
   }

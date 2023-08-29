@@ -257,7 +257,7 @@ function meNums(apiV1){
     }
   })
 }
-// 插入 html 
+// 插入 html
 async function updateHTMl(data){
   //console.log(data)
   let result="",resultAll="";
@@ -278,7 +278,7 @@ async function updateHTMl(data){
     headerIds: false,
     mangle: false
   });
-  
+
   for(let i=0;i < data.length;i++){
       let bbID = data[i].id
       let memoUrl = memos + "m/" + bbID
@@ -308,7 +308,7 @@ async function updateHTMl(data){
         }).join('');
         bbContREG =  bbContTag + bbContREG.trim()
       }
-            
+
       bbContREG = marked.parse(bbContREG)
         .replace(BILIBILI_REG, "<div class='video-wrapper'><iframe src='//www.bilibili.com/blackboard/html5mobileplayer.html?bvid=$1&as_wide=1&high_quality=1&danmaku=0' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'></iframe></div>")
         .replace(NETEASE_MUSIC_REG, "<meting-js auto='https://music.163.com/#/song?id=$1'></meting-js>")
@@ -336,12 +336,12 @@ async function updateHTMl(data){
         for(let j=0;j < resourceList.length;j++){
           let restype = resourceList[j].type.slice(0,5)
           let resexlink = resourceList[j].externalLink
-          let resLink = resexlink ? resexlink : 
+          let resLink = resexlink ? resexlink :
                         memos+'o/r/'+resourceList[j].id+'/'+(resourceList[j].publicId || resourceList[j].filename)
 
           if(restype == 'image'){
             imgUrl += `<figure class="gallery-thumbnail"><img class="img thumbnail-image" src="${resLink}"/></figure>`
-            resImgLength = resImgLength + 1 
+            resImgLength = resImgLength + 1
           }else if(restype == 'video'){
             imgUrl += `<div class="video-wrapper"><video controls><source src="${resLink}" type="video/mp4"></video></div>`
           }else{
@@ -358,9 +358,9 @@ async function updateHTMl(data){
         }
       }
       let memosIdNow = memos.replace(/https\:\/\/(.*\.)?(.*)\..*/,'id-$2-')
-      let emojiReaction = `<emoji-reaction theme="system" class="reaction" endpoint="https://api-emaction.immmmm.com" reacttargetid="${memosIdNow+'memo-'+bbID}" style="line-height:normal;display:inline-flex;"></emoji-reaction>`
+    let emojiReaction = `<emoji-reaction theme="system" class="reaction" endpoint="https://dz.12306.work" reacttargetid="${memosIdNow+'memo-'+bbID}" style="line-height:normal;display:inline-flex;"></emoji-reaction>`
       let datacountDOM = `<div class="datacount" data-twienv="${bbMemo.twiEnv}" data-id="${bbID}" onclick="loadTwikoo(this)"> ${data[i].count} 条评论 </div>`
-      
+
       memosOpenIdNow = window.localStorage && window.localStorage.getItem("memos-access-token")
 
       result +=  `<li class="memo-${bbID}">

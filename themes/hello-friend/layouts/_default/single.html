@@ -6,7 +6,7 @@
 {{ define "main" }}
   {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
   {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
-  
+
   {{ $PostCate := .File.Path | replaceRE ".*posts/(.*)/.*" "$1"}}
   <div class="post {{ $PostCate }}">
     {{ partial "breadcrumb.html" . }}
@@ -40,7 +40,7 @@
         {{ end }}
       {{ end }}
     {{ end }}
-  
+
     <div class="post-content">
       {{ if .Params.toc }}{{ .TableOfContents }}{{ end }}
       {{ .Content }}
@@ -57,16 +57,16 @@
   {{ end }}
 
     <script type="module" src="/emaction.js?v=2308072"></script>
-    <emoji-reaction theme="system" class="reaction" endpoint="https://api-emaction.immmmm.com" reacttargetid="immmmm-{{ .File.BaseFileName }}"></emoji-reaction>
+    <emoji-reaction theme="system" class="reaction" endpoint="{{ .Site.Params.reaction.url }}" reacttargetid="ys-{{ .File.BaseFileName }}"></emoji-reaction>
 
     <div class="clear"></div>
-    
+
     {{ if eq .Type $.Site.Params.contentTypeName }}
       {{ if or .Next .Prev }}
         <div class="pagination">
           <div class="pagination__title">
             {{ if and .File .Site.Params.EditPath}}
-              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener">阅读更多</a>
+              <a class="pagination__title-h" href="https://github.com/ysicing/devops-handbook/edit/master/content/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener">阅读更多</a>
             {{ else}}
               <span class="pagination__title-h">阅读更多</span>
             {{ end }}
