@@ -1,9 +1,19 @@
 baseURL = "https://ysicing.me"
-languageCode = "zh-cn"
-theme = "jingzhe"
+languageCode = "zh-CN"
+theme = "hello-friend"
 themesDir = "themes"
 title = "缘生笔记"
-paginate = 6
+
+summaryLength = 140
+hasCJKLanguage = true
+
+# 每页显示的文章数量用于分页
+paginate =  10
+# rss 输出数量
+rssLimit = 5
+timeout = '30s'
+ignoreErrors = ["error-remote-getjson","error-remote-getcsv"]
+
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
@@ -35,6 +45,18 @@ enableRobotsTXT = true
       hardWraps = false
       unsafe = true
       xhtml = false
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 1
+
+[outputs]
+  home = ["Atom", "HTML","JSON"] # <domain>/atom.xml
+  page = ["HTML"]
+
+[outputFormats.Atom]
+  mediatype = "application/rss"
+  baseName = "atom"
 
 [menu]
   [[menu.main]]

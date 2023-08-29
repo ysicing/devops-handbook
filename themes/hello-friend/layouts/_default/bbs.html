@@ -1,0 +1,195 @@
+{{ define "main" }}
+<div class="post" style="max-width:1000px">
+  <h2 class="post-title" style="margin:0 auto;text-align: center;"><a href="{{ .Permalink }}" rel="link">{{.Title}}</a></h2>
+  <div id="bbs"></div>
+</div>
+
+<style>
+  .dark .aplayer{background:#212121}.dark .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark .aplayer .aplayer-body{background-color:#212121}.dark .aplayer .aplayer-info{border-top-color:#212121}.dark .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark .aplayer .aplayer-list{background-color:#212121}.dark .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#00212121',GradientType=0 )}.dark .aplayer .aplayer-lrc:after{background:-moz-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:-webkit-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:linear-gradient(to bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#cc212121',GradientType=0 )}.dark .aplayer .aplayer-lrc p{color:#fff}.dark .aplayer .aplayer-miniswitcher{background:#484848}.dark .aplayer .aplayer-miniswitcher .aplayer-icon path{fill:#eee}
+</style>
+<style>
+html{background-image:url('https://bing.immmmm.com/img/bing?region=zh-CN&type=image');width:100%;height:100vh;background-position:center;background-size:cover;background-attachment:fixed;height:100vh;}
+body{background:rgba(255,255,255,0.88);}
+.content{height:100%;}
+body.dark{background-color: rgba(41,42,45,0.92);}
+.bbs-text h1{font-size: 1.5rem;}
+.bbs-text, .resour, .item-comment{background:rgba(255,255,255,0.88) !important;}
+.dark .bbs-text, .dark .resour, .dark #bbs-urls, .dark #load button.load-btn,.dark .item-comment{background-color: rgba(41,42,45,0.92) !important;}
+.header{background:rgba(250,250,250,0.6);}
+.dark .header{background:rgba(37,38,39,0.6);}
+
+#bbs{padding: 2rem 0;min-height:100vh;}
+#bbs-urls{margin-top: 2rem;justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  height:168px;overflow-y: scroll;overflow-x: hidden;padding:10px;background: #fff;border-radius: 8px;border:1px solid #eaeaea;box-shadow:0 4px 6px rgba(0,0,0,.04)}
+.bbs-urls{position: relative;display:inline-block;background: #eaeaea;border-radius:50%;margin:0 .4rem 5px 0;padding:3px;width:3rem;height:3rem;cursor: pointer;}
+.dark .bbs-urls,.dark .bbs-url:before{background:#4a4b50;}
+.bbs-url:before{content:"";background:#eaeaea;width:5px;height:5px;border-radius:50%;position:absolute;top:0;right:0;}
+.bbs-url.liveon:before{background:#42b983;animation-name: light-a;animation-duration:2s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;}
+@keyframes light-a {
+  from{opacity:0.6}
+  to{opacity:0.1;}
+}
+@keyframes light-b {
+  from{opacity:1}
+  to{opacity:0.4;}
+}
+
+.bbs-urls img{border-radius:50%;width:100%;height:100%;}
+.bbs-urls.url-now{background:#42b983;transition: 0.6s;animation-name: light-b;animation-duration:1s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;}
+.urls-button svg.icon{padding:10px;width:100%;height: 100%;}
+.bbs-timeline ul {margin:0;}
+.bbs-timeline ul li{list-style-type:none;position:relative;}
+.bbs-timeline{max-width:1200px;margin:0 auto;}
+.bbs-avatar{position: relative;}
+.bbs-avatar a{text-decoration:none;}
+.bbs-avatar img{width:24px;height:24px;border-radius:50%;margin-right:1rem;}
+.bbs-creator,.bbs-date,.bbs-dot,.tkcount{position:relative;top:-5px;}
+.bbs-dot{font-weight: 800;margin:0 .5rem;}
+.bbs-content {margin-bottom: 3rem;}
+.bbs-text,.resour,.item-comment{background: #fff;border-radius: 8px;font-size: 1em;padding:10px 14px;position: relative;border:1px solid #eaeaea;box-shadow:0 4px 6px rgba(0,0,0,.04)}
+.resour{font-size: 0.9rem;margin-top: 2px;padding: 5px 14px;}
+.bbs-text{overflow-y: scroll;overflow-x:hidden;max-height:50vh;}
+.bbs-text blockquote{font-family: KaiTi,STKaiti,STFangsong;margin:0 0 0 1rem;padding:.25rem 2rem;position: relative;border-left:0 none;}
+.bbs-text blockquote::before{line-height: 2rem;content: "“";font-family: Georgia, serif;font-size: 28px;font-weight: bold;position: absolute;left: 10px;top:5px;}
+.bbs-text p{margin:0;}
+.bbs-text pre p{display: inline-block;}
+.bbs-text pre p:empty{display: none;}
+.tag-span{color: #42b983;}
+#load button.load-btn{width:100%;padding:8px 0;background: #fff;border:1px solid #eaeaea;box-shadow: 0 4px 6px rgba(0,0,0,.04);}
+#bb-footer{letter-spacing:8px;margin:5rem auto 1rem;text-align:center;}
+.dark .bbs-text,.dark .resour,.dark #bbs-urls,.dark #load button.load-btn{background:#272727;border:1px solid #3b3d42;}
+.dark .item-comment{background:#272727;border:1px solid #3b3d42;}
+.dark .bbs-text p{color:#fafafa;}
+.bbs-coment-svg{margin-left: 0.5rem;cursor: pointer;}
+.dark .bbs-coment-svg svg.icon{fill:#ffffff;}
+.bbs-timeline ul li .bbs-outlink{position:absolute;right:2px;opacity:0.1;z-index: 999;}
+.bbs-timeline ul li:hover .bbs-outlink{opacity:1;}
+.loader {position: relative;margin:3rem auto;width: 100px;}
+.loader::before {content: '';display: block;padding-top: 100%;}
+.circular {animation: rotate 2s linear infinite;height: 100%;transform-origin: center center;width: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;}
+.path {stroke-dasharray: 1, 200;stroke-dashoffset: 0;animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;stroke-linecap: round;}
+@keyframes rotate {100% {transform: rotate(360deg);}}
+@keyframes dash {
+  0% {stroke-dasharray: 1, 200;stroke-dashoffset: 0;}
+  50% {stroke-dasharray: 89, 200;stroke-dashoffset: -35px;}
+  100% {stroke-dasharray: 89, 200;stroke-dashoffset: -124px;}
+}
+@keyframes color {
+  100%,0% {stroke: #d62d20;}40% {stroke: #0057e7;}66% {stroke: #008744;}80%,90% {stroke: #ffa700;}
+}
+
+.bbs-content p > img{cursor:pointer;max-height:20vh;}
+.bbs-content p:has(img.img){display: inline-block;}
+.bbs-text p > img {display: block;}
+.bbs-text p > img:first-child:nth-last-child(n+2),.bbs-text p > img:first-child:nth-last-child(n+2) ~ img {display: inline-block;}
+
+.bbs-content p > img.square{height:180px;width:180px;object-fit:cover;}
+.resimg.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:auto;
+    gap: 4px;
+    width: calc(100%* 2 / 3);
+    box-sizing: border-box;
+    margin: 4px 0 0;
+}
+.resimg.grid-2{
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+}
+.resimg.grid-4{
+  grid-template-columns: repeat(2, 1fr);
+  width: calc(80% * 2 / 3);
+}
+.resimg.grid figure.gallery-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  cursor: zoom-in;
+}
+.resimg figure{
+  text-align: left;
+  max-height:50%;
+}
+.resimg figure img{
+  max-height:38vh;
+}
+.resimg.grid figure, figcaption {
+  margin: 0 !important;
+}
+.resimg.grid figure.gallery-thumbnail > img.thumbnail-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.video-wrapper{position:relative;padding-bottom:55%;width:100%;height:0}
+.video-wrapper iframe{position:absolute;height:100%;width:100%;}
+.video-wrapper video{max-height: 30vh;}
+.d-none{display: none !important;}
+
+.reaction{line-height:normal;}
+
+#bbs .db-card{border-bottom:1px solid #eaeaea;box-shadow: none;margin:-10px -14px 10px;}
+.dark #bbs .db-card{background:#252627;border-bottom:1px solid #3b3d42;}
+</style>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<link href="https://unpkg.com/artalk@2/dist/ArtalkLite.css" rel="stylesheet">
+<style>
+.dark .artalk{
+  --at-color-font: #fff;
+  --at-color-deep: #e7e7e7;
+  --at-color-sub: #e7e7e7;
+  --at-color-grey: #fff;
+  --at-color-meta: #fff;
+  --at-color-border: #2d3235;
+  --at-color-light: #687a86;
+  --at-color-bg: #1e2224;
+  --at-color-bg-transl: rgba(30, 34, 36, .95);
+  --at-color-bg-grey: #46494e;
+  --at-color-bg-grey-transl: rgba(8, 8, 8, .95);
+  --at-color-bg-light: rgba(29, 161, 242, .1);
+  --at-color-main: #0083ff;
+  --at-color-red: #ff5652;
+  --at-color-pink: #fa5a57;
+  --at-color-yellow: #ff7c37;
+  --at-color-green: #4caf50;
+  --at-color-gradient: linear-gradient(180deg, transparent, rgba(30, 34, 36, 1))
+}
+</style>
+  <script type="module" src="/emaction.js?v=2308072"></script>
+  <script src="https://fastly.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+  <script src="/twikoo1616.js"></script>
+  <script src="https://unpkg.com/artalk@2/dist/ArtalkLite.js"></script>
+  <script src="/bbs-lmm.js?v=2308261"></script>
+{{ end }}
+
+{{ define "footer" }}
+<script type="text/javascript" src="/theme-main-1.js"></script>
+<script>
+//随机日志
+function randomPost() {
+  fetch('/sitemap.xml').then(res => res.text()).then(str => (new window.DOMParser()).parseFromString(str, "text/xml")).then(data => {
+      let ls = data.querySelectorAll('url loc');
+      let locationHref,locSplit;
+      do {
+          locationHref = ls[Math.floor(Math.random() * ls.length)].innerHTML
+          locSplit = locationHref.split('/')[3] || ''
+      } while (locSplit == '' || locSplit == 'tags' || locSplit == 'posts'); 
+      location.href = locationHref
+  })
+}
+</script>
+{{ end }}

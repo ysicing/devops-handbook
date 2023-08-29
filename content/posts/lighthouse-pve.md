@@ -107,9 +107,9 @@ source /etc/network/interfaces.d/*
 
 调整网络配置，添加nat转发, 更多可以参考官方文档[Network Configuration](https://pve.proxmox.com/wiki/Network_Configuration)
 
-{{< alert theme="danger" >}}
-这里需要注意需要将eth0改成dhcp或者static，否则会导致机器离线。
-{{< /alert >}}
+
+> 这里需要注意需要将eth0改成dhcp或者static，否则会导致机器离线。
+
 
 ```bash
 auto lo

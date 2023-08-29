@@ -20,6 +20,14 @@ jobs:
         format: csv
         dir: ./data/douban
 
+    - name: book
+      uses: lizheming/doumark-action@master
+      with:
+        id: ysicing
+        type: book
+        format: csv
+        dir: ./data/douban
+
     - name: Commit
       uses: EndBug/add-and-commit@v9
       with:

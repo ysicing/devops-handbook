@@ -1,0 +1,36 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"/>
+<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"/>
+
+<link rel="alternate" type="application/rss+xml" href="/atom.xml" title="{{ $.Site.Title }}">
+<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="stylesheet" href="//cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/theme-lmm.css?v=2308271">
+<link rel="shortcut icon" href="{{ "favicon.ico" | absURL }}">
+
+<link rel="apple-touch-icon" href="{{ "favicon.ico" | absURL }}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="{{ $.Site.Title }}">
+<link rel="bookmark" href="{{ "favicon.ico" | absURL }}">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{ "favicon.ico" | absURL }}" >
+
+<!-- OG data -->
+{{ partial "opengraph.html" . }}
+<!-- RSS | JSON -->
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+{{ end -}}
+{{- if not .Site.IsServer }}
+<script async defer data-website-id="c27bd84b-02a3-4c3f-a168-0d7fadec9c74" src="https://u.edui.fun/lmmtj.js"></script>
+{{ end -}}
+
+<script  src="https://jsd.cdn.zzko.cn/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+<script>window.addEventListener('load', () => {  quicklink.listen();});</script>
