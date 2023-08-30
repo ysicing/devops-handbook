@@ -6,7 +6,7 @@ let bbMemo = {
   limit: '10',
   creatorId: '101',
   domId: '#bber',
-  twiEnv:'https://metk.edui.fun/',
+  twiEnv:'https://twikoo.clb.ysicing.cloud/',
 }
 if(typeof(bbMemos) !=="undefined"){
   for(let key in bbMemos) {
