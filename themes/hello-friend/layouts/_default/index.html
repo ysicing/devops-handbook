@@ -14,7 +14,7 @@
   {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
   <div id="bber-talk"></div>
-  
+
   <div class="posts home grid-cols-2">
 
     {{ range first 1 $paginator.Pages }}
@@ -94,7 +94,7 @@
       localStorage.removeItem("friendData");
     }
   </script>
-  
+
   <div class="home">
     <h3><a href="/album/" onclick="clearLocalAlbum()">近期光影</a></h3>
     <div id="album" style="min-height:160px;"></div>
@@ -105,10 +105,10 @@
       localStorage.removeItem("albumData");
     }
   </script>
-  
+
   <div class="home">
     {{ $goods := getJSON "static/goods/goods.json" }}
-    <h3><a href="/goods/">近期好物</a></h3>
+    <h3><a href="/hardware/">近期好物</a></h3>
     <div id="goods">
     {{ range first 5 $goods.good}}
     <div class="goods-bankuai img-hide">
