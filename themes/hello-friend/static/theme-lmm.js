@@ -95,7 +95,7 @@ function umiTongji(){
   var umiId = "4c49e691-9efd-4049-ba15-fac0e5a34ea6"
   var umiToken = "3IxFK8yUxsH/AjUSrjeIKhYKtsNE8GeynEK+uZ9w2AWOPgSpj4TC9qsmMolYmcPvZW5CTi/RYTFFIHcCFEmef45EdlRJQfytEkF4PKjduTRBlZ+uyVRdcn9GdrvJb7qTcFK+Aymfgw5hKBWz0lES+AE7YD4ChTwd7CvQqJS3NGPG9y+s3WqZrbegR7DxH1E9dAHgMGaiIuCCT5aGuq+lgnByq3JMBDufKHCI7DfMoSFRHWhsOb1HvSFt91VEvVL3gkNc5zrAvpCI9Fsb4hURQO47GVbh0M/7Hqn3FD9UP7qv7YICJ8bJC0hDQ6I/UjE0IWD3NQC4V0txU4lWt1d6ZrD20udgpPz5UQ=="
   var umiTime = Date.parse(new Date()); //获取当前时间戳
-  var umiUrl = "https://umami.external.ysicing.cloud/api/websites/"+umiId+"/stats?start_at=0000000000&end_at="+umiTime;
+  var umiUrl = "https://umami.external.ysicing.cloud/api/websites/" + umiId +"/stats?startAt=0000000000&endAt="+umiTime;
   fetch(umiUrl,{
     method: 'GET',
     mode: 'cors',
