@@ -1,12 +1,22 @@
-<!-- twikoo -->
-{{- if .Site.Params.twikoo.enable}}
-{{- if not .Site.IsServer }}
 <div class="pagination__title">
   <span class="pagination__title-h">欢迎评论</span>
   <hr />
 </div>
-  <div id="tcomment"></div>
-  <script src="/twikoo1616.js"></script>
-  <script>twikoo.init({ envId: 'https://tk.edui.fun/', el: '#tcomment' })</script>
-  {{- end }}
-{{- end }}
+<link href="https://npm.elemecdn.com/artalk@2.5.5/dist/ArtalkLite.css" rel="stylesheet">
+<script src="https://npm.elemecdn.com/artalk@2.5.5/dist/ArtalkLite.js"></script>
+  <div id="Comments"></div>
+<script>
+  var defaultPageKey = '{{ .RelPermalink }}';
+  var pageKey = defaultPageKey.replace(/\/$/, '');
+  new Artalk({
+    el: '#Comments',
+    pageKey: `${pageKey}`,
+    pageTitle: '{{ .Title }}',
+    server: '{{ $.Site.Params.artalk.server }}',
+    site: '{{ $.Site.Params.artalk.site }}',
+    darkMode: 'auto'
+    // ...你的其他配置
+  })
+</script>
+
+

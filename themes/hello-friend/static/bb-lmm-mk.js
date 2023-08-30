@@ -2,11 +2,10 @@
 Last Modified time : 20230809 11:00 by https://immmmm.com
 */
 let bbMemo = {
-  memos: 'https://demo.usememos.com/',
+  memos: 'https://notes.ysicing.cloud/',
   limit: '10',
-  creatorId: '101',
+  creatorId: '1',
   domId: '#bber',
-  twiEnv:'https://twikoo.clb.ysicing.cloud/',
 }
 if(typeof(bbMemos) !=="undefined"){
   for(let key in bbMemos) {
@@ -203,26 +202,12 @@ function getFirstList(apiV1){
 }
 // 获取评论数量
 function updateTiwkoo(data) {
-  let twiID = data.map((item) => memos + "m/" + item.id);
-  twikoo.getCommentsCount({
-    envId: bbMemo.twiEnv,
-    urls: twiID,
-    includeReply: true
-  }).then(function (res) {
-    updateCount(res)
-  }).catch(function (err) {
-    console.error(err);
+  updateHTMl(data)
+  Artalk.loadCountWidget({
+    server: 'https://artalk.ysicing.cloud/',
+    site: '缘生笔记',
+    countEl: '#ArtalkCount'
   });
-  function updateCount(res) {
-    let twiCount = res.map((item) => {
-      return Object.assign({},{'count':item.count})
-    });
-
-    let bbTwikoo = data.map((item,index) => {
-      return {...item, ...twiCount[index]};
-    });
-    updateHTMl(bbTwikoo)
-  }
 }
 //预加载下一页数据
 function getNextList(apiV1){
@@ -359,7 +344,6 @@ async function updateHTMl(data){
       }
       let memosIdNow = memos.replace(/https\:\/\/(.*\.)?(.*)\..*/,'id-$2-')
     let emojiReaction = `<emoji-reaction theme="system" class="reaction" endpoint="https://dz.12306.work" reacttargetid="${memosIdNow+'memo-'+bbID}" style="line-height:normal;display:inline-flex;"></emoji-reaction>`
-      let datacountDOM = `<div class="datacount" data-twienv="${bbMemo.twiEnv}" data-id="${bbID}" onclick="loadTwikoo(this)"> ${data[i].count} 条评论 </div>`
 
       memosOpenIdNow = window.localStorage && window.localStorage.getItem("memos-access-token")
 
@@ -378,10 +362,6 @@ async function updateHTMl(data){
           </div>
           <div class="bb-info">
             <a href="${memoUrl}" target="_blank"><span class="datatime">${new Date(data[i].createdTs * 1000).toLocaleString()}</span></a>
-            ${datacountDOM}
-          </div>
-          <div class="item-twikoo twikoo-${bbID} d-none">
-            <div id="twikoo-${bbID}"></div>
           </div>
         </div>
       </li>`
@@ -529,35 +509,6 @@ function showTaglist(e){
   })
 }
 
-//前端加载 Twikoo 评论
-function loadTwikoo(e) {
-  let memoEnv = e.getAttribute("data-twienv")
-  let memoId = e.getAttribute("data-id")
-  let twikooDom = document.querySelector('.twikoo-'+memoId);
-  if (twikooDom.classList.contains('d-none')) {
-    document.querySelectorAll('.item-twikoo').forEach((item) => {item.classList.add('d-none');})
-    if(!document.getElementById("twikoo")){
-      twikooDom.classList.remove('d-none');
-      let domClass = document.getElementsByClassName('memo-'+memoId)
-      window.scrollTo({
-        top: domClass[0].offsetTop - 30,
-        behavior: "smooth"
-      });
-      twikoo.init({
-        envId: memoEnv,
-        el: '#twikoo-' + memoId,
-        path: bbMemo.memos+'m/'+ memoId,
-      });
-      setTimeout(function(){
-        document.getElementById("twikoo").id='twikoo-' + memoId;
-      }, 600);
-      let memoOne = location.pathname+'?memo='+bbMemos.memos+'m/'+memoId
-      history.pushState({memoOne: memoOne, title: document.title}, document.title, memoOne)
-    }
-  }else{
-    twikooDom.classList.add('d-none');
-  }
-}
 //前端加载 Artalk 评论
 function loadArtalk(e) {
   let memoEnv = e.getAttribute("data-artenv")
@@ -581,8 +532,9 @@ function loadArtalk(e) {
         el: '#artalk-' + memoId,
         pageKey: '/m/' + memoId,
         pageTitle: '',
-        site: memoSite,
-        server: memoEnv
+        server: 'https://artalk.ysicing.cloud/',
+        site: '缘生笔记',
+        darkMode: 'auto'
       });
     }
   }else{
