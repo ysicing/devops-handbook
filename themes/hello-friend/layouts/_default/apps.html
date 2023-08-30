@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $goods := getJSON "static/goods/goods.json" }}
+{{ $goods := getJSON "static/goods/apps.json" }}
 
 <div class="post">
   <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
@@ -11,7 +11,18 @@
     <div class="goods-duiqi"><img loading="lazy" decoding="async" src="{{ .image }}"></div>
     <div class="goods-jiage">{{ .jiage }}</div>
     <div class="goods-title"><a href="{{ .link }}">{{ .title }}</a></div>
-    <div class="goods-note">{{ .note }}</div>
+    <div class="goods-note">
+        <a href="{{ .link }}" target="_blank">
+          <div class="kaiyuan">{{ .kaiyuan }}</div>
+        </a>
+        <a href="{{ .link }}" target="_blank">
+          <div class="shoufei">{{ .shoufei }}</div>
+        </a>
+        <a href="{{ .link }}" target="_blank">
+          <div class="free">{{ .free }}</div>
+        </a>
+        {{ .info }}
+    </div>
   </div>
   {{ end }}
   </div>

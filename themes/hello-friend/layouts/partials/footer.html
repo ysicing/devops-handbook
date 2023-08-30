@@ -37,10 +37,11 @@
 <footer class="footer {{ if .IsHome -}}home-footer{{- end -}}">
   <div class="footer__inner">
     <div class="copyright copyright-font">
-      <span>共 {{$totalWord }} 字 <br/> {{$wowBook | safeHTML }}</span>
+      <span>共 {{$totalWord }} 字 <br/> {{$wowBook | safeHTML }} <br /> <a href="https://www.travellings.cn/go.html?blog_source=ysicing.me" target="_blank" rel="noopener noreferrer">开往</a>
+        <a href="https://foreverblog.cn/go.html?blog_source=ysicing.me" target="_blank" rel="noopener noreferrer">十年之约</a>,
+        探索更多, 我们的目标是星辰大海.
+      </span>
     </div>
-    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
-    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
     <div class="tongji">总访问量 <span id="pvStatic">0</span> 次 | 总访客数 <span id="uvStatic">0</span> 人</div>
     {{ if $.Site.Copyright }}
       <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
@@ -65,5 +66,5 @@
 </script>
 
 {{ if .IsHome }}
-  <script type="text/javascript" src="/theme-lmm-home.js?v=2308101"></script> 
+  <script type="text/javascript" src="/theme-lmm-home.js?v=2308101"></script>
 {{ end }}
