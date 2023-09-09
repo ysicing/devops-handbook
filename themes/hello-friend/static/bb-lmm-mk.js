@@ -237,7 +237,7 @@ function meNums(apiV1){
       arrData = resdata.data
     }
     if(arrData){
-      let allnums = `<div id="bb-footer"><p class="bb-allnums">共 ${arrData.length} 条 </p><p class="bb-allpub"><a href="https://immmmm.com/bbs/" target="_blank">Memos Public</a></p></div>`
+      let allnums = `<div id="bb-footer"><p class="bb-allnums">共 ${arrData.length} 条 </p><p class="bb-allpub"></p></div>`
       bbLoad.insertAdjacentHTML('afterend', allnums);
     }
   })
@@ -501,8 +501,8 @@ function showTaglist(e){
   let bbUrl = e.getAttribute("data-api")
   let tagListDom = ""
   fetch(bbUrl).then(res => res.json()).then( resdata =>{
-    for(let i=0;i < resdata.length;i++){
-      tagListDom += `<span class="tag-span" onclick='getTagNow(this)'>#${resdata[i]}</span>`
+    for(let i=0;i < resdata.data.length;i++){
+      tagListDom += `<span class="tag-span" onclick='getTagNow(this)'>#${resdata.data[i]}</span>`
     }
     let tagHtml = `<div id="tag-list-all">${tagListDom}</div>`
     bbDom.insertAdjacentHTML('beforebegin', tagHtml);
