@@ -138,7 +138,7 @@ metadata:
   name: bark-server
 spec:
   rules:
-  - host: bark.external.ysicing.cloud
+  - host: bark.external.ysicing.net
     http:
       paths:
       - backend:
@@ -167,5 +167,5 @@ kubectl apply -f bs.yaml
 最后大家可以使用我搭建的bark哈，不保证永久使用哈，如果不维护了会提前通知
 
 :::info
-公益服务: [bark.external.ysicing.cloud](https://bark.external.ysicing.cloud)
+公益服务: [bark.external.ysicing.net](https://bark.external.ysicing.net)
 :::

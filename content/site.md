@@ -27,7 +27,7 @@ description: 站点日志
 
 - `docusaurus`升级到2.4.0
 - 底层集群升级到1.24.12
-- 镜像仓库默认支持[`ysicing`](https://mirrors.ysicing.cloud/.help/ysicing.html)的代理
+- 镜像仓库默认支持[`ysicing`](https://mirrors.ysicing.net/.help/ysicing.html)的代理
 
 ## ⚙ 20230326 变更
 

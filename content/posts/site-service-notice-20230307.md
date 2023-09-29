@@ -14,8 +14,8 @@ tags:
 ## 域名变更
 
 ```
-m.deb.ysicing.me --> mirrors.ysicing.cloud
-m.yum.ysicing.me --> mirrors.ysicing.cloud
+m.deb.ysicing.me --> mirrors.ysicing.net
+m.yum.ysicing.me --> mirrors.ysicing.net
 ```
 
 同时积极响应国家推进ipv6计划, 新域名同时支持ipv4/ipv6双栈接入
@@ -40,11 +40,11 @@ m.yum.ysicing.me --> mirrors.ysicing.cloud
 
 ```bash
 # /etc/apt/sources.list.d/tailscale.list
-deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://mirrors.ysicing.cloud/tailscale/stable/debian bullseye main
+deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://mirrors.ysicing.net/tailscale/stable/debian bullseye main
 # /etc/apt/sources.list.d/caddy-stable.list
-deb [signed-by=/usr/share/keyrings/caddy-stable-archive-keyring.gpg] https://mirrors.ysicing.cloud/caddy/stable/deb/debian any-version main
+deb [signed-by=/usr/share/keyrings/caddy-stable-archive-keyring.gpg] https://mirrors.ysicing.net/caddy/stable/deb/debian any-version main
 # /etc/apt/sources.list.d/hashicorp.list
-deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://mirrors.ysicing.cloud/hashicorp/ bullseye main
+deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://mirrors.ysicing.net/hashicorp/ bullseye main
 ```
 
 ## 技术细节

@@ -66,7 +66,7 @@ chown -R headscale:headscale /var/lib/headscale
 
 ```yaml
 ---
-server_url: https://global.vip.ysicing.cloud:443
+server_url: https://global.vip.ysicing.net:443
 listen_addr: 0.0.0.0:443
 metrics_listen_addr: 127.0.0.1:9090
 grpc_listen_addr: 0.0.0.0:50443
@@ -96,7 +96,7 @@ db_type: sqlite3
 db_path: /var/lib/headscale/db.sqlite
 acme_url: https://acme-v02.api.letsencrypt.org/directory
 acme_email: "root@ysicing.net"
-tls_letsencrypt_hostname: "global.vip.ysicing.cloud"
+tls_letsencrypt_hostname: "global.vip.ysicing.net"
 tls_client_auth_mode: relaxed
 tls_letsencrypt_cache_dir: /var/lib/headscale/cache
 tls_letsencrypt_challenge_type: TLS-ALPN-01
@@ -121,7 +121,7 @@ randomize_client_port: false
 ```
 
 :::note
-如上只需要将`global.vip.ysicing.cloud`替换成自己的域名即可, 另外如果默认的ipv4段`10.77.0.0/24`冲突, 可自行替换其他可用ip端
+如上只需要将`global.vip.ysicing.net`替换成自己的域名即可, 另外如果默认的ipv4段`10.77.0.0/24`冲突, 可自行替换其他可用ip端
 :::
 
 ### derp配置
@@ -135,7 +135,7 @@ regions:
     nodes:
       - name: 900a
         regionid: 900
-        hostname: derper.sh.ysicing.cloud
+        hostname: derper.sh.ysicing.net
         stunport: 0 # 0表示默认
         stunonly: false
         derpport: 7777
@@ -212,7 +212,7 @@ Debian 11安装:
 ```bash
 # 使用我提供的镜像站加速哈哈哈
 curl -fsSL https://pkgs.tailscale.com/stable/debian/bullseye.noarmor.gpg | tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
-echo "deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://mirrors.ysicing.cloud/tailscale/stable/debian bullseye main" | tee /etc/apt/sources.list.d/tailscale.list
+echo "deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://mirrors.ysicing.net/tailscale/stable/debian bullseye main" | tee /etc/apt/sources.list.d/tailscale.list
 # 安装
 apt update
 apt install tailscale

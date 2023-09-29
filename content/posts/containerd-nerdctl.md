@@ -55,8 +55,8 @@ docker run --rm -v /usr/local/bin:/sysdir registry.cn-beijing.aliyuncs.com/k7scn
 
 ### 其他
 
-快速安装containerd脚本 [containerd-install](https://cos.ysicing.cloud/oss/scripts/containerd.sh)
+快速安装containerd脚本 [containerd-install](https://cos.ysicing.net/oss/scripts/containerd.sh)
 
 ```bash
-curl https://cos.ysicing.cloud/oss/scripts/containerd.sh | bash
+curl https://cos.ysicing.net/oss/scripts/containerd.sh | bash
 ```

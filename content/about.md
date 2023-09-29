@@ -77,7 +77,7 @@ menu:
 
 ### 💬 联系我
 
-📮 邮箱: [ysicing@ysicing.cloud](mailto:ysicing@ysicing.cloud)
+📮 邮箱: [i@ysicing.me](mailto:i@ysicing.me)
 
 ### 打赏赞助
 

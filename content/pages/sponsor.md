@@ -10,9 +10,9 @@ description: 金榜题名
 
 左边是支付宝，右边是微信支付(～￣▽￣)～ 有特殊要求者可评论区留言！
 
-![](https://s4.ysicing.cloud/alipay.jpeg?w=200&h=200&mode=clip)
-![](https://s4.ysicing.cloud/alipay-hb.jpeg?w=200&h=200&mode=clip)
-![](https://s4.ysicing.cloud/wechat.jpeg?w=200&h=200&mode=clip)
+![](https://s4.ysicing.net/alipay.jpeg?w=200&h=200&mode=clip)
+![](https://s4.ysicing.net/alipay-hb.jpeg?w=200&h=200&mode=clip)
+![](https://s4.ysicing.net/wechat.jpeg?w=200&h=200&mode=clip)
 
 除非大佬们强烈要求，不然此页面上出现的ID均为匿名处理。捐赠时建议带备注，该备注会出现在下表的Message里。如无特殊要求，此页面会公布您的付款备注信息（可能会泄露个人信息的备注将不会明示）。当然，您也可以随时要求删除！
 

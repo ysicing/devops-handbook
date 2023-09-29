@@ -2,7 +2,7 @@
 Last Modified time : 20230809 11:00 by https://immmmm.com
 */
 let bbMemo = {
-  memos: 'https://notes.ysicing.cloud/',
+  memos: 'https://notes.ysicing.net/',
   limit: '10',
   creatorId: '1',
   domId: '#bber',
@@ -204,7 +204,7 @@ function getFirstList(apiV1){
 function updateTiwkoo(data) {
   updateHTMl(data)
   Artalk.loadCountWidget({
-    server: 'https://artalk.ysicing.cloud/',
+    server: 'https://artalk.ysicing.net/',
     site: '缘生笔记',
     countEl: '#ArtalkCount'
   });
@@ -532,7 +532,7 @@ function loadArtalk(e) {
         el: '#artalk-' + memoId,
         pageKey: '/m/' + memoId,
         pageTitle: '',
-        server: 'https://artalk.ysicing.cloud/',
+        server: 'https://artalk.ysicing.net/',
         site: '缘生笔记',
         darkMode: 'auto'
       });

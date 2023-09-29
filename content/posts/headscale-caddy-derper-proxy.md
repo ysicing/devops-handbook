@@ -89,8 +89,8 @@ mv /root/go/bin/derper /usr/bin/derper
 <TabItem value="二进制" label="二进制">
 
 ```bash title="我编译好的二进制文件"
-wget https://cos.ysicing.cloud/oss/binary/derper
-wget https://cos.ysicing.cloud/oss/binary/derper.sha256sum
+wget https://cos.ysicing.net/oss/binary/derper
+wget https://cos.ysicing.net/oss/binary/derper.sha256sum
 sha256sum -c derper.sha256sum
 mv derper /usr/bin/derper
 ```

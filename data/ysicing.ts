@@ -16,31 +16,31 @@ export const YsicingService: Resource[] = [
     {
       name: 'Status-云监控',
       desc: 'Status',
-      href: 'https://status.ysicing.cloud',
+      href: 'https://status.ysicing.net',
       logo: require('./avatar/default.png'),
     },
     {
       name: 'IP查询',
       desc: 'IP查询',
-      href: 'https://ip.ysicing.cloud',
+      href: 'https://ip.ysicing.net',
       logo: require('./avatar/default.png'),
     },
     {
       name: '云缘生镜像站',
       desc: '云缘生镜像站',
-      href: 'https://mirrors.ysicing.cloud',
+      href: 'https://mirrors.ysicing.net',
       logo: require('./avatar/default.png'),
     },
     {
       name: '小声哔哔',
       desc: '小声哔哔',
-      href: 'https://note.ysicing.cloud/explore',
+      href: 'https://note.ysicing.net/explore',
       logo: require('./avatar/default.png'),
     },
     {
       name: '云缘生IP解析趋势',
       desc: '云缘生IP解析趋势',
-      href: 'https://ds.ysicing.cloud',
+      href: 'https://ds.ysicing.net',
       logo: require('./avatar/default.png'),
     }
 ]

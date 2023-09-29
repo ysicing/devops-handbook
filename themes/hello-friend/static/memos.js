@@ -5,7 +5,7 @@ var memosData = {
 }
 
 var bbMemo = {
-  memos: 'https://note.ysicing.cloud/',
+  memos: 'https://note.ysicing.net/',
   limit: '15',
   creatorId: '101',
   domId: '#bber',
@@ -89,7 +89,7 @@ function getNextList() {
     }
     //在未展开评论时，默认显示评论数
     Artalk.loadCountWidget({
-      server: 'https://artalk.ysicing.cloud/',
+      server: 'https://artalk.ysicing.net/',
       site: '缘生笔记',
       countEl: '#ArtalkCount'
     });
@@ -248,7 +248,7 @@ function getTagNow(e) {
 
     //在未展开评论时，默认显示评论数
     Artalk.loadCountWidget({
-      server: 'https://artalk.ysicing.cloud/',
+      server: 'https://artalk.ysicing.net/',
       site: '缘生笔记',
       countEl: '#ArtalkCount'
     });
@@ -257,7 +257,7 @@ function getTagNow(e) {
 
 // 显示所有 TAG
 function showTaglist() {
-  let bbUrl = 'https://memostag.external.ysicing.cloud/'
+  let bbUrl = 'https://memostag.external.ysicing.net/'
   let tagListDom = ""
   fetch(bbUrl).then(res => res.json()).then(resdata => {
     for (let i = 0; i < resdata.data.length; i++) {
@@ -348,7 +348,7 @@ function loadArtalk(memo_id) {
       el: '#memo_' + memo_id,
       pageKey: '/m/' + memo_id,
       pageTitle: '',
-      server: 'https://artalk.ysicing.cloud/',
+      server: 'https://artalk.ysicing.net/',
       site: '缘生笔记',
       darkMode: 'auto'
     });

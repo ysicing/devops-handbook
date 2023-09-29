@@ -113,7 +113,7 @@ metadata:
   name: gitea
 spec:
   rules:
-  - host: gitea.ysicing.cloud
+  - host: gitea.ysicing.net
     http:
       paths:
       - backend:
@@ -123,7 +123,7 @@ spec:
               name: http
         path: /
         pathType: ImplementationSpecific
-  - host: git.ysicing.cloud
+  - host: git.ysicing.net
     http:
       paths:
       - backend:
@@ -145,7 +145,7 @@ kubectl apply -f gitea.yaml
 
 ```ini title="新增的额外gitea配置"
 [picture]
-GRAVATAR_SOURCE = https://mirrors.ysicing.cloud/gravatar/
+GRAVATAR_SOURCE = https://mirrors.ysicing.net/gravatar/
 
 [webhook]
 ALLOWED_HOST_LIST = external,private

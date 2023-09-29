@@ -140,7 +140,7 @@ metadata:
   name: uptime
 spec:
   rules:
-  - host: uptime.i.ysicing.cloud
+  - host: uptime.i.ysicing.net
     http:
       paths:
       - backend:
@@ -158,11 +158,11 @@ metadata:
     k8s.ysicing.me/name: uptime
   annotations:
     nginx.ingress.kubernetes.io/configuration-snippet: |
-      rewrite ^/dashboard$  https://uptime.i.ysicing.cloud/dashboard redirect;
+      rewrite ^/dashboard$  https://uptime.i.ysicing.net/dashboard redirect;
   name: uptime-status
 spec:
   rules:
-  - host: status.ysicing.cloud
+  - host: status.ysicing.net
     http:
       paths:
       - backend:
@@ -184,7 +184,7 @@ kubectl apply -f kuma.yaml
 
 > 这里以k8s为例。
 
-在启动 Uptime Kuma 后，你可以通过浏览器访问 [uptime.i.ysicing.cloud](https://uptime.i.ysicing.cloud) 来进入 Uptime Kuma 的界面。如果你是第一次访问，你需要先创建一个管理员账号和密码。然后，你就可以登录并开始配置 Uptime Kuma。
+在启动 Uptime Kuma 后，你可以通过浏览器访问 [uptime.i.ysicing.net](https://uptime.i.ysicing.net) 来进入 Uptime Kuma 的界面。如果你是第一次访问，你需要先创建一个管理员账号和密码。然后，你就可以登录并开始配置 Uptime Kuma。
 
 :::note
 添加监控项比较简单，这里提下Bark告警推送遇到的坑哈, [bark](/tags/bark)群组不能为中文
@@ -200,11 +200,11 @@ kubectl apply -f kuma.yaml
 
 ### 配置自定义域名
 
-通常我们都会默认用[`status.ysicing.cloud`](https://status.ysicing.cloud)来展示服务状态哈
+通常我们都会默认用[`status.ysicing.net`](https://status.ysicing.net)来展示服务状态哈
 
 ![uptime-status-02](/images/blog/20230317/uptime-status-02.jpg)
 
 ## 附录
 
-- [云缘生StatusPage](https://status.ysicing.cloud)
+- [云缘生StatusPage](https://status.ysicing.net)
 - [懒人版自建iOS推送Bark](/tools/bark)

@@ -24,8 +24,8 @@ url: /ad/dogyun
 
 我的博客`ysicing.me`就运行在狗云的环境下，访问速度还是不错的，可以自行看看效果
 
-- [服务状态页](https://status.ysicing.cloud/)
-- [探针](https://nzops.ysicing.cloud/)
+- [服务状态页](https://status.ysicing.net/)
+- [探针](https://nzops.ysicing.net/)
 
 :::
 

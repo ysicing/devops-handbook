@@ -12,7 +12,7 @@ tags:
 
 ```bash
 # export MIRRORS="http://mirrors.tencent.com" # 默认腾讯源, 可以指定其他软件源
-curl -s https://cos.ysicing.cloud/oss/scripts/debian-upcore.sh | bash
+curl -s https://cos.ysicing.net/oss/scripts/debian-upcore.sh | bash
 ```
 
 ## Debian 11

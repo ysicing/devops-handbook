@@ -88,7 +88,7 @@ longhornUI:
 ingress:
   enabled: true
   ingressClassName: nginx
-  host: longhorn.svc.ysicing.cloud
+  host: longhorn.svc.ysicing.net
   annotations:
     nginx.ingress.kubernetes.io/auth-type: basic
     nginx.ingress.kubernetes.io/auth-secret: basic-auth

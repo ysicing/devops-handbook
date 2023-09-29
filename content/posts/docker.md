@@ -12,8 +12,8 @@ tags:
 ## 安装并配置
 
 ```bash
-curl -fsSL https://cos.ysicing.cloud/oss/scripts/docker.sh | bash
-curl -fsSL https://cos.ysicing.cloud/oss/scripts/dockerconfig.sh | bash
+curl -fsSL https://cos.ysicing.net/oss/scripts/docker.sh | bash
+curl -fsSL https://cos.ysicing.net/oss/scripts/dockerconfig.sh | bash
 ```
 
 做了如下设置

@@ -119,7 +119,7 @@ metadata:
   name: artalk
 spec:
   rules:
-  - host: artalk.ysicing.cloud
+  - host: artalk.ysicing.net
     http:
       paths:
       - backend:
@@ -198,7 +198,7 @@ export default function Comment(): JSX.Element {
             el: '#comment',
             pageKey: `${window.location.pathname}`,
             pageTitle: `${window.document.title}`,
-            server: 'https://artalk.ysicing.cloud/',
+            server: 'https://artalk.ysicing.net/',
             site: '缘生笔记',
           });
         });

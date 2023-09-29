@@ -104,7 +104,7 @@ Restart=always
 RestartSec=5s
 ExecStartPre=-/usr/sbin/modprobe br_netfilter
 ExecStartPre=-/usr/sbin/modprobe overlay
-ExecStart=/usr/local/bin/k3s server --datastore-endpoint mysql://tidb-region-k3s:athe8AhSheyooPh8Uph0lieJ4Fdeitei2su@tcp(10.10.10.10:3306)/tidbk3s  --tls-san kapi.ysicing.cloud --tls-san kubeapi.ysicing.cloud  --cluster-cidr 10.20.0.0/16 --service-cidr 10.30.0.0/16 --service-node-port-range 30000-60000 --flannel-backend wireguard-native --disable-network-policy --disable-helm-controller --disable servicelb,traefik,local-storage   --kube-proxy-arg "proxy-mode=ipvs" "masquerade-all=true"  --kube-proxy-arg "metrics-bind-address=0.0.0.0" --docker --node-ip 10.77.0.2 --node-external-ip 10.77.0.2
+ExecStart=/usr/local/bin/k3s server --datastore-endpoint mysql://tidb-region-k3s:athe8AhSheyooPh8Uph0lieJ4Fdeitei2su@tcp(10.10.10.10:3306)/tidbk3s  --tls-san kapi.ysicing.net --tls-san kubeapi.ysicing.net  --cluster-cidr 10.20.0.0/16 --service-cidr 10.30.0.0/16 --service-node-port-range 30000-60000 --flannel-backend wireguard-native --disable-network-policy --disable-helm-controller --disable servicelb,traefik,local-storage   --kube-proxy-arg "proxy-mode=ipvs" "masquerade-all=true"  --kube-proxy-arg "metrics-bind-address=0.0.0.0" --docker --node-ip 10.77.0.2 --node-external-ip 10.77.0.2
 ```
 
 </details>
@@ -142,7 +142,7 @@ ln -s /usr/local/bin/k3s /usr/local/bin/kubectl
 :::
 
 ```env title="/etc/systemd/system/k3s.service.env"
-K3S_URL=https://kubeapi.ysicing.cloud:6443
+K3S_URL=https://kubeapi.ysicing.net:6443
 K3S_TOKEN=KToken
 ```
 
@@ -210,7 +210,7 @@ systemctl enable k3s --now
 ### 打通内网和k3s service路由
 
 ```bash title="添加service路由"
- tailscale up --login-server=https://headscale.ysicing.cloud --accept-routes=true --accept-dns=false --advertise-routes=10.30.0.0/16
+ tailscale up --login-server=https://headscale.ysicing.net --accept-routes=true --accept-dns=false --advertise-routes=10.30.0.0/16
 ```
 
 ### 部署lb组件
@@ -243,7 +243,7 @@ spec:
 ```bash
 kubectl apply -f ippool.yaml
 # 另外一个节点添加转发，也可以是上面一个节点转发哈
- tailscale up --login-server=https://headscale.ysicing.cloud --accept-routes=true --accept-dns=false --advertise-routes=10.19.49.1/24
+ tailscale up --login-server=https://headscale.ysicing.net --accept-routes=true --accept-dns=false --advertise-routes=10.19.49.1/24
 ```
 
 ### 部署存储

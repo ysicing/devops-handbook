@@ -1,7 +1,7 @@
 {
     "good": [
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/poe.webp",
+            "image": "https://dfcos.ysicing.net/img/app/poe.webp",
             "title": "Poe",
             "info": "GPT, 支持付费订阅",
             "macos": "macOS",
@@ -9,7 +9,7 @@
             "link": "https://poe.com"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/vscode.webp",
+            "image": "https://dfcos.ysicing.net/img/app/vscode.webp",
             "title": "Visual Studio Code",
             "info": "编辑器",
             "macos": "macOS",
@@ -17,7 +17,7 @@
             "link": "https://code.visualstudio.com/"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/xmind.webp",
+            "image": "https://dfcos.ysicing.net/img/app/xmind.webp",
             "title": "Xmind",
             "info": "思维导图软件",
             "macos": "macOS",
@@ -25,7 +25,7 @@
             "link": "https://apps.apple.com/cn/app/xmind-%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/id1327661892?mt=12"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/clash.webp",
+            "image": "https://dfcos.ysicing.net/img/app/clash.webp",
             "title": "ClashXPro",
             "info": "上网必备软件, 主要还支持iCloud同步",
             "macos": "macOS",
@@ -33,7 +33,7 @@
             "link": "https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/lemon.webp",
+            "image": "https://dfcos.ysicing.net/img/app/lemon.webp",
             "title": "柠檬清理",
             "info": "卸载app工具, 腾讯出品",
             "macos": "macOS",
@@ -41,7 +41,7 @@
             "link": "https://lemon.qq.com/"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/youtube.webp",
+            "image": "https://dfcos.ysicing.net/img/app/youtube.webp",
             "title": "Youtube",
             "info": "看国内视频没广告且清晰度可以拉满",
             "macos": "macOS",
@@ -51,7 +51,7 @@
             "link": "https://youtube.com"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/vidhub.webp",
+            "image": "https://dfcos.ysicing.net/img/app/vidhub.webp",
             "title": "VidHub",
             "info": "看媒体库视频必备",
             "macos": "macOS",
@@ -59,7 +59,7 @@
             "link": "https://apps.apple.com/us/app/vidhub-video-library-player/id1659622164"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/xiaoyuz.webp",
+            "image": "https://dfcos.ysicing.net/img/app/xiaoyuz.webp",
             "title": "小宇宙",
             "info": "播客应用",
             "ios": "iOS",
@@ -67,7 +67,7 @@
             "link": "https://www.xiaoyuzhoufm.com/"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/telegram.webp",
+            "image": "https://dfcos.ysicing.net/img/app/telegram.webp",
             "title": "Telegram",
             "info": "聊天软件, 类似微信",
             "macos": "macOS",
@@ -76,7 +76,7 @@
             "link": "https://t.me/ysicing"
         },
         {
-            "image": "https://dfcos.ysicing.cloud/img/app/sms.webp",
+            "image": "https://dfcos.ysicing.net/img/app/sms.webp",
             "title": "短信别烦我",
             "info": "过滤垃圾信息必备, 熊猫吃短信替代品",
             "ios": "iOS",

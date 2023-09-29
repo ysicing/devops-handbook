@@ -19,7 +19,7 @@ keywords:
 
 ```bash title="安装"
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/caddy-stable-archive-keyring.gpg] https://mirrors.ysicing.cloud/caddy/stable/deb/debian any-version main" | tee /etc/apt/sources.list.d/caddy.list
+echo "deb [signed-by=/usr/share/keyrings/caddy-stable-archive-keyring.gpg] https://mirrors.ysicing.net/caddy/stable/deb/debian any-version main" | tee /etc/apt/sources.list.d/caddy.list
 apt-get update
 apt-get install caddy
 ```

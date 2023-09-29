@@ -36,7 +36,7 @@ enableRobotsTXT = true
   posts = '/posts/:filename/'
 
 [params.artalk]
-    server="https://artalk.ysicing.cloud"
+    server="https://artalk.ysicing.net"
     site="缘生笔记"
 
 [markup]

@@ -179,7 +179,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: umami.external.ysicing.cloud
+  - host: umami.external.ysicing.net
     http:
       paths:
       - backend:

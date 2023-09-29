@@ -1,4 +1,4 @@
-email = "ysicing@ysicing.cloud"
+email = "i@ysicing.me"
 github = "https://github.com/ysicing/devops-handbook"
 
 govcnbeianhao = "京ICP备17001940号"
@@ -7,10 +7,10 @@ govmoebeianhao = "20212380"
 [memos]
   name = "唠叨"
   desc = "定位私人微博。难免有些负能量/吐槽同时，这里的内容经常会删删减减，在这里说的话多半不算数。"
-  url = "https://note.ysicing.cloud"
+  url = "https://note.ysicing.net"
 
 [umami]
-  url = "https://umami.external.ysicing.cloud/script.js"
+  url = "https://umami.external.ysicing.net/script.js"
   id = "4c49e691-9efd-4049-ba15-fac0e5a34ea6"
 
 [reaction]

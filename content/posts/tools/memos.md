@@ -60,7 +60,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   labels:
-    k8sapp.ysicing.cloud/name: memos
+    k8sapp.ysicing.net/name: memos
   name: memos
 spec:
   # storageClassName: tkecfs
@@ -74,13 +74,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    k8sapp.ysicing.cloud/name: memos
+    k8sapp.ysicing.net/name: memos
   name: memos
 spec:
   replicas: 1
   selector:
     matchLabels:
-      k8sapp.ysicing.cloud/name: memos
+      k8sapp.ysicing.net/name: memos
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -89,7 +89,7 @@ spec:
   template:
     metadata:
       labels:
-        k8sapp.ysicing.cloud/name: memos
+        k8sapp.ysicing.net/name: memos
     spec:
       containers:
       - image: neosmemo/memos
@@ -115,7 +115,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    k8sapp.ysicing.cloud/name: memos
+    k8sapp.ysicing.net/name: memos
   name: memos
 spec:
   ports:
@@ -124,18 +124,18 @@ spec:
     protocol: TCP
     targetPort: 5230
   selector:
-    k8sapp.ysicing.cloud/name: memos
+    k8sapp.ysicing.net/name: memos
   type: ClusterIP
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   labels:
-    k8sapp.ysicing.cloud/name: memos
+    k8sapp.ysicing.net/name: memos
   name: memos
 spec:
   rules:
-  - host: memos.ysicing.cloud
+  - host: memos.ysicing.net
     http:
       paths:
       - backend:
@@ -189,4 +189,4 @@ Email: email
 
 ## 附录
 
-[我的私有化微博](https://note.ysicing.cloud/explore)
+[我的私有化微博](https://note.ysicing.net/explore)
